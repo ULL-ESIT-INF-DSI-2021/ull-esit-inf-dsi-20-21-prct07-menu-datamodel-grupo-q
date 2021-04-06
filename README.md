@@ -10,7 +10,7 @@
   * Adrián Hernández Suárez
   * Raúl Martín Rigor
   * Acoidan Mesa Hernandez
-  * Albertos Ríos de la Rosa
+  * Alberto Ríos de la Rosa
 
 ## Alus:
 
