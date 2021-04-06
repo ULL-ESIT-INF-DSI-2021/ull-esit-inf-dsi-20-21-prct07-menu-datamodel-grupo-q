@@ -1,0 +1,21 @@
+# PRACTICA 7: Modelo de datos de un sistema que permite el diseño de menús 
+
+## Asignatura:
+
+  * Desarrollo de Sistemas Informáticos
+
+## Nombre alumnos:
+
+  * Borja Guanche Sicilia
+  * Adrián Hernández Suárez
+  * Raúl Martín Rigor
+  * Acoidan Mesa Hernandez
+  * Albertos Ríos de la Rosa
+
+## Alus:
+
+  * alu0101205908@ull.edu.es
+  * alu0101235516@ull.edu.es
+  * alu0101203003@ull.edu.es
+  * alu0101206479@ull.edu.es
+  * alu0101235929@ull.edu.es
