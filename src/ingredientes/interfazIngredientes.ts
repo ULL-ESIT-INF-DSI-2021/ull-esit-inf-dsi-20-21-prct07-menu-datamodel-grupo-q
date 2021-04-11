@@ -1,3 +1,6 @@
+/**
+ * Interfaz Ingredientes. Permite definir los métodos que tendrá la clase Ingrediente, que serán getters y setters.
+ */
 export interface IngredientesI<G, K, L>{
 
     getNombre(): string;
