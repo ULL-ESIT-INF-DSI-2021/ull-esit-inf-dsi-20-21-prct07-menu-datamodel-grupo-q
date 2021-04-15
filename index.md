@@ -57,28 +57,138 @@ Para cada alimento o ingrediente considerado dentro del sistema de diseño de me
 
 **Resolución:**
 
-Crearemos una interfaz ingredientes para ingredientes/alimentos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo alimenticio, composición nutricional, localización y precio del alimento:
+Crearemos una interfaz IngredientesI para ingredientes/alimentos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo alimenticio, composición nutricional, localización y precio del alimento:
 
 ```ts
 /**
  * Interfaz Ingredientes. Permite definir los métodos que tendrá la clase Ingrediente, que serán getters y setters.
  */
- export interface IngredientesI<G, K, L>{
+export interface IngredientesI<G, K, L>{
 
     getNombre(): string;
     getGrupoAlimenticio(): G;
-    getComposicionNutricional(): K;
+    getcomposicionNutricional(): K;
     getLocalizacion(): L;
     getPrecio(): number;
 
     setNombre(nombre: string): void;
     setGrupoAlimenticio(grupoAlimenticio: number): void;
-    setComposicionNutricional(ComposicionNutricional: [number, number, number, number]): void;
+    setcomposicionNutricional(composicionNutricional: [number, number, number, number]): void;
     setLocalizacion(localizacion: [string, string]): void;
     setPrecio(precio: number): void;
 }
 ```
 
+Definiremos una serie de tipos que nos harán falta para desarrollar las clases:
+* El tipo *composicionNutricional* Permite definir los lipidos, hidratos de carbono, proteínas y kcal/100gr que tendrá un ingrediente. 
+
+```ts
+export type composicionNutricional = {
+    proteinas: number; // Proteinas
+    lipidos: number; // Lipidos
+    hCarbono: number; // Hidratos de carbono
+    kCal: number; // kcal/100gr
+}
+```
+
+* El tipo *GrupoAlimenticio* Permite definir el grupo al que pertenece un ingrediente y los tipos de alimentos que engloba ese grupo alimenticio indicando que tipos de alimentos pertenece a cada grupo.
+
+```ts
+export type GrupoAlimenticio = {
+
+    grupo: [number, string[]]; // grupo alimenticio al que pertenece, tipos de alimentos de ese grupo
+}
+```
+
+* El tipo *Localización* permite definir el origen del ingrdiente indicando la ciudad y país a los que pertenece el ingrediente.
+
+```ts
+export type Localizacion = {
+
+    localizacionOrigen: [string, string]; // Ciudad y país
+}
+```
+
+Crearemos también una clase abstracta gruposAlimentos que nos servirá como recurso para poder determinar el grupo alimenticio del alimento. [EXPLICAR***](***) Esta clase hará uso de el tipo definido anteriormente para los grupos alimenticios. El grupo cambiará en función del número que se le establezca en la función *set*
+
+```ts
+
+/**
+ * Clase abstracta para definir los grupos de alimentos. Se utilizará como recurso para completar el grupo
+ * alimenticio al que pertenece un ingrediente. Se trata de una clase abstracta, por lo que no se podrán 
+ * realizar instancias de la clase.
+ */
+export abstract class GruposAlimentos {
+
+    /**
+     * Propiedad grupo de tipo GrupoAlimenticio.
+     */
+    private grupo: GrupoAlimenticio = {grupo: [0, [""]]};
+
+
+    /**
+     * Constructor de la clase GruposAlimentos.
+     * @param grupo Grupo alimenticio del ingrediente.
+     */
+    constructor(grupo: number){
+
+        this.setGrupo(grupo);
+    }
+
+
+    /**
+     * Método getter para obtener el grupo al que pertenece el ingrediente.
+     * @returns Retorna el grupo del ingrdiente de tipo GrupoAlimenticio.
+     */
+    protected getGrupo(){
+
+        return this.grupo;
+    }
+
+ 
+    /**
+     * Método setter para establecer el grupo al que pertence el ingrediente, así como para indicar los ingredientes
+     * del grupo.
+     * @param grupo Grupo al que pertence el ingrediente.
+     */
+    protected setGrupo(grupo: number){
+
+        switch (grupo) {
+
+            case 1:
+
+                this.grupo = {grupo: [grupo, ["Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]};
+
+            break;
+
+            case 2:
+
+                this.grupo = {grupo: [grupo, ["Verduras", "Hortalizas"]]};
+
+            break;
+
+            case 3:
+
+                this.grupo = {grupo: [grupo, ["Leche", "Derivados Lacteos"]]};
+
+            break;
+
+            case 4:
+
+                this.grupo = {grupo: [grupo, ["Cereales"]]};
+
+            break;
+
+            case 5:
+
+                this.grupo = {grupo: [grupo, ["Frutas"]]};
+
+            break;
+        }
+    }
+}
+
+```
 #### 2.2.Platos
 
 **Enunciado:**
