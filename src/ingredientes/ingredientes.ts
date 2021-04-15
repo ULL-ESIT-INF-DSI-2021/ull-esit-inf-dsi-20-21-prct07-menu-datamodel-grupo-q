@@ -140,3 +140,5 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
 
 export const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
+
+
