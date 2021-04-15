@@ -13,6 +13,7 @@ Al finalizar la práctica, habremos completado los siguientes objetivos:
 * Crear una estructura que nos permita el diseño y manipulación de menús
 * Saber analizar que patron de diseño se debe utilizar según el caso
 * Dominar el correcto uso conjunto de todas las distintas estructuras y tipos de datos
+* Aprender a usar el módulo Inquirer.js para la gestión de una línea de comandos interactiva
 
 ### 1. Creación y configuración del driectorio del proyecto.
 
@@ -55,6 +56,28 @@ Para cada alimento o ingrediente considerado dentro del sistema de diseño de me
 3. Precio del alimento y/o ingrediente por kg en euros.
 
 **Resolución:**
+
+Crearemos una interfaz ingredientes para ingredientes/alimentos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo alimenticio, composición nutricional, localización y precio del alimento:
+
+```ts
+/**
+ * Interfaz Ingredientes. Permite definir los métodos que tendrá la clase Ingrediente, que serán getters y setters.
+ */
+ export interface IngredientesI<G, K, L>{
+
+    getNombre(): string;
+    getGrupoAlimenticio(): G;
+    getComposicionNutricional(): K;
+    getLocalizacion(): L;
+    getPrecio(): number;
+
+    setNombre(nombre: string): void;
+    setGrupoAlimenticio(grupoAlimenticio: number): void;
+    setComposicionNutricional(ComposicionNutricional: [number, number, number, number]): void;
+    setLocalizacion(localizacion: [string, string]): void;
+    setPrecio(precio: number): void;
+}
+```
 
 #### 2.2.Platos
 
