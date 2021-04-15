@@ -14,7 +14,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     private nombre: string;
     private grupoAlimenticio: GrupoAlimenticio; 
-    private composionNutricional: ComposicionPorCienGramos;
+    private composicionNutricional: ComposicionPorCienGramos;
     private localizacion: Localizacion;
     private precio: number
 
@@ -23,16 +23,16 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * Constructor de la clase Ingrediente.
      * @param nombre Nombre del ingrediente.
      * @param grupo Grupo alimenticio del ingrediente.
-     * @param composionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
      * @param localizacion Origen del ingrediente [Ciudad, País].
      * @param precio Precio del ingrediente.
      */
-    constructor(nombre: string, grupo: number, composionNutricional: [number, number, number, number],
+    constructor(nombre: string, grupo: number, composicionNutricional: [number, number, number, number],
     localizacion: [string, string], precio: number){
         super(grupo)
         this.nombre = nombre;
         this.grupoAlimenticio = this.getGrupo();
-        this.composionNutricional = {proteinas: composionNutricional[0], lipidos: composionNutricional[1], hCarbono: composionNutricional[2], kCal: composionNutricional[3]};
+        this.composicionNutricional = {proteinas: composicionNutricional[0], lipidos: composicionNutricional[1], hCarbono: composicionNutricional[2], kCal: composicionNutricional[3]};
         this.localizacion = {localizacionOrigen: localizacion};
         this.precio = precio;
     }
@@ -62,9 +62,9 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * Método getter para obtener la composición nutricional del ingrediente.
      * @returns Se retorna la composición nutricional del ingrediente en forma del tipo de dato ComposicionPorCienGramos.
      */
-    getComposionNutricional(){
+    getcomposicionNutricional(){
         
-        return this.composionNutricional;
+        return this.composicionNutricional;
     }
 
 
@@ -110,11 +110,11 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     /**
      * Método setter para definir la composición nutricional del ingrediente.
-     * @param composionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
      */
-    setComposionNutricional(composionNutricional: [number, number, number, number]){
+    setcomposicionNutricional(composicionNutricional: [number, number, number, number]){
         
-        this.composionNutricional = {proteinas: composionNutricional[0], lipidos: composionNutricional[1], hCarbono: composionNutricional[2], kCal: composionNutricional[3]};
+        this.composicionNutricional = {proteinas: composicionNutricional[0], lipidos: composicionNutricional[1], hCarbono: composicionNutricional[2], kCal: composicionNutricional[3]};
     }
 
 

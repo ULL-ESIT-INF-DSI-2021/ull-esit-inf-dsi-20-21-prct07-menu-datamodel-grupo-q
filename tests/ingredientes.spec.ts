@@ -26,8 +26,8 @@ describe('Pruebas clase Ingrediente', ()=> {
           });
     });
 
-    it('ingrediente1.getComposionNutricional() return {"composionCienGramos": [11, 0.2, 0.5, 48]} ', ()=>{
-        expect(ingrediente1.getComposionNutricional()).to.deep.equal({
+    it('ingrediente1.getcomposicionNutricional() return {"composicionCienGramos": [11, 0.2, 0.5, 48]} ', ()=>{
+        expect(ingrediente1.getcomposicionNutricional()).to.deep.equal({
             "proteinas": 11,
             "lipidos": 0.2,
             "hCarbono": 0.5,
@@ -70,9 +70,9 @@ describe('Pruebas clase Ingrediente', ()=> {
           });
     });
 
-    it('ingrediente1.setComposionNutricional([13.1, 11.2, 0.41, 155])', ()=>{
-        ingrediente1.setComposionNutricional([13.1, 11.2, 0.41, 155]);
-        expect(ingrediente1.getComposionNutricional()).to.deep.equal({
+    it('ingrediente1.setcomposicionNutricional([13.1, 11.2, 0.41, 155])', ()=>{
+        ingrediente1.setcomposicionNutricional([13.1, 11.2, 0.41, 155]);
+        expect(ingrediente1.getcomposicionNutricional()).to.deep.equal({
           "proteinas": 13.1,
           "lipidos": 11.2,
           "hCarbono": 0.41,
