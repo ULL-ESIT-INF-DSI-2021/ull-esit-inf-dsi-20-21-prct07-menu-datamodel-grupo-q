@@ -2,10 +2,10 @@
  * Tipo composicionNutricional. Permite definir los lipidos, hidratos de carbono, proteínas 
  * y kcal/100gr que tendrá un ingrediente. 
  */
-export type composicionNutricional = {
-    proteinas: number; // Proteinas
+ export type ComposicionNutricional = {
     lipidos: number; // Lipidos
     hCarbono: number; // Hidratos de carbono
+    proteinas: number; // Proteinas
     kCal: number; // kcal/100gr
 }
 
