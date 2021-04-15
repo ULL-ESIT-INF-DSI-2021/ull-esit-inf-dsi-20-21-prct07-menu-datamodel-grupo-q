@@ -1,10 +1,10 @@
-# Práctica 6: Clases e interfaces genéricas. Informe.
+# Práctica 7: Modelo de datos de un sistema que permite el diseño de menús. Informe.
 ## Desarrollo de Sistemas Informáticos 
-## Raúl Martín Rigor - alu0101203003@ull.edu.es
+## Grupo Q
 
 ### Introducción
 
-En este informe se resumen las actividades realizadas en la **práctica 6** para poner en práctica nuestros conocimientos de TypeScript. Será la primera práctica grupal y deberemos usar todas las herramientas aprendidas con anterioridad, seguir los principios SOLID y usar los patrones de diseño adecuados.
+En este informe se resumen las actividades realizadas en la **práctica 7** para poner en práctica nuestros conocimientos de TypeScript. Será la primera práctica grupal y deberemos usar todas las herramientas aprendidas con anterioridad, seguir los principios SOLID y usar los patrones de diseño adecuados.
 
 ### Objetivos
 
@@ -56,4 +56,30 @@ Para cada alimento o ingrediente considerado dentro del sistema de diseño de me
 
 **Resolución:**
 
-La estrategia a seguir para resolver este ejercicio pasa por usar la clas
+#### 2.2.Platos
+
+**Enunciado:**
+
+Los platos de un menú estarán compuestos por alimentos y/o ingredientes como los definidos anteriormente. Además, deberá considerar que un plato puede pertener a cuatro categorías distintas: entrante, primer plato, segundo plato y postre. Asimismo, para cada plato dentro del sistema se debería poder acceder a la siguiente información:
+
+1. Lista de alimentos y/o ingredientes que lo componen.
+2. Composición nutricional del plato. Esto es, la suma de la composición nutricional de los alimentos que componen el plato. Hay que tener en cuenta que los valores nutricionales se definen por 100 gr de ingrediente, pero no siempre se usan 100 gr de cada ingrediente para elaborar un plato.
+3. Grupo de alimento predominante. Este atributo deberá definir el grupo de alimento que más aparece entre los ingredientes del plato (véase la lista de en el apartado Alimentos).
+4. Precio total del plato en euros en función de la suma de los precios de los ingredientes y sus cantidades que lo componen.
+
+#### 2.3.Menús
+
+**Enunciado:**
+
+Un menú estará compuesto por platos, incluyendo un plato de cada categoría o, al menos, tres de ellas. Para cada menú, se debe poder consultar la siguiente información:
+
+1. Precio total del menú en euros.
+2. Platos que lo componen con sus correspodientes alimentos y/o ingredientes.
+3. Composición nutricional del menú de acuerdo a lo definido en el punto 2 de la sección Alimentos.
+4. Listado de grupos de alimentos por orden de aparición.
+
+#### 2.4.Carta
+
+**Enunciado:**
+
+Supongamos que el sistema que estamos diseñando se empleará en un restaurante. Dicho restaurante dispone de una carta con una serie de menús prediseñados por la administración del local. Además, en la carta se incluyen platos individuales para que los comensales diseñen sus propios menús para comer. Los menús a diseñar por los clientes pueden tener todos los platos que deseen ya que, por ejemplo, un grupo de personas podría decidir pedir varios platos para compartir o pedirlos individualmente.
