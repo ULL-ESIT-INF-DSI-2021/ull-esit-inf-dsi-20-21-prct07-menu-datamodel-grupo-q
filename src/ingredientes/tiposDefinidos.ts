@@ -1,10 +1,12 @@
 /**
- * Tipo KcalPorCienGramos. Permite definir las kcal/100gr que tendrá un ingrediente de acuerdo a los macronutrientes 
- * del mismo en formato tupla [Proteínas, Lípidos, Hidratos de carbono)]
+ * Tipo ComposicionPorCienGramos. Permite definir los lipidos, hidratos de carbono, proteínas 
+ * y kcal/100gr que tendrá un ingrediente. 
  */
-export type KcalPorCienGramos = {
-
-    composionCienGramos: [number, number, number]; // kcal/100gr Proteínas, Lípidos e Hidratos de carbono
+export type ComposicionPorCienGramos = {
+    proteinas: number; // Proteinas
+    lipidos: number; // Lipidos
+    hCarbono: number; // Hidratos de carbono
+    kCal: number; // kcal/100gr
 }
 
 

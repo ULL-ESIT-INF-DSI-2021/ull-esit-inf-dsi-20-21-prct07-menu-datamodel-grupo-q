@@ -1,4 +1,4 @@
-import { GrupoAlimenticio, KcalPorCienGramos, Localizacion } from "./tiposDefinidos"
+import { GrupoAlimenticio, ComposicionPorCienGramos, Localizacion } from "./tiposDefinidos"
 import { GruposAlimentos } from "./gruposAlimentos"
 import { IngredientesI } from "./interfazIngredientes"
 
@@ -6,15 +6,15 @@ import { IngredientesI } from "./interfazIngredientes"
 /**
  * Clase Ingrediente. Permite instanciar objetos de tipo ingredientes. Se extiende la clase
  * Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz Ingredientes (IngredientesI),
- * con los tipos definidos GrupoAlimenticio, KcalPorCienGramos, Localizacion. Las propiedades que
+ * con los tipos definidos GrupoAlimenticio, ComposicionPorCienGramos, Localizacion. Las propiedades que
  * tiene un ingrediente son: Nombre, grupo alimenticio al que pertenece, su composición nutricional,
  * la ciudad y el país de origen y el precio.
  */
-export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, KcalPorCienGramos, Localizacion>{
+export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, ComposicionPorCienGramos, Localizacion>{
 
     private nombre: string;
     private grupoAlimenticio: GrupoAlimenticio; 
-    private composionNutricional: KcalPorCienGramos;
+    private composionNutricional: ComposicionPorCienGramos;
     private localizacion: Localizacion;
     private precio: number
 
@@ -27,12 +27,12 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * @param localizacion Origen del ingrediente [Ciudad, País].
      * @param precio Precio del ingrediente.
      */
-    constructor(nombre: string, grupo: string, composionNutricional: [number, number, number],
+    constructor(nombre: string, grupo: string, composionNutricional: [number, number, number, number],
     localizacion: [string, string], precio: number){
         super(grupo)
         this.nombre = nombre;
         this.grupoAlimenticio = this.getGrupo();
-        this.composionNutricional = {composionCienGramos: composionNutricional};
+        this.composionNutricional = {proteinas: composionNutricional[0], lipidos: composionNutricional[1], hCarbono: composionNutricional[2], kCal: composionNutricional[3]};
         this.localizacion = {localizacionOrigen: localizacion};
         this.precio = precio;
     }
@@ -112,9 +112,9 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * Método setter para definir la composición nutricional del ingrediente.
      * @param composionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
      */
-    setComposionNutricional(composionNutricional: [number, number, number]){
+    setComposionNutricional(composionNutricional: [number, number, number, number]){
         
-        this.composionNutricional = {composionCienGramos: composionNutricional};
+        this.composionNutricional = {proteinas: composionNutricional[0], lipidos: composionNutricional[1], hCarbono: composionNutricional[2], kCal: composionNutricional[3]};
     }
 
 
@@ -139,4 +139,4 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 }
 
 
-export const ingrediente1 = new Ingrediente("Clara de huevo", "grupo1", [11, 0.2, 0.5], ["Candelaria", "España"], 0.12)
+export const ingrediente1 = new Ingrediente("Clara de huevo", "grupo1", [11, 0.2, 0.5, 48], ["Candelaria", "España"], 0.12)
