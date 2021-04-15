@@ -26,6 +26,34 @@ La estructura debería quedar similar a las siguientes fotos:
 
 #### 1.2. Organización de los ejercicios
 
-Será necesario implementar las clases de cada ejercicio en ficheros diferentes. Los ficheros que dependan de otros requeriran de un `import` del fichero que necesiten:
+Será necesario implementar las clases del ejercicio en ficheros diferentes. Los ficheros que dependan de otros requeriran de un `import` del fichero que necesiten:
 
 <img src="img/Captura1d.PNG" alt="" /> <img src="img/Captura1e.PNG" alt="" />
+
+Se creará una subcarpeta para el ejercicio en la carpeta src y, su correspondiente espectativa se crearán en la carpeta test con un fichero para realizar las pruebas del ejercicio.
+
+### 2. Ejercicio
+
+Se pasa a explicar la resolución del ejercicio y a adjuntar su código y expectativa. Se mostrará una versión simplificada del enunciados del ejercicio (para verlo al completo con aclaraciones y pistas, consultar la [guía de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/).
+
+(Para poder acceder a los atributos privados que creemos en las clases usaremos funciones *set* y *get*, las cuales se pueden encontrar en el código fuente.)
+
+#### 2.1 Alimentos y/o ingredientes
+
+**Enunciado:**
+
+Para cada alimento o ingrediente considerado dentro del sistema de diseño de menús se debe almacenar la información siguiente:
+
+1. Grupo de alimentos al que pertenece que puede ser:
+* Carnes, pescados, huevos, tofu, frutos secos, semillas y legumbres.
+* Verduras y hortalizas.
+* Leche y derivados.
+* Cereales.
+* Frutas.
+2. La composición nutricional del alimento con respecto a los macronutrientes y kcal por 100 gr de dicho alimento.
+* Macronutrientes: Hidratos de carbono, proteínas y lípidos.
+3. Precio del alimento y/o ingrediente por kg en euros.
+
+**Resolución:**
+
+La estrategia a seguir para resolver este ejercicio pasa por usar la clas
