@@ -16,7 +16,7 @@ export type ComposicionPorCienGramos = {
  */
 export type GrupoAlimenticio = {
 
-    grupo: [string, string[]]; // grupo alimenticio al que pertenece, tipos de alimentos de ese grupo
+    grupo: [number, string[]]; // grupo alimenticio al que pertenece, tipos de alimentos de ese grupo
 }
 
 

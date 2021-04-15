@@ -10,7 +10,7 @@ export interface IngredientesI<G, K, L>{
     getPrecio(): number;
 
     setNombre(nombre: string): void;
-    setGrupoAlimenticio(grupoAlimenticio: string): void;
+    setGrupoAlimenticio(grupoAlimenticio: number): void;
     setComposionNutricional(composionNutricional: [number, number, number, number]): void;
     setLocalizacion(localizacion: [string, string]): void;
     setPrecio(precio: number): void;

@@ -11,14 +11,14 @@ export abstract class GruposAlimentos {
     /**
      * Propiedad grupo de tipo GrupoAlimenticio.
      */
-    private grupo: GrupoAlimenticio = {grupo: ["", [""]]};
+    private grupo: GrupoAlimenticio = {grupo: [0, [""]]};
 
 
     /**
      * Constructor de la clase GruposAlimentos.
      * @param grupo Grupo alimenticio del ingrediente.
      */
-    constructor(grupo: string){
+    constructor(grupo: number){
 
         this.setGrupo(grupo);
     }
@@ -39,35 +39,35 @@ export abstract class GruposAlimentos {
      * del grupo.
      * @param grupo Grupo al que pertence el ingrediente.
      */
-    protected setGrupo(grupo: string){
+    protected setGrupo(grupo: number){
 
         switch (grupo) {
 
-            case "grupo1":
+            case 1:
 
                 this.grupo = {grupo: [grupo, ["Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]};
 
             break;
 
-            case "grupo2":
+            case 2:
 
                 this.grupo = {grupo: [grupo, ["Verduras", "Hortalizas"]]};
 
             break;
 
-            case "grupo3":
+            case 3:
 
                 this.grupo = {grupo: [grupo, ["Leche", "Derivados Lacteos"]]};
 
             break;
 
-            case "grupo4":
+            case 4:
 
                 this.grupo = {grupo: [grupo, ["Cereales"]]};
 
             break;
 
-            case "grupo5":
+            case 5:
 
                 this.grupo = {grupo: [grupo, ["Frutas"]]};
 

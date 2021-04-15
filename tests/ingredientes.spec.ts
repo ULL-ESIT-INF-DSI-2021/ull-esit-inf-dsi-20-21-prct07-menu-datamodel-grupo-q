@@ -10,10 +10,10 @@ describe('Pruebas clase Ingrediente', ()=> {
         expect(ingrediente1.getNombre()).to.be.equal("Clara de huevo");
     });
 
-    it('Ingrediente1.getGrupoAlimenticio() return { "grupo": [ "grupo1", [ "Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]} ', ()=>{
+    it('Ingrediente1.getGrupoAlimenticio() return { "grupo": [ 1, [ "Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]} ', ()=>{
         expect(ingrediente1.getGrupoAlimenticio()).to.deep.equal({
             "grupo": [
-              "grupo1",
+              1,
               [
                 "Carnes",
                 "Pescados",
@@ -53,11 +53,11 @@ describe('Pruebas clase Ingrediente', ()=> {
         expect(ingrediente1.getNombre()).to.be.equal("Huevo de codorniz");
     });
 
-    it('ingrediente1.setGrupoAlimenticio("grupo1")', ()=>{
-        ingrediente1.setGrupoAlimenticio("grupo1");
+    it('ingrediente1.setGrupoAlimenticio(1)', ()=>{
+        ingrediente1.setGrupoAlimenticio(1);
         expect(ingrediente1.getGrupoAlimenticio()).to.deep.equal({
             "grupo": [
-              "grupo1",
+              1,
               [
                 "Carnes",
                 "Pescados",

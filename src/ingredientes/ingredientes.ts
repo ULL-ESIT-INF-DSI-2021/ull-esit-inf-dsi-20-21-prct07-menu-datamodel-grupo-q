@@ -27,7 +27,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * @param localizacion Origen del ingrediente [Ciudad, País].
      * @param precio Precio del ingrediente.
      */
-    constructor(nombre: string, grupo: string, composionNutricional: [number, number, number, number],
+    constructor(nombre: string, grupo: number, composionNutricional: [number, number, number, number],
     localizacion: [string, string], precio: number){
         super(grupo)
         this.nombre = nombre;
@@ -60,7 +60,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     /**
      * Método getter para obtener la composición nutricional del ingrediente.
-     * @returns Se retorna la composición nutricional del ingrediente en forma del tipo de dato KcalPorCienGramos.
+     * @returns Se retorna la composición nutricional del ingrediente en forma del tipo de dato ComposicionPorCienGramos.
      */
     getComposionNutricional(){
         
@@ -102,7 +102,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * Método setter para definir el grupo alimenticio al que pertenece el ingrediente.
      * @param grupoAlimenticio Grupo alimenticio del ingrediente.
      */
-    setGrupoAlimenticio(grupoAlimenticio: string){
+    setGrupoAlimenticio(grupoAlimenticio: number){
         
         this.grupoAlimenticio = this.getGrupo();
     }
@@ -139,4 +139,4 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 }
 
 
-export const ingrediente1 = new Ingrediente("Clara de huevo", "grupo1", [11, 0.2, 0.5, 48], ["Candelaria", "España"], 0.12)
+export const ingrediente1 = new Ingrediente("Clara de huevo", 1, [11, 0.2, 0.5, 48], ["Candelaria", "España"], 0.12)
