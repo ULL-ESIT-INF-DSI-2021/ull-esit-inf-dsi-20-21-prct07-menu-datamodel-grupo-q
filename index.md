@@ -45,13 +45,13 @@ Se pasa a explicar la resolución del ejercicio y a adjuntar su código y expect
 Para cada alimento o ingrediente considerado dentro del sistema de diseño de menús se debe almacenar la información siguiente:
 
 1. Grupo de alimentos al que pertenece que puede ser:
-* Carnes, pescados, huevos, tofu, frutos secos, semillas y legumbres.
-* Verduras y hortalizas.
-* Leche y derivados.
-* Cereales.
-* Frutas.
+  * Carnes, pescados, huevos, tofu, frutos secos, semillas y legumbres.
+  * Verduras y hortalizas.
+  * Leche y derivados.
+  * Cereales.
+  * Frutas.
 2. La composición nutricional del alimento con respecto a los macronutrientes y kcal por 100 gr de dicho alimento.
-* Macronutrientes: Hidratos de carbono, proteínas y lípidos.
+  * Macronutrientes: Hidratos de carbono, proteínas y lípidos.
 3. Precio del alimento y/o ingrediente por kg en euros.
 
 **Resolución:**
