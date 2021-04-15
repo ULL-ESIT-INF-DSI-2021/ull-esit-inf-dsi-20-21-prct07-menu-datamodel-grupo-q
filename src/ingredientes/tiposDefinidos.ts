@@ -1,8 +1,8 @@
 /**
- * Tipo ComposicionPorCienGramos. Permite definir los lipidos, hidratos de carbono, proteínas 
+ * Tipo composicionNutricional. Permite definir los lipidos, hidratos de carbono, proteínas 
  * y kcal/100gr que tendrá un ingrediente. 
  */
-export type ComposicionPorCienGramos = {
+export type composicionNutricional = {
     proteinas: number; // Proteinas
     lipidos: number; // Lipidos
     hCarbono: number; // Hidratos de carbono

@@ -1,4 +1,4 @@
-import { GrupoAlimenticio, ComposicionPorCienGramos, Localizacion } from "./tiposDefinidos"
+import { GrupoAlimenticio, composicionNutricional, Localizacion } from "./tiposDefinidos"
 import { GruposAlimentos } from "./gruposAlimentos"
 import { IngredientesI } from "./interfazIngredientes"
 
@@ -6,15 +6,15 @@ import { IngredientesI } from "./interfazIngredientes"
 /**
  * Clase Ingrediente. Permite instanciar objetos de tipo ingredientes. Se extiende la clase
  * Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz Ingredientes (IngredientesI),
- * con los tipos definidos GrupoAlimenticio, ComposicionPorCienGramos, Localizacion. Las propiedades que
+ * con los tipos definidos GrupoAlimenticio, composicionNutricional, Localizacion. Las propiedades que
  * tiene un ingrediente son: Nombre, grupo alimenticio al que pertenece, su composición nutricional,
  * la ciudad y el país de origen y el precio.
  */
-export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, ComposicionPorCienGramos, Localizacion>{
+export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, composicionNutricional, Localizacion>{
 
     private nombre: string;
     private grupoAlimenticio: GrupoAlimenticio; 
-    private composicionNutricional: ComposicionPorCienGramos;
+    private composicionNutricional: composicionNutricional;
     private localizacion: Localizacion;
     private precio: number
 
@@ -60,7 +60,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     /**
      * Método getter para obtener la composición nutricional del ingrediente.
-     * @returns Se retorna la composición nutricional del ingrediente en forma del tipo de dato ComposicionPorCienGramos.
+     * @returns Se retorna la composición nutricional del ingrediente en forma del tipo de dato composicionNutricional.
      */
     getcomposicionNutricional(){
         
