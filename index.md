@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# Práctica 6: Clases e interfaces genéricas. Informe.
+## Desarrollo de Sistemas Informáticos 
+## Raúl Martín Rigor - alu0101203003@ull.edu.es
 
-You can use the [editor on GitHub](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Introducción
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+En este informe se resumen las actividades realizadas en la **práctica 6** para poner en práctica nuestros conocimientos de TypeScript. Será la primera práctica grupal y deberemos usar todas las herramientas aprendidas con anterioridad, seguir los principios SOLID y usar los patrones de diseño adecuados.
 
-### Markdown
+### Objetivos
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Al finalizar la práctica, habremos completado los siguientes objetivos:
 
-```markdown
-Syntax highlighted code block
+* Crear una estructura que nos permita el diseño y manipulación de menús
+* Saber analizar que patron de diseño se debe utilizar según el caso
+* Dominar el correcto uso conjunto de todas las distintas estructuras y tipos de datos
 
-# Header 1
-## Header 2
-### Header 3
+### 1. Creación y configuración del driectorio del proyecto.
 
-- Bulleted
-- List
+#### 1.1. Estructura inicial
 
-1. Numbered
-2. List
+Para la creación de la estructura inicial, utilizaremos el mismo diseño que hemos implementado en practicas anteriores ([práctica 4 (*****)](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct04-arrays-tuples-enums-alu0101203003/blob/gh-pages/index.md)).
 
-**Bold** and _Italic_ and `Code` text
+La estructura debería quedar similar a las siguientes fotos:
 
-[Link](url) and ![Image](src)
-```
+<img src="img/Captura1a.PNG" alt="" height="250"/> <img src="img/Captura1b.PNG" alt="" /> <img src="img/Captura1c.PNG" alt="" />
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### 1.2. Organización de los ejercicios
 
-### Jekyll Themes
+Será necesario implementar las clases de cada ejercicio en ficheros diferentes. Los ficheros que dependan de otros requeriran de un `import` del fichero que necesiten:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<img src="img/Captura1d.PNG" alt="" /> <img src="img/Captura1e.PNG" alt="" />
