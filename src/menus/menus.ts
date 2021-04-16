@@ -91,8 +91,8 @@ export class Menu {
   }
 
   /**
-   * Método getter para obtener los ingredientes.
-   * @returns Se retorna los ingredientes del plato
+   * Método getter para obtener los platos.
+   * @returns Se retorna los platos del menu
    */
     public getPlatos() {
     return this.platos;
