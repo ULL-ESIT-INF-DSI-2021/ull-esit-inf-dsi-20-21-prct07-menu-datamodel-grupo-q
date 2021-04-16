@@ -1,11 +1,13 @@
 import 'mocha';
 import {expect} from 'chai';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
+import {IngredientePrinter} from '../src/ingredientes/printingredientes';
 
 
 describe('Pruebas clase Ingrediente', ()=> {
 
     const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
+    const printIngrediente1 = new IngredientePrinter(ingrediente1);
     it('ingrediente1.getNombre() return "Clara de huevo"', ()=>{
         expect(ingrediente1.getNombre()).to.be.equal("Clara de huevo");
     });
@@ -37,10 +39,8 @@ describe('Pruebas clase Ingrediente', ()=> {
 
     it('ingrediente1.getLocalizacion() return {"localizacionOrigen": ["Candelaria", "España"]}', ()=>{
         expect(ingrediente1.getLocalizacion()).to.deep.equal({
-            "localizacionOrigen": [
-              "Candelaria",
-              "España"
-            ]
+              "ciudad": "Candelaria",
+              "pais": "España"
           });
     });
 
@@ -83,10 +83,8 @@ describe('Pruebas clase Ingrediente', ()=> {
     it('ingrediente1.setLocalizacion(["Arafo", "España"])', ()=>{
         ingrediente1.setLocalizacion(["Arafo", "España"]);
         expect(ingrediente1.getLocalizacion()).to.deep.equal({
-            "localizacionOrigen": [
-              "Arafo",
-              "España"
-            ]
+          "ciudad": "Arafo",
+          "pais": "España"
           });
     });
 
@@ -94,4 +92,8 @@ describe('Pruebas clase Ingrediente', ()=> {
         ingrediente1.setPrecio(0.25);
         expect(ingrediente1.getPrecio()).to.be.equal(0.25);
     });
+
+    it('printIngrediente1', ()=>{
+      printIngrediente1.print()
+  });
 });

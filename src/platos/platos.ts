@@ -11,7 +11,7 @@ import { PlatosI } from "./interfazplatos";
  export class Platos implements PlatosI<GrupoAlimenticio, ComposicionNutricional>{
 
   private composicionNutricional: ComposicionNutricional = { lipidos: 0, hCarbono: 0, proteinas: 0, kCal: 0};
-  private grupoPredominante: GrupoAlimenticio = { grupo: [0, [""]] };
+  private grupoPredominante: GrupoAlimenticio = { numGrupo: 0, grupo: [""] };
   private precio: number = 0;
 
     /**
@@ -34,11 +34,11 @@ import { PlatosI } from "./interfazplatos";
           this.composicionNutricional.proteinas = this.composicionNutricional.proteinas + ((item[0].getComposicionNutricional().proteinas*item[1])/100);
           this.composicionNutricional.kCal = this.composicionNutricional.kCal + ((item[0].getComposicionNutricional().kCal*item[1])/100);
 
-          if (item[0].getGrupoAlimenticio().grupo[0] == 1) cantporGrupo[0] += item[1];
-          if (item[0].getGrupoAlimenticio().grupo[0] == 2) cantporGrupo[1] += item[1];
-          if (item[0].getGrupoAlimenticio().grupo[0] == 3) cantporGrupo[2] += item[1];
-          if (item[0].getGrupoAlimenticio().grupo[0] == 4) cantporGrupo[3] += item[1];
-          if (item[0].getGrupoAlimenticio().grupo[0] == 5) cantporGrupo[4] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 1) cantporGrupo[0] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 2) cantporGrupo[1] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 3) cantporGrupo[2] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 4) cantporGrupo[3] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 5) cantporGrupo[4] += item[1];
           
           this.precio = this.precio + (item[0].getPrecio()*item[1] / 1000);
         });
@@ -143,11 +143,11 @@ import { PlatosI } from "./interfazplatos";
     setGrupoPredominante() {
       let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
       this.ingredientes.forEach((item) => {
-        if (item[0].getGrupoAlimenticio().grupo[0] == 1) cantporGrupo[0] += item[1];
-        if (item[0].getGrupoAlimenticio().grupo[0] == 2) cantporGrupo[1] += item[1];
-        if (item[0].getGrupoAlimenticio().grupo[0] == 3) cantporGrupo[2] += item[1];
-        if (item[0].getGrupoAlimenticio().grupo[0] == 4) cantporGrupo[3] += item[1];
-        if (item[0].getGrupoAlimenticio().grupo[0] == 5) cantporGrupo[4] += item[1];
+        if (item[0].getGrupoAlimenticio().numGrupo == 1) cantporGrupo[0] += item[1];
+        if (item[0].getGrupoAlimenticio().numGrupo == 2) cantporGrupo[1] += item[1];
+        if (item[0].getGrupoAlimenticio().numGrupo == 3) cantporGrupo[2] += item[1];
+        if (item[0].getGrupoAlimenticio().numGrupo == 4) cantporGrupo[3] += item[1];
+        if (item[0].getGrupoAlimenticio().numGrupo == 5) cantporGrupo[4] += item[1];
       }); 
       this.ingredientes[0][0].setGrupoAlimenticio(cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1)
       this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();

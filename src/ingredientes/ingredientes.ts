@@ -33,7 +33,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
         this.nombre = nombre;
         this.grupoAlimenticio = this.getGrupo();
         this.composicionNutricional = {lipidos: composicionNutricional[0], hCarbono: composicionNutricional[1], proteinas: composicionNutricional[2], kCal: composicionNutricional[3]};
-        this.localizacion = {localizacionOrigen: localizacion};
+        this.localizacion = {ciudad: localizacion[0], pais: localizacion[1]};
         this.precio = precio;
     }
 
@@ -125,7 +125,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      */
     setLocalizacion(localizacion: [string, string]){
         
-        this.localizacion = {localizacionOrigen: localizacion};
+        this.localizacion = {ciudad: localizacion[0], pais: localizacion[1]};
     }
 
 

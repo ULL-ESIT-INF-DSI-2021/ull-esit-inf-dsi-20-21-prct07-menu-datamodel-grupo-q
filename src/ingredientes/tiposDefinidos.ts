@@ -16,7 +16,8 @@
  */
 export type GrupoAlimenticio = {
 
-    grupo: [number, string[]]; // grupo alimenticio al que pertenece, tipos de alimentos de ese grupo
+    numGrupo: number; // grupo alimenticio al que pertenece
+    grupo: string[]; // tipos de alimentos de ese grupo
 }
 
 
@@ -25,5 +26,6 @@ export type GrupoAlimenticio = {
  */
 export type Localizacion = {
 
-    localizacionOrigen: [string, string]; // Ciudad y país
+    ciudad: string; // Ciudad
+    pais: string; // País
 }

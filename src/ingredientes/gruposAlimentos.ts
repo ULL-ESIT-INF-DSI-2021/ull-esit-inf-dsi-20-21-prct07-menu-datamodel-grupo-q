@@ -11,7 +11,7 @@ export abstract class GruposAlimentos {
     /**
      * Propiedad grupo de tipo GrupoAlimenticio.
      */
-    private grupo: GrupoAlimenticio = {grupo: [0, [""]]};
+    private grupo: GrupoAlimenticio = { numGrupo: 0, grupo: [""] };
 
 
     /**
@@ -45,31 +45,31 @@ export abstract class GruposAlimentos {
 
             case 1:
 
-                this.grupo = {grupo: [grupo, ["Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]};
+                this.grupo = {numGrupo: grupo, grupo: ["Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]};
 
             break;
 
             case 2:
 
-                this.grupo = {grupo: [grupo, ["Verduras", "Hortalizas"]]};
+                this.grupo = {numGrupo: grupo, grupo: ["Verduras", "Hortalizas"]};
 
             break;
 
             case 3:
 
-                this.grupo = {grupo: [grupo, ["Leche", "Derivados Lacteos"]]};
+                this.grupo = {numGrupo: grupo, grupo: ["Leche", "Derivados Lacteos"]};
 
             break;
 
             case 4:
 
-                this.grupo = {grupo: [grupo, ["Cereales"]]};
+                this.grupo = {numGrupo: grupo, grupo: ["Cereales"]};
 
             break;
 
             case 5:
 
-                this.grupo = {grupo: [grupo, ["Frutas"]]};
+                this.grupo = {numGrupo: grupo, grupo: ["Frutas"]};
 
             break;
         }
