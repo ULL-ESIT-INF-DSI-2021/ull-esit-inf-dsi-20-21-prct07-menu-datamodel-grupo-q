@@ -109,7 +109,7 @@ export type Localizacion = {
 }
 ```
 
-Crearemos también una clase abstracta gruposAlimentos que nos servirá como recurso para poder determinar el grupo alimenticio del alimento. [EXPLICAR***](***) Esta clase hará uso de el tipo definido anteriormente para los grupos alimenticios. El grupo cambiará en función del número que se le establezca en la función *setGrupo*
+Crearemos también una clase abstracta gruposAlimentos que nos servirá como recurso para poder determinar el grupo alimenticio del alimento. [REVISAR***](***) Esta clase hará uso de el tipo definido anteriormente para los grupos alimenticios. El grupo cambiará en función del número que se le establezca en la función *setGrupo*
 
 ```ts
 
@@ -187,7 +187,52 @@ export abstract class GruposAlimentos {
         }
     }
 }
+```
 
+Teniendo todos estos recursos creados, finalmente podremos crear la clase ingrediente para representar ingredientes/alimentos. Esta clase hereda la clase GrupoAlimentos e implementa la interfaz IngredientesI. De la clase GrupoAlimentos heredará el atributo necesario para representar el grupo alimenticio del alimento en cuestión.
+
+```ts
+/**
+ * Clase Ingrediente. Permite instanciar objetos de tipo ingredientes. Se extiende la clase
+ * Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz Ingredientes (IngredientesI),
+ * con los tipos definidos GrupoAlimenticio, composicionNutricional, Localizacion. Las propiedades que
+ * tiene un ingrediente son: Nombre, grupo alimenticio al que pertenece, su composición nutricional,
+ * la ciudad y el país de origen y el precio.
+ */
+export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, ComposicionNutricional, Localizacion>{
+
+    private nombre: string;
+    private grupoAlimenticio: GrupoAlimenticio; 
+    private composicionNutricional: ComposicionNutricional;
+    private localizacion: Localizacion;
+    private precio: number
+
+
+    /**
+     * Constructor de la clase Ingrediente.
+     * @param nombre Nombre del ingrediente.
+     * @param grupo Grupo alimenticio del ingrediente.
+     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param localizacion Origen del ingrediente [Ciudad, País].
+     * @param precio Precio del ingrediente.
+     */
+    constructor(nombre: string, grupo: number, composicionNutricional: [number, number, number, number],
+    localizacion: [string, string], precio: number){
+        super(grupo)
+        this.nombre = nombre;
+        this.grupoAlimenticio = this.getGrupo();
+        this.composicionNutricional = {lipidos: composicionNutricional[0], hCarbono: composicionNutricional[1], proteinas: composicionNutricional[2], kCal: composicionNutricional[3]};
+        this.localizacion = {localizacionOrigen: localizacion};
+        this.precio = precio;
+    }
+
+```
+
+Esta clase implementara todos los getters y setters necesarios para manipular los atributos del ingrediente.
+Un ejemplo de instancia de esta clase sería el siguiente:
+
+```ts
+const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
 ```
 #### 2.2.Platos
 
