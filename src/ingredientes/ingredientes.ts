@@ -13,7 +13,7 @@ import { IngredientesI } from "./interfazIngredientes"
 export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, ComposicionNutricional, Localizacion>{
 
     private nombre: string;
-    private grupoAlimenticio: GrupoAlimenticio; 
+    //private grupoAlimenticio: GrupoAlimenticio; 
     private composicionNutricional: ComposicionNutricional;
     private localizacion: Localizacion;
     private precio: number
@@ -31,7 +31,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
     localizacion: [string, string], precio: number){
         super(grupo)
         this.nombre = nombre;
-        this.grupoAlimenticio = this.getGrupo();
+        //this.grupoAlimenticio = this.getGrupo();
         this.composicionNutricional = {lipidos: composicionNutricional[0], hCarbono: composicionNutricional[1], proteinas: composicionNutricional[2], kCal: composicionNutricional[3]};
         this.localizacion = {ciudad: localizacion[0], pais: localizacion[1]};
         this.precio = precio;
@@ -54,7 +54,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      */
     getGrupoAlimenticio(){
         
-        return this.grupoAlimenticio;
+        return this.getGrupo();
     }
 
 
@@ -105,7 +105,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
     setGrupoAlimenticio(grupoAlimenticio: number){
         
         this.setGrupo(grupoAlimenticio);
-        this.grupoAlimenticio = this.getGrupo();
+        //this.grupoAlimenticio = this.getGrupo();
     }
 
 
@@ -138,7 +138,3 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
         this.precio = precio;
     }
 }
-
-
-
-
