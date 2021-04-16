@@ -4,16 +4,15 @@ import { IngredientesI } from "./interfazIngredientes"
 
 
 /**
- * Clase Ingrediente. Permite instanciar objetos de tipo ingredientes. Se extiende la clase
- * Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz Ingredientes (IngredientesI),
- * con los tipos definidos GrupoAlimenticio, composicionNutricional, Localizacion. Las propiedades que
+ * Clase Ingrediente. Permite instanciar objetos de tipo Ingrediente. Se extiende la clase
+ * Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz genérica Ingredientes (IngredientesI),
+ * con los tipos definidos GrupoAlimenticio, composicionNutricional y Localizacion. Las propiedades que
  * tiene un ingrediente son: Nombre, grupo alimenticio al que pertenece, su composición nutricional,
- * la ciudad y el país de origen y el precio.
+ * la ciudad y el país de origen y el precio por 1kg de ese ingrediente.
  */
 export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoAlimenticio, ComposicionNutricional, Localizacion>{
 
     private nombre: string;
-    //private grupoAlimenticio: GrupoAlimenticio; 
     private composicionNutricional: ComposicionNutricional;
     private localizacion: Localizacion;
     private precio: number
@@ -23,7 +22,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
      * Constructor de la clase Ingrediente.
      * @param nombre Nombre del ingrediente.
      * @param grupo Grupo alimenticio del ingrediente.
-     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param composicionNutricional Composición nutricional del ingrediente [Lípidos, Hidratos de Carbono, Proteínas, Kcal].
      * @param localizacion Origen del ingrediente [Ciudad, País].
      * @param precio Precio del ingrediente.
      */
@@ -31,7 +30,6 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
     localizacion: [string, string], precio: number){
         super(grupo)
         this.nombre = nombre;
-        //this.grupoAlimenticio = this.getGrupo();
         this.composicionNutricional = {lipidos: composicionNutricional[0], hCarbono: composicionNutricional[1], proteinas: composicionNutricional[2], kCal: composicionNutricional[3]};
         this.localizacion = {ciudad: localizacion[0], pais: localizacion[1]};
         this.precio = precio;
@@ -80,7 +78,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     /**
      * Método getter para obtener el precio del ingrediente.
-     * @returns Se retorna el precio del ingrediente en forma del tipo de dato Localización.
+     * @returns Se retorna el precio del ingrediente.
      */
     getPrecio(){
         
@@ -111,7 +109,7 @@ export class Ingrediente extends GruposAlimentos implements IngredientesI<GrupoA
 
     /**
      * Método setter para definir la composición nutricional del ingrediente.
-     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param composicionNutricional Composición nutricional del ingrediente [Lípidos, Hidratos de Carbono, Proteínas, Kcal].
      */
     setComposicionNutricional(composicionNutricional: [number, number, number, number]){
         
