@@ -60,6 +60,8 @@ export class Menu implements MenuI<ComposicionNutricional>{
    * Método setter para establecer el precio del menú
    */
   public setPrecio() {
+  this.precio = 0;
+
     this.platos.forEach((item) => {
       this.precio = this.precio + item.getPrecio();
     }); 
@@ -124,6 +126,8 @@ export class Menu implements MenuI<ComposicionNutricional>{
     });
 
     this.platos.splice(indice, 1);
+    this.setComposicionNutricional();
+    this.setPrecio();
   }
   
   /**
@@ -133,7 +137,9 @@ export class Menu implements MenuI<ComposicionNutricional>{
   public listadoGrupos() {
     let listaGrupos: number[] = [];
     this.platos.forEach((item) => {
-      listaGrupos.push(item.getGrupoPredominante().numGrupo);
+      if (listaGrupos.indexOf(item.getGrupoPredominante().numGrupo) == -1) {
+        listaGrupos.push(item.getGrupoPredominante().numGrupo);
+      }
     });
 
     return listaGrupos;
