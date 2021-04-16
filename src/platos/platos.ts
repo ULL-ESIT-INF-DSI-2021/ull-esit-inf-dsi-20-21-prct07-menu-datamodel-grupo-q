@@ -43,8 +43,8 @@ import { PlatosI } from "./interfazplatos";
           this.precio = this.precio + (item[0].getPrecio()*item[1] / 1000);
         });
 
-        this.grupoPredominante.grupo[0] = cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1;
-    }
+        this.ingredientes[0][0].setGrupoAlimenticio(cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1)
+        this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();    }
 
     /**
      * Método getter para obtener el name.
@@ -149,8 +149,8 @@ import { PlatosI } from "./interfazplatos";
         if (item[0].getGrupoAlimenticio().grupo[0] == 4) cantporGrupo[3] += item[1];
         if (item[0].getGrupoAlimenticio().grupo[0] == 5) cantporGrupo[4] += item[1];
       }); 
-      this.grupoPredominante.grupo[0] = cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1;
-      
+      this.ingredientes[0][0].setGrupoAlimenticio(cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1)
+      this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();
     }
     /**
      * Método getter para obtener el precio del plato.

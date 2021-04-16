@@ -1,11 +1,11 @@
 import 'mocha';
 import {expect} from 'chai';
-import {ingrediente1} from '../src/ingredientes/ingredientes';
+import {Ingrediente} from '../src/ingredientes/ingredientes';
 
 
 describe('Pruebas clase Ingrediente', ()=> {
 
-
+    const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
     it('ingrediente1.getNombre() return "Clara de huevo"', ()=>{
         expect(ingrediente1.getNombre()).to.be.equal("Clara de huevo");
     });
