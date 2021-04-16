@@ -44,7 +44,8 @@ import { PlatosI } from "./interfazplatos";
         });
 
         this.ingredientes[0][0].setGrupoAlimenticio(cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1)
-        this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();    }
+        this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();    
+      }
 
     /**
      * Método getter para obtener el name.

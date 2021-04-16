@@ -2,6 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Platos} from '../src/platos/platos';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
+import {PlatoPrinter} from '../src/platos/printplatos';
 
 
 describe('Pruebas clase Plato', ()=> {
@@ -14,6 +15,7 @@ const ingrediente5 = new Ingrediente("Aceite de oliva", 1, [0, 99, 0, 899], ["Je
 const ingrediente6 = new Ingrediente("Pasta", 4, [6.7, 7.4, 43.9, 273], ["Roma", "Italia"], 2.50);
 const ingredientes: [Ingrediente, number][] = [[ingrediente2, 200], [ingrediente3, 10], [ingrediente4, 20], [ingrediente5, 30], [ingrediente6, 125]];
 const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato");
+const printPastaConPesto = new PlatoPrinter(pastaConPesto);
 
   it('pastaConPesto.getNombre() return Pasta al pesto', ()=>{
     expect(pastaConPesto.getNombre()).to.be.equal("Pasta al pesto");
@@ -75,5 +77,9 @@ const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato"
   it('pastaConPesto.removeIngrediente()', ()=>{
     pastaConPesto.removeIngrediente(ingrediente1)
     expect(pastaConPesto.getIngredientes()).to.be.equal(ingredientes);
+  });
+
+  it('printPastaconqueso()', ()=>{
+    printPastaConPesto.print();
   });
 });
