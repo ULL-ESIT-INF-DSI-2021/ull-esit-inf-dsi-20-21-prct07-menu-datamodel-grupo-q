@@ -1,13 +1,13 @@
 import { Platos } from "../platos/platos"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
-import { GruposAlimentos } from "../ingredientes/gruposAlimentos";
+import { MenuI } from "./interfazmenu";
 
 /**
- * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que
- * tiene un ingrediente son: Nombre, ingredientes , su composición nutricional,
- * la ciudad y el país de origen y el precio.
+ * Clase Menu. Permite instanciar objetos de tipo menu. Las propiedades que
+ * tiene un menu son: Nombre, platos , su composición nutricional,
+ * listado de grupos alimenticio que lo componen y el precio.
  */
-export class Menu {
+export class Menu implements MenuI<ComposicionNutricional>{
 
   private precio: number = 0;
   private composicionNutricional: ComposicionNutricional = { lipidos: 0, hCarbono: 0, proteinas: 0, kCal: 0};  
@@ -34,30 +34,30 @@ export class Menu {
 
   /**
    * Método getter para acceder al atributo name
-   * @returns Se retorna la categoría del plato si es entrante, primer plato, segundo plato o postre
+   * @returns Se retorna la el nombre del menu
    */
-  public getName() {
+  public getNombre() {
     return this.name
   }
   
   /**
-   * Método getter para cambiar al atributo name
+   * Método setter para cambiar al atributo name
    * @param name El nuevo nombre que tendrá el menú
    */
-  public setName(name: string) {
+  public setNombre(name: string) {
     this.name = name;
   }
 
   /**
-   * Método getter para obtener el precio del plato.
-   * @returns Se retorna el precio total del plato en función de los ingredientes
+   * Método getter para obtener el precio del menu.
+   * @returns Se retorna el precio total del menu en función de los platos
    */
   public getPrecio() {
     return this.precio;
   }
 
   /**
-   * Método setter para establecer el precio del plato.
+   * Método setter para establecer el precio del menú
    */
   public setPrecio() {
     this.platos.forEach((item) => {
@@ -125,7 +125,11 @@ export class Menu {
 
     this.platos.splice(indice, 1);
   }
-
+  
+  /**
+   * Método para obtener el listado de los grupos alimenticios que tiene el menu
+   * @return El listado de grupo alimenticios.
+   */
   public listadoGrupos() {
     let listaGrupos: number[] = [];
     this.platos.forEach((item) => {

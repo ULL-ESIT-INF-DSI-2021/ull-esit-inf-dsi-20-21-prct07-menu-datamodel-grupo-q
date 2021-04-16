@@ -1,4 +1,3 @@
-import { GruposAlimentos } from "../ingredientes/gruposAlimentos";
 import { Ingrediente } from "../ingredientes/ingredientes"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
 import { PlatosI } from "./interfazplatos";

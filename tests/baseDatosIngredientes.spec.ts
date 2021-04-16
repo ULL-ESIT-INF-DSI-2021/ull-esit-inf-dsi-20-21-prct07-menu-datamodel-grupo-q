@@ -4,7 +4,7 @@ import {BaseDatosIngredientes} from '../src/baseDeDatos/bdIngredientes';
 import {ingredientes} from '../src/baseDeDatos/ingredientes'
 
 
-describe('Pruebas clase Ingrediente', ()=> {
+describe('Pruebas clase Base de datos ingrediente', ()=> {
 
     const baseDeDatos = new BaseDatosIngredientes(ingredientes);
 
