@@ -22,6 +22,21 @@ export class BaseDatosIngredientes {
     }
 
 
+    getInfoIngrediente(nombreIngrediente: string){
+
+        let ingrediente = new Ingrediente("", 0, [0,0,0,0], ["",""], 0);
+        
+        this.datosIngredientes.forEach((item) => {
+
+            if (item.getNombre() == nombreIngrediente) {
+                ingrediente = item;
+            }
+        });
+
+        return ingrediente;
+    }
+
+
     addNuevoIngrediente(nuevo: IngredientesJson){
 
         this.datosIngredientes.push(new Ingrediente(nuevo.nombre, nuevo.grupo, [nuevo.lipidos, nuevo.hCarbono, nuevo.proteinas, nuevo.kCal], [nuevo.ciudad, nuevo.pais], nuevo.precio));

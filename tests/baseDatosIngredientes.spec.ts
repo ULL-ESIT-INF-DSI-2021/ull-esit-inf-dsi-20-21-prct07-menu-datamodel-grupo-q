@@ -50,4 +50,16 @@ describe('Pruebas clase Base de datos ingrediente', ()=> {
             }
         ]);
     });
+
+
+    it('baseDeDatos.getInfoIngrediente("Pasta") return {"grupo": {"numGrupo": 4,"grupo": ["Cereales"]},"nombre": "Pasta","composicionNutricional": {"lipidos": 6.7,"hCarbono": 7.4,"proteinas": 43.9,"kCal": 273},"localizacion": {"ciudad": "Roma","pais": "Italia"},"precio": 2.5}', ()=>{
+        expect(baseDeDatos.getInfoIngrediente("Pasta")).to.deep.equal(
+            {
+                "grupo": {"numGrupo": 4,"grupo": ["Cereales"]},
+                "nombre": "Pasta",
+                "composicionNutricional": {"lipidos": 6.7,"hCarbono": 7.4,"proteinas": 43.9,"kCal": 273},
+                "localizacion": {"ciudad": "Roma","pais": "Italia"},
+                "precio": 2.5
+            });
+    });
 });
