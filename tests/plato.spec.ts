@@ -14,16 +14,8 @@ const ingrediente6 = new Ingrediente("Pasta", 4, [6.7, 7.4, 43.9, 273], ["Roma",
 const ingredientes: [Ingrediente, number][] = [[ingrediente2, 200], [ingrediente3, 10], [ingrediente4, 20], [ingrediente5, 30], [ingrediente6, 125]];
 const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato");
 
-  it('pastaConPesto.getName() return Pasta al pesto', ()=>{
-    expect(pastaConPesto.getName()).to.be.equal("Pasta al pesto");
-  });
-
-  it('pastaConPesto.getIngredientes() return objecto ingredientes', ()=>{
-    expect(pastaConPesto.getIngredientes()).to.be.equal(ingredientes);
-  });
-
-  it('pastaConPesto.getIngredientes() return objecto ingredientes', ()=>{
-    expect(pastaConPesto.getIngredientes()).to.be.equal(ingredientes);
+  it('pastaConPesto.getNombre() return Pasta al pesto', ()=>{
+    expect(pastaConPesto.getNombre()).to.be.equal("Pasta al pesto");
   });
 
   it('pastaConPesto.getIngredientes() return objecto ingredientes', ()=>{
@@ -46,10 +38,18 @@ const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato"
     expect(pastaConPesto.getComposicionNutricional().hCarbono).to.be.equal(56.78);
   });
 
-  /* it('pastaConPesto.getGrupoPredominante() return grupo: [ 2, [ "" ] ]', ()=>{
-    expect(pastaConPesto.getGrupoPredominante()).to.be.equal({ grupo: [ 2, [ "" ] ] });
-  });*/
+  it('pastaConPesto.getGrupoPredominante() return grupo: [ 2, [ "" ] ]', ()=>{
+    expect(pastaConPesto.getGrupoPredominante()).to.be.equal({ 
+      "grupo": [
+        2,
+        [
+          ""
+        ]
+      ]
+      });
+    });
 
+  console.log(pastaConPesto.getGrupoPredominante());
   it('pastaConPesto.getPrecio() return 2.0975', ()=>{
     expect(pastaConPesto.getPrecio()).to.be.equal(2.0975);
   });

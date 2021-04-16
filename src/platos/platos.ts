@@ -1,12 +1,14 @@
+import { GruposAlimentos } from "../ingredientes/gruposAlimentos";
 import { Ingrediente } from "../ingredientes/ingredientes"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
+import { PlatosI } from "./interfazplatos";
 
 /**
  * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que
  * tiene un ingrediente son: Nombre, ingredientes , su composición nutricional,
  * la ciudad y el país de origen y el precio.
  */
-export class Platos {
+ export class Platos implements PlatosI<GrupoAlimenticio, ComposicionNutricional>{
 
   private composicionNutricional: ComposicionNutricional = { lipidos: 0, hCarbono: 0, proteinas: 0, kCal: 0};
   private grupoPredominante: GrupoAlimenticio = { grupo: [0, [""]] };
@@ -48,7 +50,7 @@ export class Platos {
      * Método getter para obtener el name.
      * @returns Se retorna la categoría del plato si es entrante, primer plato, segundo plato o postre
      */
-    public getName() {
+    getNombre() {
       return this.name
     }
     
@@ -56,7 +58,7 @@ export class Platos {
      * Método setter para establecer el nombre al plato.
      * @param name El nombre nuevo a introducir
      */
-    public setName(name: string) {
+    setNombre(name: string) {
       this.name = name;
     }
 
@@ -64,7 +66,7 @@ export class Platos {
      * Método getter para obtener los ingredientes.
      * @returns Se retorna los ingredientes del plato
      */
-    public getIngredientes() {
+    getIngredientes() {
       return this.ingredientes;
     }
 
@@ -73,7 +75,7 @@ export class Platos {
      * @param ingrediente Ingrediente que queremos añadir.
      * @param cantidad Cantidad del tipo de Ingrediente que vamos a añadir.
      */
-    public addIngrediente(ingrediente: Ingrediente, cantidad: number) {
+    addIngrediente(ingrediente: Ingrediente, cantidad: number) {
       this.ingredientes.push([ingrediente, cantidad]);
 
       this.setComposicionNutricional();
@@ -85,7 +87,7 @@ export class Platos {
      * Método para eliminar un ingrediente de nuestro vector.
      * @param ingrediente Ingrediente que queremos eliminar.
      */
-    public removeIngrediente(ingrediente: Ingrediente) {
+    removeIngrediente(ingrediente: Ingrediente) {
       let i: number = 0;
       let indice: number = 0;
       this.ingredientes.forEach((item) => {
@@ -106,14 +108,14 @@ export class Platos {
      * Método getter para obtener la composición nutricional.
      * @returns Se retorna composición nutricional en forma del tipo de dato composición nutricional
      */
-    public getComposicionNutricional() {
+    getComposicionNutricional() {
       return this.composicionNutricional;
     }
 
     /**
      * Método setter para obtener la composición nutricional.
      */
-    public setComposicionNutricional() {
+    setComposicionNutricional() {
       this.composicionNutricional.lipidos = 0;
       this.composicionNutricional.hCarbono = 0;
       this.composicionNutricional.proteinas = 0;
@@ -131,14 +133,14 @@ export class Platos {
      * Método getter para obtener el grupo alimenticio al que pertenece el plato.
      * @returns Se retorna el grupo alimentario en forma del tipo de dato grupo alimentario
      */
-    public getGrupoPredominante() {
+    getGrupoPredominante() {
       return this.grupoPredominante;
     }
 
     /**
      * Método setter para obtener el grupo predominante.
      */
-    public setGrupoPredominante() {
+    setGrupoPredominante() {
       let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
       this.ingredientes.forEach((item) => {
         if (item[0].getGrupoAlimenticio().grupo[0] == 1) cantporGrupo[0] += item[1];
@@ -148,19 +150,20 @@ export class Platos {
         if (item[0].getGrupoAlimenticio().grupo[0] == 5) cantporGrupo[4] += item[1];
       }); 
       this.grupoPredominante.grupo[0] = cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1;
+      
     }
     /**
      * Método getter para obtener el precio del plato.
      * @returns Se retorna el precio total del plato en función de los ingredientes
      */
-    public getPrecio() {
+    getPrecio() {
       return this.precio;
     }
 
     /**
      * Método setter para establecer el precio del plato.
      */
-    public setPrecio() {
+    setPrecio() {
       this.precio = 0;
 
       this.ingredientes.forEach((item) => {
@@ -172,7 +175,7 @@ export class Platos {
      * Método getter para obtener la categoría.
      * @returns Se retorna la categoría dreturn 
      */
-    public getCategoria() {
+    getCategoria() {
       return this.categoria;
     }
     
@@ -180,7 +183,7 @@ export class Platos {
      * Método setter para establecer la categoría.
      * @param categoria a introducir
      */
-    public setCategoria(categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre") {
+    setCategoria(categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre") {
       this.categoria = categoria;
     }
 }
