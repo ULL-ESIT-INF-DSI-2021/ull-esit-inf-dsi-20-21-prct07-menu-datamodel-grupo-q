@@ -19,7 +19,6 @@ import { PlatosI } from "./interfazplatos";
      * @param ingredientes Vector de pares que contiene los ingredientes de cada plato y su cantidad.
      * @param categoria Tipo de plato.
      * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
-     * @param localizacion Origen del ingrediente [Ciudad, País].
      * @param precio Precio del ingrediente.
      */
     constructor(private name: string, private ingredientes: [Ingrediente, number][], private categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre"){   

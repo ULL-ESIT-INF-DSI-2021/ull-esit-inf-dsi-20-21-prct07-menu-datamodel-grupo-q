@@ -1,5 +1,6 @@
 import { Platos } from "../platos/platos"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
+import { GruposAlimentos } from "../ingredientes/gruposAlimentos";
 
 /**
  * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que
@@ -123,5 +124,14 @@ export class Menu {
     });
 
     this.platos.splice(indice, 1);
+  }
+
+  public listadoGrupos() {
+    let listaGrupos: number[] = [];
+    this.platos.forEach((item) => {
+      listaGrupos.push(item.getGrupoPredominante().numGrupo);
+    });
+
+    return listaGrupos;
   }
 }
