@@ -1,7 +1,7 @@
 import 'mocha';
 import {expect} from 'chai';
-import {BaseDatosIngredientes} from '../src/baseDeDatos/bdIngredientes';
-import {ingredientes} from '../src/baseDeDatos/ingredientes'
+import {BaseDatosIngredientes} from '../src/baseDeDatos/ingredientes/bdIngredientes';
+import {ingredientes} from '../src/baseDeDatos/ingredientes/ingredientes'
 
 
 describe('Pruebas clase Base de datos ingrediente', ()=> {

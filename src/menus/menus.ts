@@ -1,6 +1,6 @@
 import { Platos } from "../platos/platos"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
-import { MenuI } from "./interfazmenu";
+import { MenuI } from "./interfazMenu";
 
 /**
  * Clase Menu. Permite instanciar objetos de tipo menu. Las propiedades que

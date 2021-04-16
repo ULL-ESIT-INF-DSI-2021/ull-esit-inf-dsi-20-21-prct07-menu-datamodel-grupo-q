@@ -1,6 +1,6 @@
 import { Menu } from "../menus/menus"
 import { Platos } from "../platos/platos"
-import { CartaI } from "./interfazcarta"
+import { CartaI } from "./interfazCarta"
 
 /**
  * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que

@@ -1,6 +1,6 @@
 import { Ingrediente } from "../ingredientes/ingredientes"
 import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
-import { PlatosI } from "./interfazplatos";
+import { PlatosI } from "./interfazPlatos";
 
 /**
  * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que

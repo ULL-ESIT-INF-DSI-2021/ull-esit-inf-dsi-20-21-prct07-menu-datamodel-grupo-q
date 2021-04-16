@@ -1,4 +1,4 @@
-import { IngredientesJson } from "./tipodefinido";
+import { IngredientesJson } from "../tiposDefinidos";
 
 export let ingredientes:IngredientesJson[] = [
     {
