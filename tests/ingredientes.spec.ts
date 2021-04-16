@@ -1,9 +1,9 @@
 import 'mocha';
 import {expect} from 'chai';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
-import {IngredientePrinter} from '../src/ingredientes/printingredientes';
-import {BaseDatosIngredientes} from '../src/baseDeDatos/bdIngredientes'
-import {ingredientes} from '../src/baseDeDatos/ingredientes'
+import {IngredientePrinter} from '../src/ingredientes/printIngredientes';
+import {BaseDatosIngredientes} from '../src/baseDeDatos/ingredientes/bdIngredientes'
+import {ingredientes} from '../src/baseDeDatos/ingredientes/ingredientes'
 
 describe('Pruebas clase Ingrediente', ()=> {
 

@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Platos} from '../src/platos/platos';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
-import {PlatoPrinter} from '../src/platos/printplatos';
+import {PlatoPrinter} from '../src/platos/printPlato';
 
 
 describe('Pruebas clase Plato', ()=> {

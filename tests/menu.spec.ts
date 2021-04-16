@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Platos} from '../src/platos/platos';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
-import {MenuPrinter} from '../src/menus/printmenus';
+import {MenuPrinter} from '../src/menus/printMenu';
 import {Menu} from '../src/menus/menus';
 
 

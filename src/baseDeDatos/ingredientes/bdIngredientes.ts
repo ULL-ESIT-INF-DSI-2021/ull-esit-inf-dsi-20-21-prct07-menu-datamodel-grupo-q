@@ -1,5 +1,4 @@
 import { Ingrediente } from '../../ingredientes/ingredientes';
-import {ingredientes} from './ingredientes';
 import { IngredientesJson } from '../tiposDefinidos';
 
 export class BaseDatosIngredientes {
