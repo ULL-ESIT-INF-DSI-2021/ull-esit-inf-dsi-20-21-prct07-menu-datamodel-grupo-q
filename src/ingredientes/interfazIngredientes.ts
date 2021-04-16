@@ -1,5 +1,5 @@
 /**
- * Interfaz Ingredientes. Permite definir los métodos que tendrá la clase Ingrediente, que serán getters y setters.
+ * Interfaz Ingredientes. Permite definir los métodos que tendrá la clase Ingrediente.
  */
 export interface IngredientesI<G, K, L>{
 

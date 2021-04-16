@@ -2,7 +2,7 @@
 import { Platos } from "../platos/platos"
 
 /**
- * Interfaz Menu. Permite definir los métodos que tendrá la clase Menu, que serán getters y setters.
+ * Interfaz Menu. Permite definir los métodos que tendrá la clase Menu.
  */
  export interface MenuI<K>{
 
