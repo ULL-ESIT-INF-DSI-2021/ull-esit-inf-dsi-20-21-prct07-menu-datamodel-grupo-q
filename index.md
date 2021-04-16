@@ -31,7 +31,7 @@ Será necesario implementar las clases del ejercicio en ficheros diferentes. Los
 
 <img src="img/Captura1d.PNG" alt="" /> <img src="img/Captura1e.PNG" alt="" />
 
-Se creará una subcarpeta para el ejercicio en la carpeta src y, su correspondiente espectativa se crearán en la carpeta test con un fichero para realizar las pruebas del ejercicio.
+Se creará una subcarpeta para cada apartado del ejercicio en la carpeta src y, su correspondiente espectativa se crearán en la carpeta test con un fichero para realizar las pruebas de cada apartado.
 
 ### 2. Ejercicio
 
@@ -245,6 +245,114 @@ Los platos de un menú estarán compuestos por alimentos y/o ingredientes como l
 3. Grupo de alimento predominante. Este atributo deberá definir el grupo de alimento que más aparece entre los ingredientes del plato (véase la lista de en el apartado Alimentos).
 4. Precio total del plato en euros en función de la suma de los precios de los ingredientes y sus cantidades que lo componen.
 
+**Resolución:**
+
+Crearemos una interfaz PlatosI para platos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo predominante, composición nutricional, categoría y precio del plato:
+
+```ts
+/**
+ * Interfaz Platos. Permite definir los métodos que tendrá la clase Plato, que serán getters y setters.
+ */
+ export interface PlatosI<G, K>{
+
+  getNombre(): string;
+  getGrupoPredominante(): G;
+  getComposicionNutricional(): K;
+  getCategoria(): string;
+  getPrecio(): number;
+
+  setNombre(nombre: string): void;
+  setGrupoPredominante(): void;
+  setComposicionNutricional(): void;
+  setCategoria(categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre"): void;
+  setPrecio(precio: number): void;
+}
+```
+
+Crearemos la clase Platos que implementará esta nueva interfaz PlatosI y usará GrupoALimenticio y ComposicionNutricional para sus plantillas de datos. Usaremos un array que contiene todos los ingredientes que conforman el plato. También tendremos un array que indica la cantidad de alimento de cada grupo presente en el plato que nos será de utilidad para poder determinar el grupo predominante (esto será determinado recorriendo el vector en busca del valor máximo de cantidad de alimento).
+
+```ts
+/**
+ * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que
+ * tiene un ingrediente son: Nombre, ingredientes , su composición nutricional,
+ * la ciudad y el país de origen y el precio.
+ */
+ export class Platos implements PlatosI<GrupoAlimenticio, ComposicionNutricional>{
+
+  private composicionNutricional: ComposicionNutricional = { lipidos: 0, hCarbono: 0, proteinas: 0, kCal: 0};
+  private grupoPredominante: GrupoAlimenticio = { numGrupo: 0, grupo: [""] };
+  private precio: number = 0;
+
+    /**
+     * Constructor de la clase Ingrediente.
+     * @param ingredientes Vector de pares que contiene los ingredientes de cada plato y su cantidad.
+     * @param categoria Tipo de plato.
+     * @param composicionNutricional Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].
+     * @param precio Precio del ingrediente.
+     */
+    constructor(private name: string, private ingredientes: [Ingrediente, number][], private categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre"){   
+        this.name = name;
+        this.ingredientes = ingredientes;
+        this.categoria = categoria; 
+
+        let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
+        this.ingredientes.forEach((item) => {
+          this.composicionNutricional.lipidos = this.composicionNutricional.lipidos + ((item[0].getComposicionNutricional().lipidos*item[1])/100);
+          this.composicionNutricional.hCarbono = this.composicionNutricional.hCarbono + ((item[0].getComposicionNutricional().hCarbono*item[1])/100);
+          this.composicionNutricional.proteinas = this.composicionNutricional.proteinas + ((item[0].getComposicionNutricional().proteinas*item[1])/100);
+          this.composicionNutricional.kCal = this.composicionNutricional.kCal + ((item[0].getComposicionNutricional().kCal*item[1])/100);
+
+          if (item[0].getGrupoAlimenticio().numGrupo == 1) cantporGrupo[0] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 2) cantporGrupo[1] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 3) cantporGrupo[2] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 4) cantporGrupo[3] += item[1];
+          if (item[0].getGrupoAlimenticio().numGrupo == 5) cantporGrupo[4] += item[1];
+          
+          this.precio = this.precio + (item[0].getPrecio()*item[1] / 1000);
+        });
+
+        this.ingredientes[0][0].setGrupoAlimenticio(cantporGrupo.indexOf(Math.max.apply(null, cantporGrupo)) + 1)
+        this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();    }
+```
+
+A parte de los getters y setters, cabe destacr que esta clase también tendrá métodos para añadir o eliminar un ingrediente del plato:
+
+```ts
+/**
+     * Método para añadir un Ingrediente nuevo.
+     * @param ingrediente Ingrediente que queremos añadir.
+     * @param cantidad Cantidad del tipo de Ingrediente que vamos a añadir.
+     */
+    addIngrediente(ingrediente: Ingrediente, cantidad: number) {
+      this.ingredientes.push([ingrediente, cantidad]);
+
+      this.setComposicionNutricional();
+      this.setGrupoPredominante();
+      this.setPrecio();
+    }
+
+    /**
+     * Método para eliminar un ingrediente de nuestro vector.
+     * @param ingrediente Ingrediente que queremos eliminar.
+     */
+    removeIngrediente(ingrediente: Ingrediente) {
+      let i: number = 0;
+      let indice: number = 0;
+      this.ingredientes.forEach((item) => {
+        if (item[0] == ingrediente) {
+          indice = i;
+        }
+        i++;
+      });
+
+      this.ingredientes.splice(indice, 1);
+      
+      this.setComposicionNutricional();
+      this.setGrupoPredominante();
+      this.setPrecio();
+    }
+```
+
 #### 2.3.Menús
 
 **Enunciado:**
@@ -255,6 +363,9 @@ Un menú estará compuesto por platos, incluyendo un plato de cada categoría o,
 2. Platos que lo componen con sus correspodientes alimentos y/o ingredientes.
 3. Composición nutricional del menú de acuerdo a lo definido en el punto 2 de la sección Alimentos.
 4. Listado de grupos de alimentos por orden de aparición.
+
+**Resolución:**
+
 
 #### 2.4.Carta
 
