@@ -41,7 +41,11 @@ const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato"
 
   it('pastaConPesto.getGrupoPredominante() return grupo: "grupo": [2,["Verduras","Hortalizas"]]', ()=>{
     expect(pastaConPesto.getGrupoPredominante()).to.deep.equal({ 
-      "grupo": [2,["Verduras","Hortalizas"]]
+      "grupo": [
+        "Verduras",
+        "Hortalizas"
+    ],
+    "numGrupo": 2
       });
   });
 

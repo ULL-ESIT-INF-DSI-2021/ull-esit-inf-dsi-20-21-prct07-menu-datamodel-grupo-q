@@ -15,16 +15,14 @@ describe('Pruebas clase Ingrediente', ()=> {
     it('Ingrediente1.getGrupoAlimenticio() return { "grupo": [ 1, [ "Carnes", "Pescados", "Huevos", "Tofu", "Frutos Secos", "Legumbres"]]} ', ()=>{
         expect(ingrediente1.getGrupoAlimenticio()).to.deep.equal({
             "grupo": [
-              1,
-              [
                 "Carnes",
                 "Pescados",
                 "Huevos",
                 "Tofu",
                 "Frutos Secos",
                 "Legumbres"
-              ]
-            ]
+            ],
+            "numGrupo": 1
           });
     });
 
@@ -56,18 +54,16 @@ describe('Pruebas clase Ingrediente', ()=> {
     it('ingrediente1.setGrupoAlimenticio(1)', ()=>{
         ingrediente1.setGrupoAlimenticio(1);
         expect(ingrediente1.getGrupoAlimenticio()).to.deep.equal({
-            "grupo": [
-              1,
-              [
-                "Carnes",
-                "Pescados",
-                "Huevos",
-                "Tofu",
-                "Frutos Secos",
-                "Legumbres"
-              ]
-            ]
-          });
+          "grupo": [
+            "Carnes",
+            "Pescados",
+            "Huevos",
+            "Tofu",
+            "Frutos Secos",
+            "Legumbres"
+        ],
+        "numGrupo": 1
+        });
     });
 
     it('ingrediente1.setComposicionNutricional([13.1, 11.2, 0.41, 155])', ()=>{
