@@ -1,5 +1,6 @@
 import { Ingrediente } from '../../ingredientes/ingredientes';
 import { IngredientesJson } from '../tiposDefinidos';
+import { ingredientes } from './ingredientes';
 
 export class BaseDatosIngredientes {
 
@@ -59,3 +60,6 @@ export class BaseDatosIngredientes {
         this.datosIngredientes.splice(indice, 1);
     }
 }
+
+
+export const baseDeDatosIngredientes = new BaseDatosIngredientes(ingredientes);
