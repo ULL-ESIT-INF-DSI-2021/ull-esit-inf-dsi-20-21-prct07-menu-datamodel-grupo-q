@@ -3,9 +3,7 @@ import { Ingrediente } from "./ingredientes";
  * Clase para mostrar por pantalla el contenido del ingrediente
  */
 export class IngredientePrinter {
-  constructor(private ingrediente: Ingrediente) {
-    this.ingrediente = ingrediente;
-  }
+  constructor(private ingrediente: Ingrediente) {}
 
   /**
    * Metodo para mostrar pon pantalla el ingrediente

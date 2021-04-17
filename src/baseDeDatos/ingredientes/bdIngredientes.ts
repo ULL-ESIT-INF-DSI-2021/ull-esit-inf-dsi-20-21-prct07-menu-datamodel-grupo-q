@@ -74,7 +74,14 @@ export class BaseDatosIngredientes {
 
         this.datosIngredientes.splice(indice, 1);
     }
+
+    salida() {
+        this.datosIngredientes.forEach(item => {
+            console.log(`new Ingrediente("${item.getNombre()}", ${item.getGrupoAlimenticio().numGrupo}, [${item.getComposicionNutricional().lipidos}, ${item.getComposicionNutricional().hCarbono}, ${item.getComposicionNutricional().proteinas}, ${item.getComposicionNutricional().kCal}], ["${item.getLocalizacion().ciudad}", "${item.getLocalizacion().pais}"], ${item.getPrecio()}),`);
+        })
+    }
 }
 
 
 export const baseDeDatosIngredientes = new BaseDatosIngredientes(ingredientes);
+baseDeDatosIngredientes.salida();

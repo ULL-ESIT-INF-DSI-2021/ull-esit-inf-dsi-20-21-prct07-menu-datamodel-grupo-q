@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/aplicacion.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/funcionamiento/aplicacion.js\"",
     "doc": "typedoc",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output"
   },
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.16",
     "@types/inquirer": "^7.3.1",
+    "@types/lowdb": "^1.0.9",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.41",
     "chai": "^4.3.4",
