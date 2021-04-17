@@ -368,9 +368,9 @@ Un menú estará compuesto por platos, incluyendo un plato de cada categoría o,
 
 Crearemos una interfaz MenusI para platos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo predominante, composición nutricional, categoría y precio del plato:
 
-import { Platos } from "../platos/platos"
-
 ```ts
+     import { Platos } from "../platos/platos"
+     
      /**
      * Interfaz Menu. Permite definir los métodos que tendrá la clase Menu.
      */
@@ -470,3 +470,81 @@ A parte de los getters y setters, cabe destacar que esta clase también tendrá 
 **Enunciado:**
 
 Supongamos que el sistema que estamos diseñando se empleará en un restaurante. Dicho restaurante dispone de una carta con una serie de menús prediseñados por la administración del local. Además, en la carta se incluyen platos individuales para que los comensales diseñen sus propios menús para comer. Los menús a diseñar por los clientes pueden tener todos los platos que deseen ya que, por ejemplo, un grupo de personas podría decidir pedir varios platos para compartir o pedirlos individualmente.
+
+**Resolución:**
+
+Crearemos una interfaz CartaI para platos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener, añadir y borrar los menus y platos de la carta.
+
+```ts
+import { Platos } from "../platos/platos"
+import { Menu } from "../menus/menus"
+
+/**
+ * Interfaz Carta. Permite definir los métodos que tendrá la clase Carta.
+ */
+ export interface CartaI{
+
+  getMenus(): Menu[];
+  getPlatos(): Platos[];
+  addPlato(plato: Platos): void;
+  removePlato(plato: Platos): void;
+  addMenus(menu: Menu): void;
+  removeMenus(menu: Menu): void
+}
+```
+
+Crearemos la clase Carta que implementará esta nueva interfaz CartaI El constructor creado es el siguiente, donde se le pasará un array de menus y de platos.
+
+```ts
+/**
+ * Clase Platos. Permite instanciar objetos de tipo plato. Las propiedades que
+ * tiene un ingrediente son: Nombre, ingredientes , su composición nutricional,
+ * la ciudad y el país de origen y el precio.
+ */
+export class Carta implements CartaI{
+  
+
+  /**
+   * Constructor de la clase Carta.
+   * @param menus Array con los menús
+   * @param platos Array con los platos
+   */
+  constructor(private menus: Menu[], private platos: Platos[]) {}
+```
+
+A parte de los getters y setters, cabe destacar que esta clase también tendrá métodos para añadir o eliminar un menu o un plato a la carta.
+
+```ts
+  /**
+   * Metodo para añadir un menu a la carta
+   * @param menu el menu a añadir
+   */
+  public addMenus(menu: Menu) {
+    this.menus.push(menu);
+  }
+
+  /**
+   * Método para borrar un menu de la carta
+   * @param menu el menu a eliminar
+   */
+  public removeMenus(menu: Menu) {
+    const indice: number = this.menus.indexOf(menu);
+    this.menus.splice(indice, 1);
+  }
+
+  /**
+   * Metodo para añadir un plato a la carta
+   * @param plato el plato a añadir
+   */
+  public addPlato(plato: Platos) {
+    this.platos.push(plato);
+  }
+  /**
+   * Método para borrar un plato de la carta
+   * @param plato el plato a eliminar
+   */
+  public removePlato(plato: Platos) {
+    const indice: number = this.platos.indexOf(plato);
+    this.platos.splice(indice, 1);
+  }
+```
