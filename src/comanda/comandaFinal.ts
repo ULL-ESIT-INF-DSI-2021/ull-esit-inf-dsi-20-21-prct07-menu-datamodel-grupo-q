@@ -19,18 +19,27 @@ export class ComandaFinal  {
   }
 
   getComanda() {
-    return this.pedido;
+    return this.comanda;
   }
 
-  setPedido(newPedido: Menu | Platos) {
-    this.pedido = newPedido;
+  setComanda(newComanda: ComandaPedido[]) {
+    this.comanda = newComanda;
   }
 
-  getCantidad() {
-    this.cantidad;
+  addPedido(newPedido: ComandaPedido) {
+    this.comanda.push(newPedido);
   }
 
-  setCantidad(newCantidad: number) {
-    this.cantidad = newCantidad;
+  removePedido(newPedido: ComandaPedido) {
+    let i: number = 0;
+    let indice: number = 0;
+    this.comanda.forEach((item) => {
+      if (item == newPedido) {
+        indice = i;
+      }
+      i++;
+    });
+
+    this.comanda.splice(indice, 1);
   }
 }

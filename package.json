@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/aplicacion.js\"",
     "doc": "typedoc",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output"
   },
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q#readme",
   "devDependencies": {
     "@types/chai": "^4.2.16",
+    "@types/inquirer": "^7.3.1",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.41",
     "chai": "^4.3.4",
@@ -33,6 +34,7 @@
     "typedoc": "^0.20.35"
   },
   "dependencies": {
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "lowdb": "^1.0.0"
   }
 }
