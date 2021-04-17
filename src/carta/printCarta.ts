@@ -25,11 +25,11 @@ export class CartaPrinter {
       console.log(`        Ǹombre: ${item.getNombre()}`);
       console.log(`            Entrante:`)
       auxiliar[0].forEach((elemento) => { console.log(`                ● ${elemento}`)});
-      console.log(`\n            Primer plato:`)
+      console.log(`            Primer plato:`)
       auxiliar[1].forEach((elemento) => { console.log(`                ● ${elemento}`)});
-      console.log(`\n            Segundo plato:`)
+      console.log(`            Segundo plato:`)
       auxiliar[2].forEach((elemento) => { console.log(`                ● ${elemento}`)});
-      console.log(`\n            Postres:`)
+      console.log(`            Postres:`)
       auxiliar[3].forEach((elemento) => { console.log(`                ● ${elemento}\n\n`)});
     });
 
@@ -45,11 +45,11 @@ export class CartaPrinter {
 
     console.log(`            Entrantes:`)
     auxiliar[0].forEach((plato) => { console.log(`                ● ${plato}`)});
-    console.log(`\n            Primeros platos:`)
+    console.log(`            Primeros platos:`)
     auxiliar[1].forEach((plato) => { console.log(`                ● ${plato}`)});
-    console.log(`\n            Segundos platos:`)
+    console.log(`            Segundos platos:`)
     auxiliar[2].forEach((plato) => { console.log(`                ● ${plato}`)});
-    console.log(`\n            Postres:`)
+    console.log(`            Postres:`)
     auxiliar[3].forEach((plato) => { console.log(`                ● ${plato}`)});
   }
 

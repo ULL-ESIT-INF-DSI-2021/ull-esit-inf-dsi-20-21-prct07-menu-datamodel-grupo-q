@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {baseDeDatosPlatos, nuevoPlato} from '../src/baseDeDatos/platos/bdPlatos'
 
 
-describe('Pruebas clase Base de datos ingrediente', ()=> {
+describe('Pruebas clase Base de datos platos', ()=> {
 
     it('baseDeDatosPlatos.getDatosPlatos().length return 13', ()=>{
         expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(13);

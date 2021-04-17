@@ -66,7 +66,6 @@ export class BaseDatosPlatos {
             if (j == nuevo.ingredientes.length){
                 break
             }
-            console.log(baseDeDatosIngredientes.getDatosIngredientes()[i].getNombre())
             if(nuevo.ingredientes[j] == baseDeDatosIngredientes.getDatosIngredientes()[i].getNombre()){
                 listaIngradientes.push([baseDeDatosIngredientes.getDatosIngredientes()[i], nuevo.cantidades[j]])
                 i = 0
