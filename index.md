@@ -234,6 +234,22 @@ Un ejemplo de instancia de esta clase sería el siguiente:
 ```ts
 const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
 ```
+
+Por último también creamos una clase IngredientePrinter cuya función es la de mostrar por pantalla la información de un ingrediente. 
+
+```ts
+export class IngredientePrinter {
+  constructor(private ingrediente: Ingrediente) {
+    this.ingrediente = ingrediente;
+  }
+
+  /**
+   * Metodo para mostrar pon pantalla el ingrediente
+   */
+  print() {
+    console.log(`Nombre: ${this.ingrediente.getNombre()},\n    Grupo alimenticio: ${this.ingrediente.getGrupoAlimenticio().grupo}, \n    Composición nutriconal: \n        Kcal = ${this.ingrediente.getComposicionNutricional().kCal}, \n        Proteinas = ${this.ingrediente.getComposicionNutricional().proteinas},\n        Lipidos = ${this.ingrediente.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.ingrediente.getComposicionNutricional().hCarbono},\n    Localización: \n        Ciudad = ${this.ingrediente.getLocalizacion().ciudad}, \n        Pais = ${this.ingrediente.getLocalizacion().pais}, \n    Precio: ${this.ingrediente.getPrecio()} €/kg`);
+  }
+````
 #### 2.2.Platos
 
 **Enunciado:**
@@ -352,7 +368,26 @@ A parte de los getters y setters, cabe destacar que esta clase también tendrá 
       this.setPrecio();
     }
 ```
+Por último también creamos una clase PlatoPrinter cuya función es la de mostrar por pantalla la información de un plato. 
 
+```ts
+export class PlatoPrinter {
+  constructor(private plato: Platos) {
+    this.plato = plato;
+  }
+
+  /**
+   * Metodo para mostrar pon pantalla el plato
+   */
+  print() {
+    
+    console.log(`Nombre: ${this.plato.getNombre()}, \n    Ingredientes:`);
+    this.plato.getIngredientes().forEach((item) => {
+      console.log(`        ${item[0].getNombre()}`);
+    });
+    console.log(`\n    Composición nutriconal: \n        Kcal = ${this.plato.getComposicionNutricional().kCal}, \n        Proteinas = ${this.plato.getComposicionNutricional().proteinas},\n        Lipidos = ${this.plato.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.plato.getComposicionNutricional().hCarbono},\n    Grupo alimenticio: ${this.plato.getGrupoPredominante().grupo}, \n    Precio: ${this.plato.getPrecio()} €`);
+  }
+````
 #### 2.3.Menús
 
 **Enunciado:**
@@ -465,6 +500,38 @@ A parte de los getters y setters, cabe destacar que esta clase también tendrá 
   }
 ```
 
+Por último también creamos una clase MenuPrinter cuya función es la de mostrar por pantalla la información de un menu. 
+
+```ts
+export class MenuPrinter {
+  constructor(private menu: Menu) {
+    this.menu = menu;
+  }
+
+  /**
+   * Metodo para mostrar pon pantalla el menu
+   */
+  print() {
+    console.log(`Nombre: ${this.menu.getNombre()}, \n    Platos:`);
+    let auxiliar: [string[], string[], string[], string[]] = [[], [], [], []];
+    this.menu.getPlatos().forEach((item) => {
+        if (item.getCategoria() == "Entrante") auxiliar[0].push(item.getNombre());
+        if (item.getCategoria() == "Primer plato") auxiliar[1].push(item.getNombre());
+        if (item.getCategoria() == "Segundo plato") auxiliar[2].push(item.getNombre());
+        if (item.getCategoria() == "Postre") auxiliar[3].push(item.getNombre());
+    });
+      console.log(`       Entrante:`)
+      auxiliar[0].forEach((item) => { console.log(`            ● ${item}`)});
+      console.log(`       Primer plato:`)
+      auxiliar[1].forEach((item) => { console.log(`            ● ${item}`)});
+      console.log(`       Segundo plato:`)
+      auxiliar[2].forEach((item) => { console.log(`            ● ${item}`)});
+      console.log(`       Postres:`)
+      auxiliar[3].forEach((item) => { console.log(`            ● ${item}\n\n`)});
+    console.log(`    Composición nutriconal: \n        Kcal = ${this.menu.getComposicionNutricional().kCal}, \n        Proteinas = ${this.menu.getComposicionNutricional().proteinas},\n        Lipidos = ${this.menu.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.menu.getComposicionNutricional().hCarbono},\n    Grupo alimenticio: ${this.menu.listadoGrupos()}, \n    Precio: ${this.menu.getPrecio()} €`);
+  }
+}
+```
 #### 2.4.Carta
 
 **Enunciado:**
@@ -548,3 +615,58 @@ A parte de los getters y setters, cabe destacar que esta clase también tendrá 
     this.platos.splice(indice, 1);
   }
 ```
+
+Por último también creamos una clase CartaPrinter cuya función es la de mostrar por pantalla la información de una carta. 
+
+```ts
+export class CartaPrinter {
+  constructor(private carta: Carta) {
+    this.carta = carta;
+  }
+
+  /**
+   * Metodo para mostrar pon pantalla la carta
+   */
+  print() {
+    console.log(`CARTA DEL RESTAURANTE \n     Menus:`);
+    let auxiliar: [string[], string[], string[], string[]] = [[], [], [], []];;
+    this.carta.getMenus().forEach((item) => {
+      item.getPlatos().forEach((elemento) => {
+        if (elemento.getCategoria() == "Entrante") auxiliar[0].push(elemento.getNombre());
+        if (elemento.getCategoria() == "Primer plato") auxiliar[1].push(elemento.getNombre());
+        if (elemento.getCategoria() == "Segundo plato") auxiliar[2].push(elemento.getNombre());
+        if (elemento.getCategoria() == "Postre") auxiliar[3].push(elemento.getNombre());
+      });
+      
+      console.log(`        Ǹombre: ${item.getNombre()}`);
+      console.log(`            Entrante:`)
+      auxiliar[0].forEach((elemento) => { console.log(`                ● ${elemento}`)});
+      console.log(`            Primer plato:`)
+      auxiliar[1].forEach((elemento) => { console.log(`                ● ${elemento}`)});
+      console.log(`            Segundo plato:`)
+      auxiliar[2].forEach((elemento) => { console.log(`                ● ${elemento}`)});
+      console.log(`            Postres:`)
+      auxiliar[3].forEach((elemento) => { console.log(`                ● ${elemento}\n\n`)});
+    });
+
+    auxiliar = [[], [], [], []];
+
+    console.log(`\n     Platos:`);
+    this.carta.getPlatos().forEach((plato) => {
+      if (plato.getCategoria() == "Entrante") auxiliar[0].push(plato.getNombre());
+      if (plato.getCategoria() == "Primer plato") auxiliar[1].push(plato.getNombre());
+      if (plato.getCategoria() == "Segundo plato") auxiliar[2].push(plato.getNombre());
+      if (plato.getCategoria() == "Postre") auxiliar[3].push(plato.getNombre());
+    });
+
+    console.log(`            Entrantes:`)
+    auxiliar[0].forEach((plato) => { console.log(`                ● ${plato}`)});
+    console.log(`            Primeros platos:`)
+    auxiliar[1].forEach((plato) => { console.log(`                ● ${plato}`)});
+    console.log(`            Segundos platos:`)
+    auxiliar[2].forEach((plato) => { console.log(`                ● ${plato}`)});
+    console.log(`            Postres:`)
+    auxiliar[3].forEach((plato) => { console.log(`                ● ${plato}`)});
+  }
+ }
+````
