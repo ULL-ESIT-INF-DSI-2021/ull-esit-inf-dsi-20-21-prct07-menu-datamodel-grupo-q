@@ -4,17 +4,25 @@ import { baseDeDatosIngredientes } from "../ingredientes/bdIngredientes";
 import { PlatosJson } from "../tiposDefinidos";
 import { platos } from "./platos";
 
+/**
+ * Clase que simula el comportamiento de una base de datos para los platos
+ */
 export class BaseDatosPlatos {
 
+    /**
+     * Array que almacena todos los objetos Platos
+     */
     private datosPlatos: Platos[] = [];
 
+    /**
+     * Constructor de la clase BaseDatosPlatos, lo que hace es que se le introduce un array de tipo de datos definido con las características que va a necesitar el contructor de la clase Plato
+     * @param ingredientes Array de tipo PlatosJson, esto último es un tipo de dato definido que representa las características de los platos
+     */
     constructor(platos: PlatosJson[]){
-
         let i: number = 0;
 
         platos.forEach(plato => {
-
-            let listaIngradientes: [Ingrediente, number][] = [];
+            let listaIngredientes: [Ingrediente, number][] = [];
             let j: number = 0;
 
             for(let i: number = 0; i<= baseDeDatosIngredientes.getDatosIngredientes().length; i++){
@@ -22,24 +30,29 @@ export class BaseDatosPlatos {
                     break
                 }
                 if(plato.ingredientes[j] == baseDeDatosIngredientes.getDatosIngredientes()[i].getNombre()){
-                    listaIngradientes.push([baseDeDatosIngredientes.getDatosIngredientes()[i], plato.cantidades[j]])
+                    listaIngredientes.push([baseDeDatosIngredientes.getDatosIngredientes()[i], plato.cantidades[j]])
                     i = 0
                     j++;
                 }    
             }
-            this.datosPlatos.push(new Platos(plato.nombre, listaIngradientes, plato.categoria));
+            this.datosPlatos.push(new Platos(plato.nombre, listaIngredientes, plato.categoria));
         });
     }
 
-
+    /**
+     * Función para acceder al atributo privado datosPlatos
+     * @returns El atributo privado datosPlatos
+     */
     getDatosPlatos(){
-
         return this.datosPlatos;
     }
 
-
+    /**
+     * Función para obtener un plato en función de su nombre
+     * @param nombrePlato Nombre del plato
+     * @returns El plato
+     */
     getInfoPlato(nombrePlato: string){
-
         let plato = new Platos("", [[new Ingrediente("", 0, [0,0,0,0], ["", ""], 0), 0]], "Entrante");
 
         let i: number = 0;
@@ -56,9 +69,11 @@ export class BaseDatosPlatos {
         return plato;
     }
 
-
+    /**
+     * Función par añadir un plato a la base de datos
+     * @param nuevo Nuevo plato
+     */
     addNuevoIngrediente(nuevo: PlatosJson){
-
         let listaIngradientes: [Ingrediente, number][] = [];
         let j: number = 0;
 
@@ -76,7 +91,10 @@ export class BaseDatosPlatos {
         this.datosPlatos.push(new Platos(nuevo.nombre, listaIngradientes, nuevo.categoria))
     }
 
-
+    /**
+     * Función para quitar un plato a la base de datos a través de su nombre
+     * @param nuevo Nuevo plato
+     */
     removeIngrediente(nombrePlato: string){
         
         let i: number = 0;
