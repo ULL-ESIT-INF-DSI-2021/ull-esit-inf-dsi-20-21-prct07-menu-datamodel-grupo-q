@@ -315,7 +315,7 @@ Crearemos la clase Platos que implementará esta nueva interfaz PlatosI y usará
         this.grupoPredominante = this.ingredientes[0][0].getGrupoAlimenticio();    }
 ```
 
-A parte de los getters y setters, cabe destacr que esta clase también tendrá métodos para añadir o eliminar un ingrediente del plato:
+A parte de los getters y setters, cabe destacar que esta clase también tendrá métodos para añadir o eliminar un ingrediente del plato:
 
 ```ts
 /**
@@ -366,6 +366,104 @@ Un menú estará compuesto por platos, incluyendo un plato de cada categoría o,
 
 **Resolución:**
 
+Crearemos una interfaz MenusI para platos. Toda implementación de esta interfaz deberá tener métodos que permitan obtener y modificar el nombre, grupo predominante, composición nutricional, categoría y precio del plato:
+
+import { Platos } from "../platos/platos"
+
+```ts
+     /**
+     * Interfaz Menu. Permite definir los métodos que tendrá la clase Menu.
+     */
+     export interface MenuI<K>{
+
+      getNombre(): string;
+      getPlatos(): Platos[];
+      getComposicionNutricional(): K;
+      getPrecio(): number;
+      addPlato(plato: Platos): void;
+      removePlato(plato: Platos): void;
+      listadoGrupos(): void;
+      setNombre(nombre: string): void;
+      setComposicionNutricional(): void;
+      setPrecio(precio: number): void;
+    }
+```
+
+Crearemos la clase Menu que implementará esta nueva interfaz MenuI y usará GrupoALimenticio y ComposicionNutricional para sus plantillas de datos. Usaremos un array que contiene todos los platos que conforman el menu. El constructor creado es el siguiente, donde se calcula el precio y la composicion nutricional del menu.
+
+```ts
+import { Platos } from "../platos/platos"
+import { ComposicionNutricional, GrupoAlimenticio } from "../ingredientes/tiposDefinidos"
+import { MenuI } from "./interfazMenu";
+
+/**
+ * Clase Menu. Permite instanciar objetos de tipo menu. Las propiedades que
+ * tiene un menu son: Nombre, platos , su composición nutricional,
+ * listado de grupos alimenticio que lo componen y el precio.
+ */
+export class Menu implements MenuI<ComposicionNutricional>{
+
+  private precio: number = 0;
+  private composicionNutricional: ComposicionNutricional = { lipidos: 0, hCarbono: 0, proteinas: 0, kCal: 0};  
+
+  /**
+   * Constructor de la clase Menú.
+   * @param name Nombre del menú
+   * @param platos Array con los platos
+   */
+  constructor(private name: string, private platos: Platos[]) {   
+    this.name = name;
+    this.platos = platos;
+
+    let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
+    this.platos.forEach((item) => {
+      this.composicionNutricional.lipidos = this.composicionNutricional.lipidos + item.getComposicionNutricional().lipidos;
+      this.composicionNutricional.hCarbono = this.composicionNutricional.hCarbono + item.getComposicionNutricional().hCarbono;
+      this.composicionNutricional.proteinas = this.composicionNutricional.proteinas + item.getComposicionNutricional().proteinas;
+      this.composicionNutricional.kCal = this.composicionNutricional.kCal + item.getComposicionNutricional().kCal;
+
+      this.precio = this.precio + item.getPrecio();
+    });
+  }
+```
+
+A parte de los getters y setters, cabe destacar que esta clase también tendrá métodos para añadir o eliminar un plato del menu, y un método que muestre el listado de los grupos que componen el menú:
+
+```ts
+ /**
+   * Método para eliminar un plato de nuestro menú
+   * @param plato Plato que queremos eliminar.
+   */
+  public removePlato(plato: Platos) {
+    let i: number = 0;
+    let indice: number = 0;
+    this.platos.forEach((item) => {
+      if (item == plato) {
+        indice = i;
+      }
+      i++;
+    });
+
+    this.platos.splice(indice, 1);
+    this.setComposicionNutricional();
+    this.setPrecio();
+  }
+  
+  /**
+   * Método para obtener el listado de los grupos alimenticios que tiene el menu
+   * @return El listado de grupo alimenticios.
+   */
+  public listadoGrupos() {
+    let listaGrupos: number[] = [];
+    this.platos.forEach((item) => {
+      if (listaGrupos.indexOf(item.getGrupoPredominante().numGrupo) == -1) {
+        listaGrupos.push(item.getGrupoPredominante().numGrupo);
+      }
+    });
+
+    return listaGrupos;
+  }
+```
 
 #### 2.4.Carta
 
