@@ -27,7 +27,7 @@ export class ComandaPedido  {
   }
 
   getCantidad() {
-    this.cantidad;
+    return this.cantidad;
   }
 
   setCantidad(newCantidad: number) {
