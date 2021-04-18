@@ -679,14 +679,893 @@ export class CartaPrinter {
  
  Para comprobar la estructura, o más bien, asignarle esta, tenemos creado un fichero `.ts` por cada base de datos, llamada `(nombreBase)BD.ts`, en este fichero tenemos creaod un **schema** el cual asigna la estructura que tendrán nuestros objetos dentro de cada base de datos, usando para estos, ficheros `.json`. Para la base de datos de ingredientes, tendremos lo siguiente:
  
- _** Ejemplo de una implementación de un objeto en la BDD de Ingredientes: **_
+ **Ejemplo de una implementación de un objeto en la BDD de Ingredientes:**
  
  ```typescript
- 
+  {
+   "grupo": {
+     "numGrupo": 2,
+     "grupo": [
+       "Verduras",
+       "Hortalizas"
+     ]
+   },
+   "nombre": "Albahaca fresca",
+   "composicionNutricional": {
+     "lipidos": 25,
+     "hCarbono": 0.61,
+     "proteinas": 0.44,
+     "kCal": 0.3
+   },
+   "localizacion": {
+     "ciudad": "Milan",
+     "pais": "Italia"
+   },
+   "precio": 4.5
+  }
  ```
  
+   Aqui podemos observar que, para un Ingrediente, tenemos almacenado el **grupo**, con su respectivo número de grupo, el **nombre** del ingrediente, la **composición nutricional** la cual está compuesta por **lípidos, hidratos de carbono, proteínas, kilo calorías**, la **localización** del origen del ingrediente, compuesta por la **ciudad** y el **país**, y finalmente el **precio**. 
+   
+   Para ver el fichero completo, puede acceder desde [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/ingredientes/ingredientes.json).
+   
+   **Ejemplo de una implementación de un objeto en la BDD de Platos:**
+ 
+ ```typescript
+{
+  "name": "Pizza de Jamon cocido y champiñones",
+  "ingredientes": [
+    [
+      {
+        "grupo": {
+          "numGrupo": 4,
+          "grupo": [
+            "Cereales"
+          ]
+        },
+        "nombre": "Base de pizza",
+        "composicionNutricional": {
+          "lipidos": 7.4,
+          "hCarbono": 43.9,
+          "proteinas": 6.7,
+          "kCal": 273
+        },
+        "localizacion": {
+          "ciudad": "Roma",
+          "pais": "Italia"
+        },
+        "precio": 2.1
+      },
+      100
+    ],
+    [
+      {
+        "grupo": {
+          "numGrupo": 1,
+          "grupo": [
+            "Carnes",
+            "Pescados",
+            "Huevos",
+            "Tofu",
+            "Frutos Secos",
+            "Legumbres"
+          ]
+        },
+        "nombre": "Jamon cocido",
+        "composicionNutricional": {
+          "lipidos": 10.8,
+          "hCarbono": 1,
+          "proteinas": 18.4,
+          "kCal": 175
+        },
+        "localizacion": {
+          "ciudad": "La Rioja",
+          "pais": "España"
+        },
+        "precio": 7.25
+      },
+      40
+    ],
+    [
+      {
+        "grupo": {
+          "numGrupo": 3,
+          "grupo": [
+            "Leche",
+            "Derivados Lacteos"
+          ]
+        },
+        "nombre": "Queso mozzarella",
+        "composicionNutricional": {
+          "lipidos": 16.1,
+          "hCarbono": 0,
+          "proteinas": 19.5,
+          "kCal": 223
+        },
+        "localizacion": {
+          "ciudad": "Venecia",
+          "pais": "Italia"
+        },
+        "precio": 4.3
+      },
+      50
+    ],
+    [
+      {
+        "grupo": {
+          "numGrupo": 2,
+          "grupo": [
+            "Verduras",
+            "Hortalizas"
+          ]
+        },
+        "nombre": "Salsa de tomate",
+        "composicionNutricional": {
+          "lipidos": 5.3,
+          "hCarbono": 5.8,
+          "proteinas": 1.5,
+          "kCal": 81
+        },
+        "localizacion": {
+          "ciudad": "Milan",
+          "pais": "Italia"
+        },
+        "precio": 3.8
+      },
+      20
+    ],
+    [
+      {
+        "grupo": {
+          "numGrupo": 2,
+          "grupo": [
+            "Verduras",
+            "Hortalizas"
+          ]
+        },
+        "nombre": "Champiñon",
+        "composicionNutricional": {
+          "lipidos": 0.3,
+          "hCarbono": 4,
+          "proteinas": 1.8,
+          "kCal": 31
+        },
+        "localizacion": {
+          "ciudad": "La Rioja",
+          "pais": "España"
+        },
+        "precio": 7.25
+      },
+      35
+    ]
+  ],
+  "categoria": "Segundo plato",
+  "composicionNutricional": {
+    "lipidos": 20.935000000000002,
+    "hCarbono": 46.85999999999999,
+    "proteinas": 24.740000000000002,
+    "kCal": 481.55
+  },
+  "grupoPredominante": {
+    "numGrupo": 4,
+    "grupo": [
+      "Cereales"
+    ]
+  },
+  "precio": 1.0447499999999998
+}
+ ```
+  Aqui podemos observar que, para un Plato, tenemos almacenado el **nombre** del plato, y luego un `array` con los ingredientes que contiene el plato, este array tiene la misma composición que la estructura de los ingredientes, es decir, en nuestro array de ingredientes, cada ingrediente almacenará, si nombre, su composición, el grupo y finalmente el precio. A parte de esto, tendremos además, la **categoría** del plato, es decir, si el plato es un entrante, primer plato, segundo plato o postre, el **grupo predominante**, es decir, el grupo del que pertenecen la mayor parte de los ingredientes del plato y para terminar, tenemos el **precio** del plato.
+ 
+   Para ver el fichero completo, puede acceder desde [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/platos/platos.json).
+ 
 
-[REVISAR CANTIDADES***](***)
+   **Ejemplo de una implementación de un objeto en la BDD de Menú:**
+   
+   
+```typescript
+
+{
+ "nombre": "Italiano",
+ "platos": [
+   {
+     "name": "Pan con ajo",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 4,
+             "grupo": [
+               "Cereales"
+             ]
+           },
+           "nombre": "Pan",
+           "composicionNutricional": {
+             "lipidos": 1,
+             "hCarbono": 58,
+             "proteinas": 7.8,
+             "kCal": 277
+           },
+           "localizacion": {
+             "ciudad": "Candelaria",
+             "pais": "España"
+           },
+           "precio": 2.5
+         },
+         100
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Ajo",
+           "composicionNutricional": {
+             "lipidos": 0.3,
+             "hCarbono": 23,
+             "proteinas": 5.3,
+             "kCal": 118
+           },
+           "localizacion": {
+             "ciudad": "Yakutsk",
+             "pais": "Siberia"
+           },
+           "precio": 3.4
+         },
+         2
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 3,
+             "grupo": [
+               "Leche",
+               "Derivados Lacteos"
+             ]
+           },
+           "nombre": "Mantequilla",
+           "composicionNutricional": {
+             "lipidos": 83,
+             "hCarbono": 0,
+             "proteinas": 0.6,
+             "kCal": 749
+           },
+           "localizacion": {
+             "ciudad": "Lyon",
+             "pais": "Francia"
+           },
+           "precio": 5.5
+         },
+         60
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Perejil",
+           "composicionNutricional": {
+             "lipidos": 1.3,
+             "hCarbono": 2.7,
+             "proteinas": 3,
+             "kCal": 45
+           },
+           "localizacion": {
+             "ciudad": "Cerdeña",
+             "pais": "italia"
+           },
+           "precio": 5.5
+         },
+         20
+       ]
+     ],
+     "categoria": "Entrante",
+     "composicionNutricional": {
+       "lipidos": 51.065999999999995,
+       "hCarbono": 59,
+       "proteinas": 8.866,
+       "kCal": 737.76
+     },
+     "grupoPredominante": {
+       "numGrupo": 4,
+       "grupo": [
+         "Cereales"
+       ]
+     },
+     "precio": 0.6968
+   },
+   {
+     "name": "Pizza de Jamon cocido y champiñones",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 4,
+             "grupo": [
+               "Cereales"
+             ]
+           },
+           "nombre": "Base de pizza",
+           "composicionNutricional": {
+             "lipidos": 7.4,
+             "hCarbono": 43.9,
+             "proteinas": 6.7,
+             "kCal": 273
+           },
+           "localizacion": {
+             "ciudad": "Roma",
+             "pais": "Italia"
+           },
+           "precio": 2.1
+         },
+         100
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 1,
+             "grupo": [
+               "Carnes",
+               "Pescados",
+               "Huevos",
+               "Tofu",
+               "Frutos Secos",
+               "Legumbres"
+             ]
+           },
+           "nombre": "Jamon cocido",
+           "composicionNutricional": {
+             "lipidos": 10.8,
+             "hCarbono": 1,
+             "proteinas": 18.4,
+             "kCal": 175
+           },
+           "localizacion": {
+             "ciudad": "La Rioja",
+             "pais": "España"
+           },
+           "precio": 7.25
+         },
+         40
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 3,
+             "grupo": [
+               "Leche",
+               "Derivados Lacteos"
+             ]
+           },
+           "nombre": "Queso mozzarella",
+           "composicionNutricional": {
+             "lipidos": 16.1,
+             "hCarbono": 0,
+             "proteinas": 19.5,
+             "kCal": 223
+           },
+           "localizacion": {
+             "ciudad": "Venecia",
+             "pais": "Italia"
+           },
+           "precio": 4.3
+         },
+         50
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Salsa de tomate",
+           "composicionNutricional": {
+             "lipidos": 5.3,
+             "hCarbono": 5.8,
+             "proteinas": 1.5,
+             "kCal": 81
+           },
+           "localizacion": {
+             "ciudad": "Milan",
+             "pais": "Italia"
+           },
+           "precio": 3.8
+         },
+         20
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Champiñon",
+           "composicionNutricional": {
+             "lipidos": 0.3,
+             "hCarbono": 4,
+             "proteinas": 1.8,
+             "kCal": 31
+           },
+           "localizacion": {
+             "ciudad": "La Rioja",
+             "pais": "España"
+           },
+           "precio": 7.25
+         },
+         35
+       ]
+     ],
+     "categoria": "Segundo plato",
+     "composicionNutricional": {
+       "lipidos": 20.935000000000002,
+       "hCarbono": 46.85999999999999,
+       "proteinas": 24.740000000000002,
+       "kCal": 481.55
+     },
+     "grupoPredominante": {
+       "numGrupo": 4,
+       "grupo": [
+         "Cereales"
+       ]
+     },
+     "precio": 1.0447499999999998
+   },
+   {
+     "name": "Natillas",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 3,
+             "grupo": [
+               "Leche",
+               "Derivados Lacteos"
+             ]
+           },
+           "nombre": "Leche",
+           "composicionNutricional": {
+             "lipidos": 3.5,
+             "hCarbono": 4.7,
+             "proteinas": 3.1,
+             "kCal": 63
+           },
+           "localizacion": {
+             "ciudad": "Asturias",
+             "pais": "España"
+           },
+           "precio": 10.42
+         },
+         120
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 4,
+             "grupo": [
+               "Cereales"
+             ]
+           },
+           "nombre": "Galleta",
+           "composicionNutricional": {
+             "lipidos": 14,
+             "hCarbono": 71.5,
+             "proteinas": 7,
+             "kCal": 450
+           },
+           "localizacion": {
+             "ciudad": "Doorn",
+             "pais": "Holanda"
+           },
+           "precio": 7.21
+         },
+         20
+       ]
+     ],
+     "categoria": "Postre",
+     "composicionNutricional": {
+       "lipidos": 7,
+       "hCarbono": 19.94,
+       "proteinas": 5.12,
+       "kCal": 165.6
+     },
+     "grupoPredominante": {
+       "numGrupo": 3,
+       "grupo": [
+         "Leche",
+         "Derivados Lacteos"
+       ]
+     },
+     "precio": 1.3946
+   }
+ ],
+ "precio": 3.1361499999999998,
+ "composicionNutricional": {
+   "lipidos": 79.001,
+   "hCarbono": 125.79999999999998,
+   "proteinas": 38.726,
+   "kCal": 1384.9099999999999
+ }
+},
+{
+ "nombre": "Ingles",
+ "platos": [
+   {
+     "name": "Huevos rotos",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 1,
+             "grupo": [
+               "Carnes",
+               "Pescados",
+               "Huevos",
+               "Tofu",
+               "Frutos Secos",
+               "Legumbres"
+             ]
+           },
+           "nombre": "Huevos",
+           "composicionNutricional": {
+             "lipidos": 11.1,
+             "hCarbono": 0.7,
+             "proteinas": 12.5,
+             "kCal": 153
+           },
+           "localizacion": {
+             "ciudad": "Londres",
+             "pais": "Inglaterra"
+           },
+           "precio": 13.8
+         },
+         250
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Papas",
+           "composicionNutricional": {
+             "lipidos": 0,
+             "hCarbono": 70,
+             "proteinas": 0.2,
+             "kCal": 282
+           },
+           "localizacion": {
+             "ciudad": "Castilla y León",
+             "pais": "España"
+           },
+           "precio": 3.2
+         },
+         100
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 1,
+             "grupo": [
+               "Carnes",
+               "Pescados",
+               "Huevos",
+               "Tofu",
+               "Frutos Secos",
+               "Legumbres"
+             ]
+           },
+           "nombre": "Chorizo",
+           "composicionNutricional": {
+             "lipidos": 31.1,
+             "hCarbono": 1,
+             "proteinas": 22,
+             "kCal": 385
+           },
+           "localizacion": {
+             "ciudad": "Teror",
+             "pais": "España"
+           },
+           "precio": 3.24
+         },
+         85
+       ]
+     ],
+     "categoria": "Entrante",
+     "composicionNutricional": {
+       "lipidos": 54.185,
+       "hCarbono": 72.6,
+       "proteinas": 50.15,
+       "kCal": 991.75
+     },
+     "grupoPredominante": {
+       "numGrupo": 1,
+       "grupo": [
+         "Carnes",
+         "Pescados",
+         "Huevos",
+         "Tofu",
+         "Frutos Secos",
+         "Legumbres"
+       ]
+     },
+     "precio": 4.0454
+   },
+   {
+     "name": "Salmon con arroz",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 1,
+             "grupo": [
+               "Carnes",
+               "Pescados",
+               "Huevos",
+               "Tofu",
+               "Frutos Secos",
+               "Legumbres"
+             ]
+           },
+           "nombre": "Salmon",
+           "composicionNutricional": {
+             "lipidos": 12,
+             "hCarbono": 0,
+             "proteinas": 18.4,
+             "kCal": 182
+           },
+           "localizacion": {
+             "ciudad": "Rotherdam",
+             "pais": "Holanda"
+           },
+           "precio": 12.3
+         },
+         125
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 1,
+             "grupo": [
+               "Carnes",
+               "Pescados",
+               "Huevos",
+               "Tofu",
+               "Frutos Secos",
+               "Legumbres"
+             ]
+           },
+           "nombre": "Aceite de oliva",
+           "composicionNutricional": {
+             "lipidos": 0,
+             "hCarbono": 99,
+             "proteinas": 0,
+             "kCal": 899
+           },
+           "localizacion": {
+             "ciudad": "Jerez",
+             "pais": "España"
+           },
+           "precio": 25.5
+         },
+         25
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 4,
+             "grupo": [
+               "Cereales"
+             ]
+           },
+           "nombre": "Arroz",
+           "composicionNutricional": {
+             "lipidos": 18.1,
+             "hCarbono": 86,
+             "proteinas": 7,
+             "kCal": 381
+           },
+           "localizacion": {
+             "ciudad": "Pekin",
+             "pais": "China"
+           },
+           "precio": 3.8
+         },
+         100
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 2,
+             "grupo": [
+               "Verduras",
+               "Hortalizas"
+             ]
+           },
+           "nombre": "Ajo",
+           "composicionNutricional": {
+             "lipidos": 0.3,
+             "hCarbono": 23,
+             "proteinas": 5.3,
+             "kCal": 118
+           },
+           "localizacion": {
+             "ciudad": "Yakutsk",
+             "pais": "Siberia"
+           },
+           "precio": 3.4
+         },
+         5
+       ]
+     ],
+     "categoria": "Segundo plato",
+     "composicionNutricional": {
+       "lipidos": 33.115,
+       "hCarbono": 111.9,
+       "proteinas": 30.265,
+       "kCal": 839.15
+     },
+     "grupoPredominante": {
+       "numGrupo": 1,
+       "grupo": [
+         "Carnes",
+         "Pescados",
+         "Huevos",
+         "Tofu",
+         "Frutos Secos",
+         "Legumbres"
+       ]
+     },
+     "precio": 2.5719999999999996
+   },
+   {
+     "name": "Tarta de queso",
+     "ingredientes": [
+       [
+         {
+           "grupo": {
+             "numGrupo": 3,
+             "grupo": [
+               "Leche",
+               "Derivados Lacteos"
+             ]
+           },
+           "nombre": "Queso ricotta",
+           "composicionNutricional": {
+             "lipidos": 10.5,
+             "hCarbono": 3.75,
+             "proteinas": 11.5,
+             "kCal": 161
+           },
+           "localizacion": {
+             "ciudad": "Venecia",
+             "pais": "Italia"
+           },
+           "precio": 11.23
+         },
+         125
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 4,
+             "grupo": [
+               "Cereales"
+             ]
+           },
+           "nombre": "Galleta",
+           "composicionNutricional": {
+             "lipidos": 14,
+             "hCarbono": 71.5,
+             "proteinas": 7,
+             "kCal": 450
+           },
+           "localizacion": {
+             "ciudad": "Doorn",
+             "pais": "Holanda"
+           },
+           "precio": 7.21
+         },
+         20
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 3,
+             "grupo": [
+               "Leche",
+               "Derivados Lacteos"
+             ]
+           },
+           "nombre": "Leche",
+           "composicionNutricional": {
+             "lipidos": 3.5,
+             "hCarbono": 4.7,
+             "proteinas": 3.1,
+             "kCal": 63
+           },
+           "localizacion": {
+             "ciudad": "Asturias",
+             "pais": "España"
+           },
+           "precio": 10.42
+         },
+         100
+       ],
+       [
+         {
+           "grupo": {
+             "numGrupo": 5,
+             "grupo": [
+               "Frutas"
+             ]
+           },
+           "nombre": "Mermelada de arandanos",
+           "composicionNutricional": {
+             "lipidos": 0,
+             "hCarbono": 70,
+             "proteinas": 0.2,
+             "kCal": 282
+           },
+           "localizacion": {
+             "ciudad": "Atenas",
+             "pais": "Grecia"
+           },
+           "precio": 3.24
+         },
+         10
+       ]
+     ],
+     "categoria": "Postre",
+     "composicionNutricional": {
+       "lipidos": 19.425,
+       "hCarbono": 30.6875,
+       "proteinas": 18.895,
+       "kCal": 382.45
+     },
+     "grupoPredominante": {
+       "numGrupo": 3,
+       "grupo": [
+         "Leche",
+         "Derivados Lacteos"
+       ]
+     },
+     "precio": 2.62235
+   }
+ ],
+ "precio": 9.23975,
+ "composicionNutricional": {
+   "lipidos": 106.72500000000001,
+   "hCarbono": 215.1875,
+   "proteinas": 99.30999999999999,
+   "kCal": 2213.35
+ }
+}
+```
+  Aqui podemos observar que, para un Menú, tenemos almacenado el **nombre** del menú, y luego un `array` con los platos que contiene el menú, este array tiene la misma composición que la estructura de los platos, es decir, en nuestro array de platos, cada plato almacenará, su nombre y un `array` que contiene los ingredientes de los platos. A parte de esto, tendremos además, el **precio** del plato, y el menú tendrá que conectener como mínimo, un **entrante**, un **Primer plato**, un **Segundo plato** y por último un **Postre**.
+  
+ 
+   Para ver el fichero completo, puede acceder desde [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/menus/menus.json).
+   
+ 
+ 
+ 
 * **Ingredientes**: 50 alimentos/ingredientes con su correspondiente información (nombre, grupo alimenticio, composición nutricional, localización y precio).
 * **Platos**: 22 platos (entre entrantes, primeros platos, segundos platos y postres) conformados por la combinación de algunos de los ingredientes con su correspondiente información (nombre, ingredientes que lo componen con la cantidad en la que están presentes y la categoría del plato).
 * **Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
