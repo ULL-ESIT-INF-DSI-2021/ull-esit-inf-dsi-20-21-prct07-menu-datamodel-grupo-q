@@ -1197,7 +1197,7 @@ export class CartaPrinter {
 * **BDD Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
 
 
-#### 3.2. Gestión de una línea de comandos interactiva (FALTA TERMINAR)
+#### 3.2. Gestión de una línea de comandos interactiva
 
 Nos interesa poder tener cierta interacción con el programa para poder manipular los datos creados. Nos ayudaremos de el módulo Inquirer.js para este propósito. Por línea de comandos podremos realizar las siguientes acciones:
 
@@ -1207,4 +1207,26 @@ Nos interesa poder tener cierta interacción con el programa para poder manipula
 
 Diseñaremos una aplicación que usa el módulo inquirer mencionado además de todos los recursos creados anteriormente. La función principal para manejar el promt será promptIngrediente. Esta función se encarga de manejar la respuesta del usuario y evaluarla segun el caso para efectuar el comando correspondiente. Mediante estos comandos podremos manipular todos los datos y personalizarnos a nuestro gusto editando los atributos paso por paso. El código que hace posible el manejo de estas respuestas se encuentra [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/funcionamiento/aplicacion.ts)
 
-### 4. Clase Comanda (FALTA TERMINAR)
+### 4. Clase Comanda
+
+Nuestra clase comanda, permite instanciar un objeto de tipo plato, los cuales tienen las propiedades que hemos comentado anteriormente, el nombre, el array de los ingredientes que contiene el plato, su composición nutricional, la ciudad y el país de origen y finalmente el precio.
+
+Dentro de la clase tenemos varios métodos, el primero promptVisCarta(), el cual se encarga de comprobar la información que quiere consultar el usuario, ya sea, ver un menú en concreto, la información de un plato o incluso realizar una comanda.
+
+Por otro lado, tenemos el método promptRelComanda() el cual es un método que se encarga de visualizar la carta o la comanda, según requiera el usuario, además de poder añadir a la comanda un menú hecho por el usuario, o uno de los que ofrezca el restaurante.
+
+### Conclusiones
+
+Esta práctica nos ha resultado de gran utilidad para poner en práctica todos los conocimientos, herramientas, principios ... aprendidos hasta la fecha. Además hemos aprendido a manejar el prompt y darle una gran utilidad a la linea de comandos (cosa que sin duda usaremos en un futuro para próximas prácticas y proyectos).
+
+### Bibliografía
+
+A continuación se muestra una serie de recursos que han sido de gran utilidad para la realización de la práctica y de este informe:
+
+Recurso| Dirección
+-------|----------
+Guía de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/
+Apuntes | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-arrays-tuples-enums.html
+W3schools | https://www.w3schools.com/
+Instancias y constructores | https://stackoverflow.com/questions/6973866/javascript-get-type-instance-name/36094818
+
