@@ -1,9 +1,8 @@
 import { Ingrediente } from "../ingredientes/ingredientes";
-import { IngredientesJson } from "./tiposDefinidos";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 
-type schemaType = {
+type schemaTypeIngrediente = {
   ingredientes:     {
     grupo: {
       numGrupo: number,
@@ -24,8 +23,8 @@ type schemaType = {
   }[]
 }
 
-export class JsonIngredientes {
-  private database: lowdb.LowdbSync<schemaType>;
+export class IngredientesBD {
+  private database: lowdb.LowdbSync<schemaTypeIngrediente>;
   constructor(private datosIngredientes: Ingrediente[] = []) {
     this.database = lowdb(new FileSync("./src/baseDeDatos/ingredientes/ingredientes.json"))
     
@@ -39,66 +38,70 @@ export class JsonIngredientes {
     }
   }
 
-      /**
-     * Función para acceder al atributo privado datosIngredientes
-     * @returns El atributo privado datosIngredientes
-     */
-       getDatosIngredientes(){
-        return this.datosIngredientes;
-    }
 
-    /**
-     * Función para obtener un ingrediente en función de su nombre
-     * @param nombreIngrediente Nombre del ingrediente
-     * @returns El ingredente
-     */
-    getInfoIngrediente(nombreIngrediente: string){
-        let ingrediente = new Ingrediente("", 0, [0,0,0,0], ["",""], 0);
+  /**
+  * Función para acceder al atributo privado datosIngredientes
+  * @returns El atributo privado datosIngredientes
+  */
+  getDatosIngredientes(){
+    return this.datosIngredientes;
+  }
+
+
+  /**
+  * Función para obtener un ingrediente en función de su nombre
+  * @param nombreIngrediente Nombre del ingrediente
+  * @returns El ingredente
+  */
+  getInfoIngrediente(nombreIngrediente: string){
+    let ingrediente = new Ingrediente("", 0, [0,0,0,0], ["",""], 0);
         
-        this.datosIngredientes.forEach((item) => {
-            if (item.getNombre() == nombreIngrediente) {
-                ingrediente = item;
-            }
-        });
-
-        return ingrediente;
-    }
-
-    /**
-     * Función par añadir un ingrediente a la base de datos
-     * @param nuevo Nuevo ingrediente
-     */
-    addNuevoIngrediente(nuevo: Ingrediente){
-        this.datosIngredientes.push(nuevo);
-        this.storeNuevoIngrediente();
-    }
-
-    /**
-     * Función par añadir un ingrediente a la base de datos
-     * @param nuevo Nuevo ingrediente
-     */
-    storeNuevoIngrediente(){
-          this.database.set('ingredientes', [...this.datosIngredientes.values()]).write();
+    this.datosIngredientes.forEach((item) => {
+      if (item.getNombre() == nombreIngrediente) {
+        ingrediente = item;
       }
+    });
 
-    /**
-     * Función para quitar un ingrediente a la base de datos a través de su nombre
-     * @param nuevo Nuevo ingrediente
-     */
-    removeIngrediente(nombreIngrediente: string){
-        let i: number = 0;
-        let indice: number = 0;
+    return ingrediente;
+  }
 
-        this.datosIngredientes.forEach((item) => {
 
-            if (item.getNombre() == nombreIngrediente) {
-                indice = i;
-            }
+  /**
+  * Función par añadir un ingrediente a la base de datos
+  * @param nuevo Nuevo ingrediente
+  */
+  addNuevoIngrediente(nuevo: Ingrediente){
+    this.datosIngredientes.push(nuevo);
+    this.storeNuevoIngrediente();
+  }
 
-            i++;
-        });
 
-        this.datosIngredientes.splice(indice, 1);
-        this.storeNuevoIngrediente();
-    }
+  /**
+  * Función par añadir un ingrediente a la base de datos
+  * @param nuevo Nuevo ingrediente
+  */
+  storeNuevoIngrediente(){
+    this.database.set('ingredientes', [...this.datosIngredientes.values()]).write();
+  }
+
+
+ /**
+  * Función para quitar un ingrediente a la base de datos a través de su nombre
+  * @param nuevo Nuevo ingrediente
+  */
+  removeIngrediente(nombreIngrediente: string){
+    let i: number = 0;
+    let indice: number = 0;
+
+    this.datosIngredientes.forEach((item) => {
+      
+      if (item.getNombre() == nombreIngrediente) {
+        indice = i;
+      }
+      i++;
+    });
+
+    this.datosIngredientes.splice(indice, 1);
+    this.storeNuevoIngrediente();
+  }
 }

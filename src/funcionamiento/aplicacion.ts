@@ -1,12 +1,10 @@
 import inquirer from 'inquirer';
-import { baseDeDatosIngredientes } from '../baseDeDatos/ingredientes/bdIngredientes';
 import { IngredientePrinter } from '../ingredientes/printIngredientes';
-import { JsonIngredientes } from '../baseDeDatos/JsonIngredientes';
-import { pruebaIngredientes } from '../baseDeDatos/prueba';
+import { IngredientesBD } from '../baseDeDatos/JsonIngredientes';
 import { Ingrediente } from '../ingredientes/ingredientes';
 
 
-let coleccionIngredientes = new JsonIngredientes();
+let coleccionIngredientes = new IngredientesBD();
 
 async function promptUser() {
   console.clear();
