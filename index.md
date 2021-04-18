@@ -615,6 +615,36 @@ A parte de los getters y setters, cabe destacar que esta clase también tendrá 
     this.platos.splice(indice, 1);
   }
 ```
+La clase Carta tendrá como parte del constructor, el nombre del restaurante, un array con los menús del restaurante y un array con los platos que proporciona la carta del restaurante.
+
+Esta clase contiene diversos métodos que explicaremos a continuación, pero, antes de hacer eso, explicaremos la interfaz. En el fichero interfazCarta.ts hemos creado una interfaz donde hemos definido los métodos que tiene la clase carta, estos métodos son los siguientes:
+
+El método getMenus(): el cual lo usamos  para obtener los menús de la carta.
+El método getPlatos(): el cual lo usaremos para obtener los platos de la carta.
+El método addPlato(): el cual lo usaremos para que, en el caso de que el usuario quiera añadir un plato nuevo a la carta, pueda hacerlo.
+El método removePlato(): lo usamos si hemos añadido por error un plato a la carta, o deseamos quitar uno existente.
+El método addMenus(): para añadir un menú nuevo a la carta, en el caso de que el usuario así lo desee.
+El método removeMenus(): para eliminar un menú nuevo a la carta, en el caso de que el usuario así lo desee.
+
+```ts
+import { Platos } from "../platos/platos"
+import { Menu } from "../menus/menus"
+
+/**
+ * Interfaz Carta. Permite definir los métodos que tendrá la clase Carta.
+ */
+ export interface CartaI{
+
+  getMenus(): Menu[];
+  getPlatos(): Platos[];
+  addPlato(plato: Platos): void;
+  removePlato(plato: Platos): void;
+  addMenus(menu: Menu): void;
+  removeMenus(menu: Menu): void
+}
+```
+
+Por otro lado, tenemos el fichero printCarta.ts el cual simplemente lo usamos para el correcto mostrado por pantalla de nuestra carta, separándolo por las diferentes categorías que contiene la carta.
 
 Por último también creamos una clase CartaPrinter cuya función es la de mostrar por pantalla la información de una carta. 
 
