@@ -1590,4 +1590,6 @@ Nos interesa poder tener cierta interacción con el programa para poder manipula
 * **Borrar** alimentos/ingredientes, platos, menús y cartas.
 * **Modificar** alimentos/ingredientes, platos, menús y cartas.
 
+Diseñaremos una aplicación que usa el módulo inquirer mencionado además de todos los recursos creados anteriormente. La función principal para manejar el promt será promptIngrediente. Esta función se encarga de manejar la respuesta del usuario y evaluarla segun el caso para efectuar el comando correspondiente.
+
 ### 4. Clase Comanda (FALTA TERMINAR)
