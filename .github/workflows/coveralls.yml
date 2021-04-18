@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v1.1.2
     - name: Cloning repo
       uses: actions/checkout@v2
     - name: Use Node.js 15.x
