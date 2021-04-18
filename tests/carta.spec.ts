@@ -29,7 +29,7 @@ const Natillas = new Platos("Natillas", ingredientesNatillas, "Postre");
 const PlatosMenu: Platos[] =  [PanConAjo, Pizza, Natillas];
 const MenuItaliano = new Menu("Italiano", PlatosMenu);
 
-const cartaR = new Carta([MenuItaliano], [PanConAjo, Pizza, Natillas]);
+const cartaR = new Carta("Nombre restaurante", [MenuItaliano], [PanConAjo, Pizza, Natillas]);
 
 const PrintCartaR = new CartaPrinter(cartaR);
 

@@ -800,30 +800,31 @@
           "precio": 4.0454
         },
         {
-          "name": "Pan con ajo",
+          "name": "Puchero",
           "ingredientes": [
             [
               {
                 "grupo": {
-                  "numGrupo": 4,
+                  "numGrupo": 2,
                   "grupo": [
-                    "Cereales"
+                    "Verduras",
+                    "Hortalizas"
                   ]
                 },
-                "nombre": "Pan",
+                "nombre": "Piña",
                 "composicionNutricional": {
                   "lipidos": 1,
-                  "hCarbono": 58,
-                  "proteinas": 7.8,
-                  "kCal": 277
+                  "hCarbono": 48,
+                  "proteinas": 0,
+                  "kCal": 12
                 },
                 "localizacion": {
-                  "ciudad": "Candelaria",
+                  "ciudad": "Santa Cruz de Tenerife",
                   "pais": "España"
                 },
-                "precio": 2.5
+                "precio": 1
               },
-              100
+              "20"
             ],
             [
               {
@@ -834,84 +835,89 @@
                     "Hortalizas"
                   ]
                 },
-                "nombre": "Ajo",
+                "nombre": "Bubango",
                 "composicionNutricional": {
-                  "lipidos": 0.3,
-                  "hCarbono": 23,
-                  "proteinas": 5.3,
-                  "kCal": 118
+                  "lipidos": 1,
+                  "hCarbono": 30,
+                  "proteinas": 0,
+                  "kCal": 10
                 },
                 "localizacion": {
-                  "ciudad": "Yakutsk",
-                  "pais": "Siberia"
+                  "ciudad": "Santa Cruz de Tenerife",
+                  "pais": "España"
                 },
-                "precio": 3.4
+                "precio": 1
               },
-              2
+              "90"
             ],
             [
               {
                 "grupo": {
-                  "numGrupo": 3,
+                  "numGrupo": 2,
                   "grupo": [
-                    "Leche",
-                    "Derivados Lacteos"
+                    "Verduras",
+                    "Hortalizas"
                   ]
                 },
-                "nombre": "Mantequilla",
+                "nombre": "Zanahoria",
                 "composicionNutricional": {
-                  "lipidos": 83,
+                  "lipidos": 2,
+                  "hCarbono": 67,
+                  "proteinas": 0,
+                  "kCal": 16
+                },
+                "localizacion": {
+                  "ciudad": "Maputo",
+                  "pais": "Mozambique"
+                },
+                "precio": 1
+              },
+              "80"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Pollo",
+                "composicionNutricional": {
+                  "lipidos": 9.7,
                   "hCarbono": 0,
-                  "proteinas": 0.6,
-                  "kCal": 749
+                  "proteinas": 20,
+                  "kCal": 167
                 },
                 "localizacion": {
-                  "ciudad": "Lyon",
-                  "pais": "Francia"
+                  "ciudad": "Amsterdam",
+                  "pais": "Holanda"
                 },
-                "precio": 5.5
+                "precio": 10.43
               },
-              60
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Perejil",
-                "composicionNutricional": {
-                  "lipidos": 1.3,
-                  "hCarbono": 2.7,
-                  "proteinas": 3,
-                  "kCal": 45
-                },
-                "localizacion": {
-                  "ciudad": "Cerdeña",
-                  "pais": "italia"
-                },
-                "precio": 5.5
-              },
-              20
+              "20"
             ]
           ],
-          "categoria": "Entrante",
+          "categoria": "Primer plato",
           "composicionNutricional": {
-            "lipidos": 51.065999999999995,
-            "hCarbono": 59,
-            "proteinas": 8.866,
-            "kCal": 737.76
+            "lipidos": 4.640000000000001,
+            "hCarbono": 90.2,
+            "proteinas": 4,
+            "kCal": 57.6
           },
           "grupoPredominante": {
-            "numGrupo": 4,
+            "numGrupo": 2,
             "grupo": [
-              "Cereales"
+              "Verduras",
+              "Hortalizas"
             ]
           },
-          "precio": 0.6968
+          "precio": 0.3986
         },
         {
           "name": "Pollo a la brasa",
@@ -1010,12 +1016,408 @@
           "precio": 0.2375
         }
       ],
-      "precio": 6.544199999999999,
+      "precio": 6.2459999999999996,
       "composicionNutricional": {
-        "lipidos": 121.426,
-        "hCarbono": 168.475,
-        "proteinas": 90.26599999999999,
-        "kCal": 2147.51
+        "lipidos": 75,
+        "hCarbono": 199.675,
+        "proteinas": 85.4,
+        "kCal": 1467.35
+      }
+    },
+    {
+      "nombre": "Japones",
+      "platos": [
+        {
+          "name": "Sushi",
+          "ingredientes": [
+            [
+              {
+                "grupo": {
+                  "numGrupo": 2,
+                  "grupo": [
+                    "Verduras",
+                    "Hortalizas"
+                  ]
+                },
+                "nombre": "Alga",
+                "composicionNutricional": {
+                  "lipidos": 1,
+                  "hCarbono": 0,
+                  "proteinas": 30,
+                  "kCal": 225
+                },
+                "localizacion": {
+                  "ciudad": "Tokyo",
+                  "pais": "Japon"
+                },
+                "precio": 9
+              },
+              "40"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 4,
+                  "grupo": [
+                    "Cereales"
+                  ]
+                },
+                "nombre": "Arroz",
+                "composicionNutricional": {
+                  "lipidos": 18.1,
+                  "hCarbono": 86,
+                  "proteinas": 7,
+                  "kCal": 381
+                },
+                "localizacion": {
+                  "ciudad": "Pekin",
+                  "pais": "China"
+                },
+                "precio": 3.8
+              },
+              "100"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Atun rojo",
+                "composicionNutricional": {
+                  "lipidos": 12,
+                  "hCarbono": 0,
+                  "proteinas": 23,
+                  "kCal": 200
+                },
+                "localizacion": {
+                  "ciudad": "Oslo",
+                  "pais": "Noruega"
+                },
+                "precio": 17.32
+              },
+              "60"
+            ]
+          ],
+          "categoria": "Entrante",
+          "composicionNutricional": {
+            "lipidos": 25.7,
+            "hCarbono": 86,
+            "proteinas": 32.8,
+            "kCal": 591
+          },
+          "grupoPredominante": {
+            "numGrupo": 2,
+            "grupo": [
+              "Verduras",
+              "Hortalizas"
+            ]
+          },
+          "precio": 1.7792000000000001
+        },
+        {
+          "name": "Sopa de pescado",
+          "ingredientes": [
+            [
+              {
+                "grupo": {
+                  "numGrupo": 4,
+                  "grupo": [
+                    "Cereales"
+                  ]
+                },
+                "nombre": "Fideos",
+                "composicionNutricional": {
+                  "lipidos": 10,
+                  "hCarbono": 321,
+                  "proteinas": 0,
+                  "kCal": 64
+                },
+                "localizacion": {
+                  "ciudad": "Milan",
+                  "pais": "Italia"
+                },
+                "precio": 2
+              },
+              "100"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Bacalao",
+                "composicionNutricional": {
+                  "lipidos": 40,
+                  "hCarbono": 0,
+                  "proteinas": 300,
+                  "kCal": 90
+                },
+                "localizacion": {
+                  "ciudad": "Ourense",
+                  "pais": "España"
+                },
+                "precio": 6
+              },
+              "20"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 2,
+                  "grupo": [
+                    "Verduras",
+                    "Hortalizas"
+                  ]
+                },
+                "nombre": "Caldo",
+                "composicionNutricional": {
+                  "lipidos": 3,
+                  "hCarbono": 11,
+                  "proteinas": 6,
+                  "kCal": 8
+                },
+                "localizacion": {
+                  "ciudad": "Almeria",
+                  "pais": "España"
+                },
+                "precio": 0
+              },
+              "90"
+            ]
+          ],
+          "categoria": "Primer plato",
+          "composicionNutricional": {
+            "lipidos": 20.7,
+            "hCarbono": 330.9,
+            "proteinas": 65.4,
+            "kCal": 89.2
+          },
+          "grupoPredominante": {
+            "numGrupo": 4,
+            "grupo": [
+              "Cereales"
+            ]
+          },
+          "precio": 0.32
+        },
+        {
+          "name": "Teriyaki de atun rojo",
+          "ingredientes": [
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Atun rojo",
+                "composicionNutricional": {
+                  "lipidos": 12,
+                  "hCarbono": 0,
+                  "proteinas": 23,
+                  "kCal": 200
+                },
+                "localizacion": {
+                  "ciudad": "Oslo",
+                  "pais": "Noruega"
+                },
+                "precio": 17.32
+              },
+              100
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Aceite de oliva",
+                "composicionNutricional": {
+                  "lipidos": 0,
+                  "hCarbono": 99,
+                  "proteinas": 0,
+                  "kCal": 899
+                },
+                "localizacion": {
+                  "ciudad": "Jerez",
+                  "pais": "España"
+                },
+                "precio": 25.5
+              },
+              25
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 2,
+                  "grupo": [
+                    "Verduras",
+                    "Hortalizas"
+                  ]
+                },
+                "nombre": "Salsa de soja",
+                "composicionNutricional": {
+                  "lipidos": 0.1,
+                  "hCarbono": 6.7,
+                  "proteinas": 8.7,
+                  "kCal": 66
+                },
+                "localizacion": {
+                  "ciudad": "Pekin",
+                  "pais": "China"
+                },
+                "precio": 5.2
+              },
+              10
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 2,
+                  "grupo": [
+                    "Verduras",
+                    "Hortalizas"
+                  ]
+                },
+                "nombre": "Jengibre",
+                "composicionNutricional": {
+                  "lipidos": 0.7,
+                  "hCarbono": 9.5,
+                  "proteinas": 1.7,
+                  "kCal": 55
+                },
+                "localizacion": {
+                  "ciudad": "Pekin",
+                  "pais": "China"
+                },
+                "precio": 7.2
+              },
+              25
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 5,
+                  "grupo": [
+                    "Frutas"
+                  ]
+                },
+                "nombre": "Sesamo blanco",
+                "composicionNutricional": {
+                  "lipidos": 58,
+                  "hCarbono": 0.9,
+                  "proteinas": 18.2,
+                  "kCal": 614
+                },
+                "localizacion": {
+                  "ciudad": "Ciudad del cabo",
+                  "pais": "Sudafrica"
+                },
+                "precio": 2.2
+              },
+              10
+            ]
+          ],
+          "categoria": "Segundo plato",
+          "composicionNutricional": {
+            "lipidos": 17.985,
+            "hCarbono": 27.885,
+            "proteinas": 26.115000000000002,
+            "kCal": 506.5
+          },
+          "grupoPredominante": {
+            "numGrupo": 1,
+            "grupo": [
+              "Carnes",
+              "Pescados",
+              "Huevos",
+              "Tofu",
+              "Frutos Secos",
+              "Legumbres"
+            ]
+          },
+          "precio": 2.6235
+        },
+        {
+          "name": "Yogurt desnatado con fruta",
+          "ingredientes": [
+            [
+              {
+                "grupo": {
+                  "numGrupo": 3,
+                  "grupo": [
+                    "Leche",
+                    "Derivados Lacteos"
+                  ]
+                },
+                "nombre": "Leche",
+                "composicionNutricional": {
+                  "lipidos": 3.5,
+                  "hCarbono": 4.7,
+                  "proteinas": 3.1,
+                  "kCal": 63
+                },
+                "localizacion": {
+                  "ciudad": "Asturias",
+                  "pais": "España"
+                },
+                "precio": 10.42
+              },
+              120
+            ]
+          ],
+          "categoria": "Postre",
+          "composicionNutricional": {
+            "lipidos": 4.2,
+            "hCarbono": 5.64,
+            "proteinas": 3.72,
+            "kCal": 75.6
+          },
+          "grupoPredominante": {
+            "numGrupo": 3,
+            "grupo": [
+              "Leche",
+              "Derivados Lacteos"
+            ]
+          },
+          "precio": 1.2504000000000002
+        }
+      ],
+      "precio": 5.9731,
+      "composicionNutricional": {
+        "lipidos": 68.585,
+        "hCarbono": 450.42499999999995,
+        "proteinas": 128.035,
+        "kCal": 1262.3
       }
     },
     {
@@ -1558,7 +1960,7 @@
           "precio": 3.9415
         },
         {
-          "name": "Pan con ajo",
+          "name": "Sopa de pescado",
           "ingredientes": [
             [
               {
@@ -1568,20 +1970,48 @@
                     "Cereales"
                   ]
                 },
-                "nombre": "Pan",
+                "nombre": "Fideos",
                 "composicionNutricional": {
-                  "lipidos": 1,
-                  "hCarbono": 58,
-                  "proteinas": 7.8,
-                  "kCal": 277
+                  "lipidos": 10,
+                  "hCarbono": 321,
+                  "proteinas": 0,
+                  "kCal": 64
                 },
                 "localizacion": {
-                  "ciudad": "Candelaria",
+                  "ciudad": "Milan",
+                  "pais": "Italia"
+                },
+                "precio": 2
+              },
+              "100"
+            ],
+            [
+              {
+                "grupo": {
+                  "numGrupo": 1,
+                  "grupo": [
+                    "Carnes",
+                    "Pescados",
+                    "Huevos",
+                    "Tofu",
+                    "Frutos Secos",
+                    "Legumbres"
+                  ]
+                },
+                "nombre": "Bacalao",
+                "composicionNutricional": {
+                  "lipidos": 40,
+                  "hCarbono": 0,
+                  "proteinas": 300,
+                  "kCal": 90
+                },
+                "localizacion": {
+                  "ciudad": "Ourense",
                   "pais": "España"
                 },
-                "precio": 2.5
+                "precio": 6
               },
-              100
+              "20"
             ],
             [
               {
@@ -1592,76 +2022,28 @@
                     "Hortalizas"
                   ]
                 },
-                "nombre": "Ajo",
+                "nombre": "Caldo",
                 "composicionNutricional": {
-                  "lipidos": 0.3,
-                  "hCarbono": 23,
-                  "proteinas": 5.3,
-                  "kCal": 118
+                  "lipidos": 3,
+                  "hCarbono": 11,
+                  "proteinas": 6,
+                  "kCal": 8
                 },
                 "localizacion": {
-                  "ciudad": "Yakutsk",
-                  "pais": "Siberia"
+                  "ciudad": "Almeria",
+                  "pais": "España"
                 },
-                "precio": 3.4
+                "precio": 0
               },
-              2
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 3,
-                  "grupo": [
-                    "Leche",
-                    "Derivados Lacteos"
-                  ]
-                },
-                "nombre": "Mantequilla",
-                "composicionNutricional": {
-                  "lipidos": 83,
-                  "hCarbono": 0,
-                  "proteinas": 0.6,
-                  "kCal": 749
-                },
-                "localizacion": {
-                  "ciudad": "Lyon",
-                  "pais": "Francia"
-                },
-                "precio": 5.5
-              },
-              60
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Perejil",
-                "composicionNutricional": {
-                  "lipidos": 1.3,
-                  "hCarbono": 2.7,
-                  "proteinas": 3,
-                  "kCal": 45
-                },
-                "localizacion": {
-                  "ciudad": "Cerdeña",
-                  "pais": "italia"
-                },
-                "precio": 5.5
-              },
-              20
+              "90"
             ]
           ],
-          "categoria": "Entrante",
+          "categoria": "Primer plato",
           "composicionNutricional": {
-            "lipidos": 51.065999999999995,
-            "hCarbono": 59,
-            "proteinas": 8.866,
-            "kCal": 737.76
+            "lipidos": 20.7,
+            "hCarbono": 330.9,
+            "proteinas": 65.4,
+            "kCal": 89.2
           },
           "grupoPredominante": {
             "numGrupo": 4,
@@ -1669,7 +2051,7 @@
               "Cereales"
             ]
           },
-          "precio": 0.6968
+          "precio": 0.32
         },
         {
           "name": "Salmon con arroz",
@@ -1799,7 +2181,7 @@
           "precio": 2.5719999999999996
         },
         {
-          "name": "Pan con ajo",
+          "name": "Donut",
           "ingredientes": [
             [
               {
@@ -1809,100 +2191,28 @@
                     "Cereales"
                   ]
                 },
-                "nombre": "Pan",
+                "nombre": "Donut",
                 "composicionNutricional": {
-                  "lipidos": 1,
-                  "hCarbono": 58,
-                  "proteinas": 7.8,
-                  "kCal": 277
+                  "lipidos": 23,
+                  "hCarbono": 47.2,
+                  "proteinas": 6.1,
+                  "kCal": 426
                 },
                 "localizacion": {
-                  "ciudad": "Candelaria",
-                  "pais": "España"
+                  "ciudad": "Brooklyn",
+                  "pais": "EEUU"
                 },
-                "precio": 2.5
+                "precio": 3.25
               },
-              100
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Ajo",
-                "composicionNutricional": {
-                  "lipidos": 0.3,
-                  "hCarbono": 23,
-                  "proteinas": 5.3,
-                  "kCal": 118
-                },
-                "localizacion": {
-                  "ciudad": "Yakutsk",
-                  "pais": "Siberia"
-                },
-                "precio": 3.4
-              },
-              2
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 3,
-                  "grupo": [
-                    "Leche",
-                    "Derivados Lacteos"
-                  ]
-                },
-                "nombre": "Mantequilla",
-                "composicionNutricional": {
-                  "lipidos": 83,
-                  "hCarbono": 0,
-                  "proteinas": 0.6,
-                  "kCal": 749
-                },
-                "localizacion": {
-                  "ciudad": "Lyon",
-                  "pais": "Francia"
-                },
-                "precio": 5.5
-              },
-              60
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Perejil",
-                "composicionNutricional": {
-                  "lipidos": 1.3,
-                  "hCarbono": 2.7,
-                  "proteinas": 3,
-                  "kCal": 45
-                },
-                "localizacion": {
-                  "ciudad": "Cerdeña",
-                  "pais": "italia"
-                },
-                "precio": 5.5
-              },
-              20
+              80
             ]
           ],
-          "categoria": "Entrante",
+          "categoria": "Postre",
           "composicionNutricional": {
-            "lipidos": 51.065999999999995,
-            "hCarbono": 59,
-            "proteinas": 8.866,
-            "kCal": 737.76
+            "lipidos": 18.4,
+            "hCarbono": 37.76,
+            "proteinas": 4.88,
+            "kCal": 340.8
           },
           "grupoPredominante": {
             "numGrupo": 4,
@@ -1910,15 +2220,15 @@
               "Cereales"
             ]
           },
-          "precio": 0.6968
+          "precio": 0.26
         }
       ],
-      "precio": 7.9071,
+      "precio": 7.093499999999999,
       "composicionNutricional": {
-        "lipidos": 283.997,
-        "hCarbono": 383,
-        "proteinas": 50.447,
-        "kCal": 3847.0699999999997
+        "lipidos": 220.965,
+        "hCarbono": 633.66,
+        "proteinas": 102.995,
+        "kCal": 2801.55
       }
     },
     {
@@ -2141,868 +2451,6 @@
         "hCarbono": 64.64,
         "proteinas": 42.586,
         "kCal": 1063.86
-      }
-    },
-    {
-      "nombre": "Japones",
-      "platos": [
-        {
-          "name": "Sushi",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Alga",
-                "composicionNutricional": {
-                  "lipidos": 1,
-                  "hCarbono": 0,
-                  "proteinas": 30,
-                  "kCal": 225
-                },
-                "localizacion": {
-                  "ciudad": "Tokyo",
-                  "pais": "Japon"
-                },
-                "precio": 9
-              },
-              "40"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 4,
-                  "grupo": [
-                    "Cereales"
-                  ]
-                },
-                "nombre": "Arroz",
-                "composicionNutricional": {
-                  "lipidos": 18.1,
-                  "hCarbono": 86,
-                  "proteinas": 7,
-                  "kCal": 381
-                },
-                "localizacion": {
-                  "ciudad": "Pekin",
-                  "pais": "China"
-                },
-                "precio": 3.8
-              },
-              "100"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Atun rojo",
-                "composicionNutricional": {
-                  "lipidos": 12,
-                  "hCarbono": 0,
-                  "proteinas": 23,
-                  "kCal": 200
-                },
-                "localizacion": {
-                  "ciudad": "Oslo",
-                  "pais": "Noruega"
-                },
-                "precio": 17.32
-              },
-              "60"
-            ]
-          ],
-          "categoria": "Entrante",
-          "composicionNutricional": {
-            "lipidos": 25.7,
-            "hCarbono": 86,
-            "proteinas": 32.8,
-            "kCal": 591
-          },
-          "grupoPredominante": {
-            "numGrupo": 2,
-            "grupo": [
-              "Verduras",
-              "Hortalizas"
-            ]
-          },
-          "precio": 1.7792000000000001
-        },
-        {
-          "name": "Sopa de pescado",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 4,
-                  "grupo": [
-                    "Cereales"
-                  ]
-                },
-                "nombre": "Fideos",
-                "composicionNutricional": {
-                  "lipidos": 10,
-                  "hCarbono": 321,
-                  "proteinas": 0,
-                  "kCal": 64
-                },
-                "localizacion": {
-                  "ciudad": "Milan",
-                  "pais": "Italia"
-                },
-                "precio": 2
-              },
-              "100"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Bacalao",
-                "composicionNutricional": {
-                  "lipidos": 40,
-                  "hCarbono": 0,
-                  "proteinas": 300,
-                  "kCal": 90
-                },
-                "localizacion": {
-                  "ciudad": "Ourense",
-                  "pais": "España"
-                },
-                "precio": 6
-              },
-              "20"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Caldo",
-                "composicionNutricional": {
-                  "lipidos": 3,
-                  "hCarbono": 11,
-                  "proteinas": 6,
-                  "kCal": 8
-                },
-                "localizacion": {
-                  "ciudad": "Almeria",
-                  "pais": "España"
-                },
-                "precio": 0
-              },
-              "90"
-            ]
-          ],
-          "categoria": "Primer plato",
-          "composicionNutricional": {
-            "lipidos": 20.7,
-            "hCarbono": 330.9,
-            "proteinas": 65.4,
-            "kCal": 89.2
-          },
-          "grupoPredominante": {
-            "numGrupo": 4,
-            "grupo": [
-              "Cereales"
-            ]
-          },
-          "precio": 0.32
-        },
-        {
-          "name": "Teriyaki de atun rojo",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Atun rojo",
-                "composicionNutricional": {
-                  "lipidos": 12,
-                  "hCarbono": 0,
-                  "proteinas": 23,
-                  "kCal": 200
-                },
-                "localizacion": {
-                  "ciudad": "Oslo",
-                  "pais": "Noruega"
-                },
-                "precio": 17.32
-              },
-              100
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Aceite de oliva",
-                "composicionNutricional": {
-                  "lipidos": 0,
-                  "hCarbono": 99,
-                  "proteinas": 0,
-                  "kCal": 899
-                },
-                "localizacion": {
-                  "ciudad": "Jerez",
-                  "pais": "España"
-                },
-                "precio": 25.5
-              },
-              25
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Salsa de soja",
-                "composicionNutricional": {
-                  "lipidos": 0.1,
-                  "hCarbono": 6.7,
-                  "proteinas": 8.7,
-                  "kCal": 66
-                },
-                "localizacion": {
-                  "ciudad": "Pekin",
-                  "pais": "China"
-                },
-                "precio": 5.2
-              },
-              10
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Jengibre",
-                "composicionNutricional": {
-                  "lipidos": 0.7,
-                  "hCarbono": 9.5,
-                  "proteinas": 1.7,
-                  "kCal": 55
-                },
-                "localizacion": {
-                  "ciudad": "Pekin",
-                  "pais": "China"
-                },
-                "precio": 7.2
-              },
-              25
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 5,
-                  "grupo": [
-                    "Frutas"
-                  ]
-                },
-                "nombre": "Sesamo blanco",
-                "composicionNutricional": {
-                  "lipidos": 58,
-                  "hCarbono": 0.9,
-                  "proteinas": 18.2,
-                  "kCal": 614
-                },
-                "localizacion": {
-                  "ciudad": "Ciudad del cabo",
-                  "pais": "Sudafrica"
-                },
-                "precio": 2.2
-              },
-              10
-            ]
-          ],
-          "categoria": "Segundo plato",
-          "composicionNutricional": {
-            "lipidos": 17.985,
-            "hCarbono": 27.885,
-            "proteinas": 26.115000000000002,
-            "kCal": 506.5
-          },
-          "grupoPredominante": {
-            "numGrupo": 1,
-            "grupo": [
-              "Carnes",
-              "Pescados",
-              "Huevos",
-              "Tofu",
-              "Frutos Secos",
-              "Legumbres"
-            ]
-          },
-          "precio": 2.6235
-        },
-        {
-          "name": "Yogurt desnatado con fruta",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 3,
-                  "grupo": [
-                    "Leche",
-                    "Derivados Lacteos"
-                  ]
-                },
-                "nombre": "Leche",
-                "composicionNutricional": {
-                  "lipidos": 3.5,
-                  "hCarbono": 4.7,
-                  "proteinas": 3.1,
-                  "kCal": 63
-                },
-                "localizacion": {
-                  "ciudad": "Asturias",
-                  "pais": "España"
-                },
-                "precio": 10.42
-              },
-              120
-            ]
-          ],
-          "categoria": "Postre",
-          "composicionNutricional": {
-            "lipidos": 4.2,
-            "hCarbono": 5.64,
-            "proteinas": 3.72,
-            "kCal": 75.6
-          },
-          "grupoPredominante": {
-            "numGrupo": 3,
-            "grupo": [
-              "Leche",
-              "Derivados Lacteos"
-            ]
-          },
-          "precio": 1.2504000000000002
-        }
-      ],
-      "precio": 5.9731,
-      "composicionNutricional": {
-        "lipidos": 68.585,
-        "hCarbono": 450.42499999999995,
-        "proteinas": 128.035,
-        "kCal": 1262.3
-      }
-    },
-    {
-      "nombre": "Sureto",
-      "platos": [
-        {
-          "name": "Huevos rotos",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Huevos",
-                "composicionNutricional": {
-                  "lipidos": 11.1,
-                  "hCarbono": 0.7,
-                  "proteinas": 12.5,
-                  "kCal": 153
-                },
-                "localizacion": {
-                  "ciudad": "Londres",
-                  "pais": "Inglaterra"
-                },
-                "precio": 13.8
-              },
-              250
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Papas",
-                "composicionNutricional": {
-                  "lipidos": 0,
-                  "hCarbono": 70,
-                  "proteinas": 0.2,
-                  "kCal": 282
-                },
-                "localizacion": {
-                  "ciudad": "Castilla y León",
-                  "pais": "España"
-                },
-                "precio": 3.2
-              },
-              100
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Chorizo",
-                "composicionNutricional": {
-                  "lipidos": 31.1,
-                  "hCarbono": 1,
-                  "proteinas": 22,
-                  "kCal": 385
-                },
-                "localizacion": {
-                  "ciudad": "Teror",
-                  "pais": "España"
-                },
-                "precio": 3.24
-              },
-              85
-            ]
-          ],
-          "categoria": "Entrante",
-          "composicionNutricional": {
-            "lipidos": 54.185,
-            "hCarbono": 72.6,
-            "proteinas": 50.15,
-            "kCal": 991.75
-          },
-          "grupoPredominante": {
-            "numGrupo": 1,
-            "grupo": [
-              "Carnes",
-              "Pescados",
-              "Huevos",
-              "Tofu",
-              "Frutos Secos",
-              "Legumbres"
-            ]
-          },
-          "precio": 4.0454
-        },
-        {
-          "name": "Lentejas",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Lenteja",
-                "composicionNutricional": {
-                  "lipidos": 3,
-                  "hCarbono": 90,
-                  "proteinas": 13,
-                  "kCal": 70
-                },
-                "localizacion": {
-                  "ciudad": "Lugo",
-                  "pais": "España"
-                },
-                "precio": 1
-              },
-              "200"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Codillo",
-                "composicionNutricional": {
-                  "lipidos": 35,
-                  "hCarbono": 0,
-                  "proteinas": 280,
-                  "kCal": 88
-                },
-                "localizacion": {
-                  "ciudad": "Castilla La Mancha",
-                  "pais": "España"
-                },
-                "precio": 5
-              },
-              "80"
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Chorizo",
-                "composicionNutricional": {
-                  "lipidos": 31.1,
-                  "hCarbono": 1,
-                  "proteinas": 22,
-                  "kCal": 385
-                },
-                "localizacion": {
-                  "ciudad": "Teror",
-                  "pais": "España"
-                },
-                "precio": 3.24
-              },
-              "15"
-            ]
-          ],
-          "categoria": "Primer plato",
-          "composicionNutricional": {
-            "lipidos": 38.665,
-            "hCarbono": 180.15,
-            "proteinas": 253.3,
-            "kCal": 268.15
-          },
-          "grupoPredominante": {
-            "numGrupo": 2,
-            "grupo": [
-              "Verduras",
-              "Hortalizas"
-            ]
-          },
-          "precio": 0.6486000000000001
-        },
-        {
-          "name": "Costillar con miel y mostaza",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Costilla de Cerdo",
-                "composicionNutricional": {
-                  "lipidos": 29.2,
-                  "hCarbono": 0,
-                  "proteinas": 21.5,
-                  "kCal": 349
-                },
-                "localizacion": {
-                  "ciudad": "Leon",
-                  "pais": "España"
-                },
-                "precio": 12.93
-              },
-              500
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Miel",
-                "composicionNutricional": {
-                  "lipidos": 0,
-                  "hCarbono": 78,
-                  "proteinas": 0.5,
-                  "kCal": 314
-                },
-                "localizacion": {
-                  "ciudad": "Tolouse",
-                  "pais": "Francia"
-                },
-                "precio": 7.43
-              },
-              20
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Cebolla",
-                "composicionNutricional": {
-                  "lipidos": 77.3,
-                  "hCarbono": 19.4,
-                  "proteinas": 1.3,
-                  "kCal": 163
-                },
-                "localizacion": {
-                  "ciudad": "Yunnan",
-                  "pais": "China"
-                },
-                "precio": 2.15
-              },
-              100
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Mostaza",
-                "composicionNutricional": {
-                  "lipidos": 4.4,
-                  "hCarbono": 6.4,
-                  "proteinas": 4.7,
-                  "kCal": 84
-                },
-                "localizacion": {
-                  "ciudad": "Berlin",
-                  "pais": "Alemania"
-                },
-                "precio": 3.73
-              },
-              25
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Sal",
-                "composicionNutricional": {
-                  "lipidos": 0,
-                  "hCarbono": 0,
-                  "proteinas": 0,
-                  "kCal": 0
-                },
-                "localizacion": {
-                  "ciudad": "Oslo",
-                  "pais": "Noruega"
-                },
-                "precio": 1.5
-              },
-              5
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 2,
-                  "grupo": [
-                    "Verduras",
-                    "Hortalizas"
-                  ]
-                },
-                "nombre": "Ajo",
-                "composicionNutricional": {
-                  "lipidos": 0.3,
-                  "hCarbono": 23,
-                  "proteinas": 5.3,
-                  "kCal": 118
-                },
-                "localizacion": {
-                  "ciudad": "Yakutsk",
-                  "pais": "Siberia"
-                },
-                "precio": 3.4
-              },
-              15
-            ],
-            [
-              {
-                "grupo": {
-                  "numGrupo": 1,
-                  "grupo": [
-                    "Carnes",
-                    "Pescados",
-                    "Huevos",
-                    "Tofu",
-                    "Frutos Secos",
-                    "Legumbres"
-                  ]
-                },
-                "nombre": "Aceite de oliva",
-                "composicionNutricional": {
-                  "lipidos": 0,
-                  "hCarbono": 99,
-                  "proteinas": 0,
-                  "kCal": 899
-                },
-                "localizacion": {
-                  "ciudad": "Jerez",
-                  "pais": "España"
-                },
-                "precio": 25.5
-              },
-              10
-            ]
-          ],
-          "categoria": "Segundo plato",
-          "composicionNutricional": {
-            "lipidos": 224.445,
-            "hCarbono": 49.95,
-            "proteinas": 110.86999999999999,
-            "kCal": 2099.4
-          },
-          "grupoPredominante": {
-            "numGrupo": 1,
-            "grupo": [
-              "Carnes",
-              "Pescados",
-              "Huevos",
-              "Tofu",
-              "Frutos Secos",
-              "Legumbres"
-            ]
-          },
-          "precio": 7.23535
-        },
-        {
-          "name": "Donut",
-          "ingredientes": [
-            [
-              {
-                "grupo": {
-                  "numGrupo": 4,
-                  "grupo": [
-                    "Cereales"
-                  ]
-                },
-                "nombre": "Donut",
-                "composicionNutricional": {
-                  "lipidos": 23,
-                  "hCarbono": 47.2,
-                  "proteinas": 6.1,
-                  "kCal": 426
-                },
-                "localizacion": {
-                  "ciudad": "Brooklyn",
-                  "pais": "EEUU"
-                },
-                "precio": 3.25
-              },
-              80
-            ]
-          ],
-          "categoria": "Postre",
-          "composicionNutricional": {
-            "lipidos": 18.4,
-            "hCarbono": 37.76,
-            "proteinas": 4.88,
-            "kCal": 340.8
-          },
-          "grupoPredominante": {
-            "numGrupo": 4,
-            "grupo": [
-              "Cereales"
-            ]
-          },
-          "precio": 0.26
-        }
-      ],
-      "precio": 12.18935,
-      "composicionNutricional": {
-        "lipidos": 335.69499999999994,
-        "hCarbono": 340.46,
-        "proteinas": 419.2,
-        "kCal": 3700.1000000000004
       }
     }
   ]

@@ -13,6 +13,7 @@ import { Menu } from '../menus/menus';
 import { MenuPrinter } from '../menus/printMenu';
 import { coleccionCarta } from '../baseDeDatos/carta/cartasBD';
 import { CartaPrinter } from '../carta/printCarta';
+import { Carta } from '../carta/carta';
 
 /**
  * Método para preguntarle al usuario, en que se quiere centrar.
@@ -464,6 +465,68 @@ async function promptCarta(): Promise<void> {
         type: 'list',
         name: 'command',
         message: 'Si ya ha terminado de ver las cartas, pulse ENTER',
+        choices: ["Volver"]
+      })
+
+      promptCarta();
+    break;
+    case "Añadir carta":
+      const nombreYNumeroMenusCarta = await inquirer.prompt([{
+          type: 'input',
+          name: 'Nombre',
+          message: 'Introduzca el nombre del restaurante: '
+        },
+        {
+          type: 'input',
+          name: 'Menus',
+          message: 'Introduzca el número de menús que tendrá su carta: ',
+        }
+      ]);
+
+      let menusAux: Menu[] = [];
+      
+      for (let i = 0; i < nombreYNumeroMenusCarta['Menus']; i++) {
+        const datosMenusCarta = await inquirer.prompt([{
+          type: 'list',
+          name: 'Nombre',
+          message: `Seleccione el menú ${i+1} a introducir en la carta: `,
+          choices: coleccionMenus.getDatosMenus().map(item => ({
+            name: item.getNombre()
+          }))
+        }]);
+        
+        menusAux.push(coleccionMenus.getMenuConcreto(datosMenusCarta['Nombre']));
+      }
+      
+      const numeroPlatosCarta = await inquirer.prompt(        {
+        type: 'input',
+        name: 'Platos',
+        message: 'Introduzca el número de platos que tendrá su carta: '
+      })
+
+      let platosAux: Platos[] = [];
+      for (let i = 0; i < numeroPlatosCarta['Platos']; i++) {
+        const datosPlatosCarta = await inquirer.prompt([{
+          type: 'list',
+          name: 'Nombre',
+          message: `Seleccione el plato ${i+1} a introducir en la carta: `,
+          choices: coleccionPlatos.getDatosPlatos().map(item => ({
+            name: item.getNombre()
+          }))
+        }]);
+        
+        platosAux.push(coleccionPlatos.getPlatoConcreto(datosPlatosCarta['Nombre']));
+      }
+
+      const carta = new Carta(nombreYNumeroMenusCarta['Nombre'], menusAux, platosAux);
+      coleccionCarta.addNuevoCarta(carta);
+      
+      console.log("\n\n¡CARTA AÑADIDA CON ÉXITO!\n")
+
+      await inquirer.prompt({
+        type: 'list',
+        name: 'salir',
+        message: 'Pulse ENTER para volver a la carta',
         choices: ["Volver"]
       })
 

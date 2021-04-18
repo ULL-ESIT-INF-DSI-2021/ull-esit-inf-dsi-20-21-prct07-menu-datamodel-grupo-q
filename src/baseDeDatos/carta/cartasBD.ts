@@ -2,18 +2,19 @@ import { Menu } from "../../menus/menus";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import { Ingrediente } from "../../ingredientes/ingredientes";
-import { pruebaCartas} from "../borja/prueba";
+//import { pruebaCartas} from "../borja/prueba";
 import { ComposicionNutricional, GrupoAlimenticio } from "../../ingredientes/tiposDefinidos";
 import { Platos } from "../../platos/platos";
 import { coleccionPlatos } from "../platos/platosBD";
 import { Carta } from "../../carta/carta";
 import { coleccionMenus } from "../menus/menusBD";
+import { pruebaCartas } from "../borja/prueba";
 
 /**
  * Esquema de la base de datos de menus.
  */
 type schemaTypeCarta = {
-  /*carta: {
+  carta: {
         nombreRestaurante: string,
         menus: {
             nombre: string,
@@ -25,13 +26,20 @@ type schemaTypeCarta = {
                 grupoPredominante: GrupoAlimenticio,
                 precio: number
             }[],
-        }[]
-    }[]*/
-    carta: {}[]
+        }[],
+        platos: {
+          name: string,
+          ingredientes: [Ingrediente, number][],
+          categoria: "Entrante" | "Primer menu" | "Segundo menu" | "Postre",
+          composicionNutricional: ComposicionNutricional,
+          grupoPredominante: GrupoAlimenticio,
+          precio: number
+      }[],
+    }[]
 }
 
 export class CartaBD {
-  private database: lowdb.LowdbSync<Carta[]>;
+  private database: lowdb.LowdbSync<schemaTypeCarta>;
   /**
    * Constructor de la clase.
    */
@@ -39,21 +47,20 @@ export class CartaBD {
     this.database = lowdb(new FileSync("./src/baseDeDatos/carta/carta.json"))
     
     if (this.database.has('carta').value()) {
-        /*let dbtItems = this.database.get('carta').value();
+        let dbtItems = this.database.get('carta').value();
         let platosAux: Platos[] = [];
         let menusAux: Menu[] = [];
-        dbtItems.forEach(cartas=> {
+        dbtItems.forEach(cartas => {
             cartas.menus.forEach(menus => {
-                menus.platos.forEach((plato) => {
-                    platosAux.push(coleccionPlatos.getPlatoConcreto(plato.name));
-                })
-                //menusAux.push(new Menu(menus.nombre, platosAux));
-                menusAux.push(coleccionMenus.getMenuConcreto(menus.nombre))
+                menusAux.push(coleccionMenus.getMenuConcreto(menus.nombre));
             });
+            cartas.platos.forEach(platos => {
+              platosAux.push(coleccionPlatos.getPlatoConcreto(platos.name));
+            })
             datosCarta.push(new Carta(cartas.nombreRestaurante, menusAux, platosAux));
             platosAux = [];
             menusAux = [];
-        });*/
+        });
     }
     else {
       this.database.set('carta', datosCarta).write();
@@ -130,4 +137,4 @@ export class CartaBD {
   }
 }
 
-export const coleccionCarta = new CartaBD(pruebaCartas);
+export const coleccionCarta = new CartaBD();

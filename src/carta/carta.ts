@@ -67,6 +67,7 @@ export class Carta implements CartaI{
   public addPlato(plato: Platos) {
     this.platos.push(plato);
   }
+  
   /**
    * Método para borrar un plato de la carta
    * @param plato el plato a eliminar
