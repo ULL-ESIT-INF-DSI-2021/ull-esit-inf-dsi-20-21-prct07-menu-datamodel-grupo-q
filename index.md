@@ -29,7 +29,7 @@ La estructura debería quedar similar a las siguientes fotos:
 
 Será necesario implementar las clases del ejercicio en ficheros diferentes. Los ficheros que dependan de otros requeriran de un `import` del fichero que necesiten:
 
-<img src="img/Captura1d.PNG" alt="" /> <img src="img/Captura1e.PNG" alt="" />
+<img src="img/Captura1dd.PNG" alt="" /> <img src="img/Captura1ee.PNG" alt="" />
 
 Se creará una subcarpeta para cada apartado del ejercicio en la carpeta src y, su correspondiente espectativa se crearán en la carpeta test con un fichero para realizar las pruebas de cada apartado.
 
