@@ -1582,7 +1582,7 @@ export class CartaPrinter {
 * **BDD Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
 
 
-#### 3.2. Gestión de una línea de comandos interactiva
+#### 3.2. Gestión de una línea de comandos interactiva (FALTA TERMINAR)
 
 Nos interesa poder tener cierta interacción con el programa para poder manipular los datos creados. Nos ayudaremos de el módulo Inquirer.js para este propósito. Por línea de comandos podremos realizar las siguientes acciones:
 
@@ -1590,4 +1590,4 @@ Nos interesa poder tener cierta interacción con el programa para poder manipula
 * **Borrar** alimentos/ingredientes, platos, menús y cartas.
 * **Modificar** alimentos/ingredientes, platos, menús y cartas.
 
-### 4. Clase Comanda
+### 4. Clase Comanda (FALTA TERMINAR)
