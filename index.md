@@ -1215,6 +1215,8 @@ Dentro de la clase tenemos varios métodos, el primero promptVisCarta(), el cual
 
 Por otro lado, tenemos el método promptRelComanda() el cual es un método que se encarga de visualizar la carta o la comanda, según requiera el usuario, además de poder añadir a la comanda un menú hecho por el usuario, o uno de los que ofrezca el restaurante.
 
+El código completo de la clase comanda se encuentra [aquí]()
+
 ### Conclusiones
 
 Esta práctica nos ha resultado de gran utilidad para poner en práctica todos los conocimientos, herramientas, principios ... aprendidos hasta la fecha. Además hemos aprendido a manejar el prompt y darle una gran utilidad a la linea de comandos (cosa que sin duda usaremos en un futuro para próximas prácticas y proyectos).
