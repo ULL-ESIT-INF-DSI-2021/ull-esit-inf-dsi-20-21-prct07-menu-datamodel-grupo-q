@@ -109,7 +109,7 @@ export type Localizacion = {
 }
 ```
 
-Crearemos también una clase abstracta gruposAlimentos que nos servirá como recurso para poder determinar el grupo alimenticio del alimento. [REVISAR***](***) Esta clase hará uso de el tipo definido anteriormente para los grupos alimenticios. El grupo cambiará en función del número que se le establezca en la función *setGrupo*
+Crearemos también una clase abstracta gruposAlimentos que nos servirá como recurso para poder determinar el grupo alimenticio del alimento. Esta clase hará uso de el tipo definido anteriormente para los grupos alimenticios. El grupo cambiará en función del número que se le establezca en la función *setGrupo*
 
 ```ts
 
