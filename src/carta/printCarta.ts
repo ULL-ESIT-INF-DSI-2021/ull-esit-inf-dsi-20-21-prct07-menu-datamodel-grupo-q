@@ -13,8 +13,9 @@ export class CartaPrinter {
    */
   print() {
     console.log(`CARTA DEL RESTAURANTE ${this.carta.getNombre()}\n     Menus:`);
-    let auxiliar: [string[], string[], string[], string[]] = [[], [], [], []];;
+    let auxiliar: [string[], string[], string[], string[]] = [[], [], [], []];
     this.carta.getMenus().forEach((item) => {
+      auxiliar = [[], [], [], []];
       item.getPlatos().forEach((elemento) => {
         if (elemento.getCategoria() == "Entrante") auxiliar[0].push(elemento.getNombre());
         if (elemento.getCategoria() == "Primer plato") auxiliar[1].push(elemento.getNombre());
@@ -22,7 +23,7 @@ export class CartaPrinter {
         if (elemento.getCategoria() == "Postre") auxiliar[3].push(elemento.getNombre());
       });
       
-      console.log(`        Ǹombre: ${item.getNombre()}`);
+      console.log(`\n\n        Ǹombre: ${item.getNombre()}`);
       console.log(`            Entrante:`)
       auxiliar[0].forEach((elemento) => { console.log(`                ● ${elemento}`)});
       console.log(`            Primer plato:`)
@@ -30,7 +31,7 @@ export class CartaPrinter {
       console.log(`            Segundo plato:`)
       auxiliar[2].forEach((elemento) => { console.log(`                ● ${elemento}`)});
       console.log(`            Postres:`)
-      auxiliar[3].forEach((elemento) => { console.log(`                ● ${elemento}\n\n`)});
+      auxiliar[3].forEach((elemento) => { console.log(`                ● ${elemento}`)});
     });
 
     auxiliar = [[], [], [], []];

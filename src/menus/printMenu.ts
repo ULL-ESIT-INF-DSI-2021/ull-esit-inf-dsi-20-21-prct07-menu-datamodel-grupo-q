@@ -27,7 +27,7 @@ export class MenuPrinter {
       console.log(`       Segundo plato:`)
       auxiliar[2].forEach((item) => { console.log(`            ● ${item}`)});
       console.log(`       Postres:`)
-      auxiliar[3].forEach((item) => { console.log(`            ● ${item}\n\n`)});
+      auxiliar[3].forEach((item) => { console.log(`            ● ${item}`)});
     console.log(`    Composición nutriconal: \n        Kcal = ${this.menu.getComposicionNutricional().kCal}, \n        Proteinas = ${this.menu.getComposicionNutricional().proteinas},\n        Lipidos = ${this.menu.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.menu.getComposicionNutricional().hCarbono},\n    Grupo alimenticio: ${this.menu.listadoGrupos()}, \n    Precio: ${this.menu.getPrecio()} €`);
   }
 

@@ -28,6 +28,9 @@ type schemaTypeIngrediente = {
 
 export class IngredientesBD {
   private database: lowdb.LowdbSync<schemaTypeIngrediente>;
+  /**
+   * Constructor de la clase.
+   */
   constructor(private datosIngredientes: Ingrediente[] = []) {
     this.database = lowdb(new FileSync("./src/baseDeDatos/ingredientes/ingredientes.json"))
     

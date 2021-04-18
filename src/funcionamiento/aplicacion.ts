@@ -14,6 +14,9 @@ import { MenuPrinter } from '../menus/printMenu';
 import { coleccionCarta } from '../baseDeDatos/carta/cartasBD';
 import { CartaPrinter } from '../carta/printCarta';
 
+/**
+ * Método para preguntarle al usuario, en que se quiere centrar.
+ */
 async function promptUser() {
   console.clear();
 
@@ -50,6 +53,9 @@ async function promptUser() {
   }
 }
 
+/**
+ * Método para preguntar al usuario que quiere hacer cuando haya seleccionado "ingredientes" en el metodo anterior.
+ */
 async function promptIngrediente(): Promise<void> {
   console.clear();
 
@@ -189,6 +195,9 @@ async function promptIngrediente(): Promise<void> {
   }
 }
 
+/**
+ * Método para preguntar al usuario que quiere hacer cuando haya seleccionado "platos" en el metodo anterior.
+ */
 async function promptPlato(): Promise<void> {
   console.clear();
 
@@ -307,6 +316,9 @@ async function promptPlato(): Promise<void> {
   }
 }
 
+/**
+ * Método para preguntar al usuario que quiere hacer cuando haya seleccionado "menús" en el metodo anterior.
+ */
 async function promptMenu(): Promise<void> {
   console.clear();
 
@@ -422,6 +434,9 @@ async function promptMenu(): Promise<void> {
   }
 }
 
+/**
+ * Método para preguntar al usuario que quiere hacer cuando haya seleccionado "carta" en el metodo anterior.
+ */
 async function promptCarta(): Promise<void> {
   console.clear();
 

@@ -13,7 +13,7 @@ import { coleccionMenus } from "../menus/menusBD";
  * Esquema de la base de datos de menus.
  */
 type schemaTypeCarta = {
-  carta: {
+  /*carta: {
         nombreRestaurante: string,
         menus: {
             nombre: string,
@@ -26,11 +26,12 @@ type schemaTypeCarta = {
                 precio: number
             }[],
         }[]
-    }[]
+    }[]*/
+    carta: {}[]
 }
 
 export class CartaBD {
-  private database: lowdb.LowdbSync<schemaTypeCarta>;
+  private database: lowdb.LowdbSync<Carta[]>;
   /**
    * Constructor de la clase.
    */
@@ -38,7 +39,7 @@ export class CartaBD {
     this.database = lowdb(new FileSync("./src/baseDeDatos/carta/carta.json"))
     
     if (this.database.has('carta').value()) {
-        let dbtItems = this.database.get('carta').value();
+        /*let dbtItems = this.database.get('carta').value();
         let platosAux: Platos[] = [];
         let menusAux: Menu[] = [];
         dbtItems.forEach(cartas=> {
@@ -48,12 +49,11 @@ export class CartaBD {
                 })
                 //menusAux.push(new Menu(menus.nombre, platosAux));
                 menusAux.push(coleccionMenus.getMenuConcreto(menus.nombre))
-                platosAux = [];
             });
             datosCarta.push(new Carta(cartas.nombreRestaurante, menusAux, platosAux));
             platosAux = [];
             menusAux = [];
-        });
+        });*/
     }
     else {
       this.database.set('carta', datosCarta).write();
@@ -71,7 +71,7 @@ export class CartaBD {
 
 
   /**
-  * Función para obtener una carta en función de su nombre
+  * Función para obtener una carta en función del nombre de su nombre
   * @param nombreCarta Nombre de la carta
   * @returns La carta
   */
@@ -130,4 +130,4 @@ export class CartaBD {
   }
 }
 
-export const coleccionCarta = new CartaBD();
+export const coleccionCarta = new CartaBD(pruebaCartas);
