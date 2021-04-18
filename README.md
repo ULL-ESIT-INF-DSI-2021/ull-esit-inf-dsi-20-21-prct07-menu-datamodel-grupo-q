@@ -20,4 +20,4 @@
   * alu0101206479@ull.edu.es
   * alu0101235929@ull.edu.es
   
-En el fichero **x** encontrará el informe del proyecto realizado por el equipo Q.
+En el fichero **index.md** encontrará el informe del proyecto realizado por el equipo Q.
