@@ -2,13 +2,11 @@ import { Menu } from "../../menus/menus";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import { Ingrediente } from "../../ingredientes/ingredientes";
-//import { pruebaCartas} from "../borja/prueba";
 import { ComposicionNutricional, GrupoAlimenticio } from "../../ingredientes/tiposDefinidos";
 import { Platos } from "../../platos/platos";
 import { coleccionPlatos } from "../platos/platosBD";
 import { Carta } from "../../carta/carta";
 import { coleccionMenus } from "../menus/menusBD";
-import { pruebaCartas } from "../borja/prueba";
 
 /**
  * Esquema de la base de datos de menus.

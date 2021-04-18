@@ -2,7 +2,6 @@ import { Menu } from "../../menus/menus";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import { Ingrediente } from "../../ingredientes/ingredientes";
-import { pruebaMenus } from "../borja/prueba";
 import { ComposicionNutricional, GrupoAlimenticio } from "../../ingredientes/tiposDefinidos";
 import { Platos } from "../../platos/platos";
 import { coleccionPlatos } from "../platos/platosBD";

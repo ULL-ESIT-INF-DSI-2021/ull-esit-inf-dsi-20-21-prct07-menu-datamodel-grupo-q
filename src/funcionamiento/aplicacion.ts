@@ -5,7 +5,6 @@ import { Ingrediente } from '../ingredientes/ingredientes';
 import { coleccionIngredientes } from '../baseDeDatos/ingredientes/ingredientesBD';
 import { coleccionPlatos } from '../baseDeDatos/platos/platosBD';
 import { PlatoPrinter } from '../platos/printPlato';
-import { pruebaPlatos } from '../baseDeDatos/borja/prueba';
 import { PlatosBD } from '../baseDeDatos/platos/platosBD';
 import { Platos } from '../platos/platos';
 import { coleccionMenus } from '../baseDeDatos/menus/menusBD';
