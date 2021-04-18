@@ -20,16 +20,45 @@ export class Menu implements MenuI<ComposicionNutricional>{
   constructor(private name: string, private platos: Platos[]) {   
     this.name = name;
     this.platos = platos;
+    let contador: number = 0;
+    let categoriaAux: string = platos[0].getCategoria();
+    let comprobarCategoria: number[] = [1];
 
     let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
-    this.platos.forEach((item) => {
-      this.composicionNutricional.lipidos = this.composicionNutricional.lipidos + item.getComposicionNutricional().lipidos;
-      this.composicionNutricional.hCarbono = this.composicionNutricional.hCarbono + item.getComposicionNutricional().hCarbono;
-      this.composicionNutricional.proteinas = this.composicionNutricional.proteinas + item.getComposicionNutricional().proteinas;
-      this.composicionNutricional.kCal = this.composicionNutricional.kCal + item.getComposicionNutricional().kCal;
-
-      this.precio = this.precio + item.getPrecio();
+    this.platos.forEach((plato) => {
+      if (comprobarCategoria[2] != 1) {
+        console.log(comprobarCategoria.length)
+        if (categoriaAux != plato.getCategoria()){
+          comprobarCategoria.push(1);
+        }
+      }
+      this.composicionNutricional.lipidos = this.composicionNutricional.lipidos + plato.getComposicionNutricional().lipidos;
+      this.composicionNutricional.hCarbono = this.composicionNutricional.hCarbono + plato.getComposicionNutricional().hCarbono;
+      this.composicionNutricional.proteinas = this.composicionNutricional.proteinas + plato.getComposicionNutricional().proteinas;
+      this.composicionNutricional.kCal = this.composicionNutricional.kCal + plato.getComposicionNutricional().kCal;
+      this.precio = this.precio + plato.getPrecio();
+      contador++;
+      categoriaAux = plato.getCategoria();
     });
+
+    let mensaje: string = "";
+
+    try {
+
+      if (contador > 5) throw 1;
+      if (comprobarCategoria.length < 3) throw 2;
+      mensaje = "Menú creado correctamente"
+    } 
+    
+    catch(err) {
+
+      if (err == 1) mensaje = "Menú con mas de 5 platos.";
+      if (err == 2) mensaje = "No hay un plato de al menos tres categorias distintas.";
+    }
+    
+    finally{
+      console.log(mensaje);
+    }
   }
 
   /**

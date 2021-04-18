@@ -84,4 +84,4 @@ export class BaseDatosIngredientes {
 
 
 export const baseDeDatosIngredientes = new BaseDatosIngredientes(ingredientes);
-baseDeDatosIngredientes.salida();
+//baseDeDatosIngredientes.salida();
