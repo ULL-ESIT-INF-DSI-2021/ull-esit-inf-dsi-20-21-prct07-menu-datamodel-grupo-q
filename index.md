@@ -677,7 +677,16 @@ export class CartaPrinter {
 
  Para almacenar todo lo necesario para que funcione el programa crearemos una serie de bases de datos, para poder almacenar toda la información con respecto a los ingredientes, los platos, el menú y finamente la comanda. Por una parte, veremos en detalle cada una de estas, y como están estructuradas.
  
- Para comprobar la estructura, o más bien, asignarle esta, tenemos creado un fichero `.ts` por cada base de datos, llamada `(nombreBase)BD.ts`, en este fichero tenemos creaod un **schema** el cual asigna la estructura que tendrán nuestros objetos dentro de cada base de datos, usando para estos, ficheros `.json`. Para la base de datos de ingredientes, tendremos lo siguiente:
+ Para comprobar la estructura, o más bien, asignarle esta, tenemos creado un fichero `.ts` por cada base de datos, llamada `(nombreBase)BD.ts`, en este fichero tenemos creado un **schema** el cual asigna la estructura que tendrán nuestros objetos dentro de cada base de datos, usando para estos, ficheros `.json`. Además, tendremos creada una clase en cada fichero, correspondiente a la base de datos, la cual nos ayudará a acceder a esta base de datos, a añadir un nuevo producto, ya sea un ingrediente, plato o menú, o por otro lado, a eliminar un producto que no deseemos. En los siguientes enlaces podrá acceder a estos `ficheros.ts` para cada base de datos.
+ 
+ * [Schema para Ingredientes](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/ingredientes/ingredientesBD.ts).
+ 
+ * [Schema para Platos](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/platos/platosBD.ts).
+ 
+ * [Schema para Menú](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/menus/menusBD.ts).
+ 
+ 
+ Para la base de datos de ingredientes, tendremos lo siguiente:
  
  **Ejemplo de una implementación de un objeto en la BDD de Ingredientes:**
  
