@@ -1,5 +1,8 @@
 import { PlatosJson } from "./tiposDefinidos";
 
+/**
+ * Base de datos de los platos. Con sus ingredientes y sus cantidades.
+ */
 export let platos:PlatosJson[] = [
 
     {

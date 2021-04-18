@@ -56,18 +56,6 @@ export class IngredientesBD {
   * @param nombreIngrediente Nombre del ingrediente
   * @returns El ingredente
   */
-  getInfoIngrediente(nombreIngrediente: string){
-    let ingrediente = new Ingrediente("", 0, [0,0,0,0], ["",""], 0);
-        
-    this.datosIngredientes.forEach((item) => {
-      if (item.getNombre() == nombreIngrediente) {
-        ingrediente = item;
-      }
-    });
-
-    return ingrediente;
-  }
-
   getIngredienteConcreto(nombreIngrediente: string){
     let i: number = 0;
     let indice: number = 0;

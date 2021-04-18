@@ -77,27 +77,37 @@ export class PlatosBD {
   }
 
 
+  getPlatosPorCategoria(categoria: string){
+
+    let platosAux: Platos[] = []
+    this.datosPlatos.forEach(plato => {
+      if (plato.getCategoria() == categoria) {
+        platosAux.push(plato);
+      }
+    });
+    return platosAux;
+  }
+
+
   /**
-  * Función para obtener un platos en función de su nombre
-  * @param nombrePlatos Nombre del platos
+  * Función para obtener un plato en función de su nombre
+  * @param nombrePlatos Nombre del plato
   * @returns El plato
   */
-   getInfoPlato(nombrePlato: string){
-    let plato = new Platos("", [[new Ingrediente("", 0, [0,0,0,0], ["", ""], 0), 0]], "Entrante");
-
+  getPlatoConcreto(nombrePlato: string){
     let i: number = 0;
-    if (this.datosPlatos[i].getNombre() == nombrePlato){
-            return this.datosPlatos[i];
-    }
-    while (this.datosPlatos[i].getNombre() != nombrePlato){
-        i++;
-        if (this.datosPlatos[i].getNombre() == nombrePlato){
-            return this.datosPlatos[i];
-        }
-    }
+    let indice: number = 0;
 
-    return plato;
-  }
+    this.datosPlatos.forEach((item) => {
+        if (item.getNombre() == nombrePlato) {
+            indice = i;
+        }
+        i++;
+    });
+    
+    return this.datosPlatos[indice];
+}
+
 
   /**
   * Función par añadir un platos a la base de datos

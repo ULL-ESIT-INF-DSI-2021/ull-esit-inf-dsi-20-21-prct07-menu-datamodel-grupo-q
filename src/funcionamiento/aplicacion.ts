@@ -8,6 +8,9 @@ import { PlatoPrinter } from '../platos/printPlato';
 import { pruebaPlatos } from '../baseDeDatos/borja/prueba';
 import { PlatosBD } from '../baseDeDatos/platos/platosBD';
 import { Platos } from '../platos/platos';
+import { coleccionMenus } from '../baseDeDatos/menus/menusBD';
+import { Menu } from '../menus/menus';
+import { MenuPrinter } from '../menus/printMenu';
 
 async function promptUser() {
   console.clear();
@@ -30,6 +33,9 @@ async function promptUser() {
     break;
     case "Platos":
       promptPlato();
+    break;
+    case "Menús":
+      promptMenu();
     break;
     case "Salir":
     break;
@@ -225,9 +231,12 @@ async function promptPlato(): Promise<void> {
       let ingredienteCantidad: [Ingrediente, number][] = [];
       for(let i: number = 0; i < parseInt(nombreYNumero['Numero de ingredientes']); i++) {
         const datosIngrediente = await inquirer.prompt([{
-          type: 'input',
+          type: 'list',
           name: 'Nombre',
-          message: `Introduzca el nombre del ingrediente ${i+1}: `
+          message: `Seleccione el ingrediente: `,
+          choices: coleccionIngredientes.getDatosIngredientes().map(item => ({
+            name: item.getNombre()
+          }))
           },
           {
             type: 'input',
@@ -292,19 +301,119 @@ async function promptPlato(): Promise<void> {
   }
 }
 
-async function promptAdd(): Promise<void> {
+async function promptMenu(): Promise<void> {
   console.clear();
-  console.log("Añade una tarea")
-  const respuesta = await inquirer.prompt({
-    type: 'input',
-    name: 'nombre',
-    message: 'Introduce el nombre del ingrediente'
-  });
 
-  if(respuesta['nombre'] !== '') {
-    console.log("INTRODUCIDO");
+  const respuesta = await inquirer.prompt({
+    type: 'list',
+    name: 'command',
+    message: '¿Qué quiere hacer?',
+    choices: [
+      "Mostrar menús",
+      "Añadir menús",
+      "Borrar menús",
+      "Volver"
+    ]
+  })
+
+  switch(respuesta["command"]) {
+    case "Mostrar menús":
+      coleccionMenus.getDatosMenus().forEach(menu => {
+        let menuPrinter = new MenuPrinter(menu);
+        console.log()
+        menuPrinter.print();
+      });
+
+      const a = await inquirer.prompt({
+        type: 'list',
+        name: 'command',
+        message: 'Si ya ha terminado de ver los menus, pulse ENTER',
+        choices: ["Volver"]
+      })
+
+      promptMenu();
+    break;
+
+    case "Añadir menús":
+      const datosNuevoMenu = await inquirer.prompt([{
+          type: 'input',
+          name: 'Nombre',
+          message: 'Introduzca el nombre del menu: '
+        },
+        {
+          type: 'list',
+          name: 'Entrante',
+          message: '¿Seleccione su entrante?',
+          choices: coleccionPlatos.getPlatosPorCategoria("Entrante").map(item => ({
+            name: item.getNombre()
+          }))
+        },
+        {
+          type: 'list',
+          name: 'Primer plato',
+          message: '¿Seleccione su primer plato?',
+          choices: coleccionPlatos.getPlatosPorCategoria("Primer plato").map(item => ({
+            name: item.getNombre()
+          }))
+        },
+        {
+          type: 'list',
+          name: 'Segundo plato',
+          message: '¿Seleccione su segundo plato?',
+          choices: coleccionPlatos.getPlatosPorCategoria("Segundo plato").map(item => ({
+            name: item.getNombre()
+          }))
+        },
+        {
+          type: 'list',
+          name: 'Postre',
+          message: '¿Seleccione su postre?',
+          choices: coleccionPlatos.getPlatosPorCategoria("Postre").map(item => ({
+            name: item.getNombre()
+          }))
+        }
+      ]);
+
+      const menu = new Menu(datosNuevoMenu['Nombre'], [coleccionPlatos.getPlatoConcreto(datosNuevoMenu['Entrante']), coleccionPlatos.getPlatoConcreto(datosNuevoMenu['Primer plato']), coleccionPlatos.getPlatoConcreto(datosNuevoMenu['Segundo plato']), coleccionPlatos.getPlatoConcreto(datosNuevoMenu['Postre'])]);
+      coleccionMenus.addNuevoMenus(menu);
+      
+      console.log("\n\n¡MENÚ AÑADIDO CON ÉXITO!\n")
+
+      await inquirer.prompt({
+        type: 'list',
+        name: 'salir',
+        message: 'Pulse ENTER para volver al menú',
+        choices: ["Volver"]
+      })
+
+      promptMenu();
+    break;
+    case "Borrar menús":
+      const menuAQuitar = await inquirer.prompt({
+        type: 'input',
+        name: 'Nombre',
+        message: 'Introduzca el nombre del menu que quiere quitar de la base de datos: '
+      })
+
+      coleccionMenus.removeMenus(menuAQuitar['Nombre']);
+      
+      console.log("\n\n¡MENU ELIMINADO CON ÉXITO!\n")
+
+      await inquirer.prompt({
+        type: 'list',
+        name: 'salir',
+        message: 'Pulse ENTER para volver al menú',
+        choices: ["Volver"]
+      })
+
+      promptMenu();
+    break;
+    case "Volver":
+      promptUser();
+    break;
+    default:
+      break;
   }
-  promptUser();
 }
 
 

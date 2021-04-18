@@ -1799,6 +1799,415 @@
         ]
       },
       "precio": 7.23535
+    },
+    {
+      "name": "Sushi",
+      "ingredientes": [
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Alga",
+            "composicionNutricional": {
+              "lipidos": 1,
+              "hCarbono": 0,
+              "proteinas": 30,
+              "kCal": 225
+            },
+            "localizacion": {
+              "ciudad": "Tokyo",
+              "pais": "Japon"
+            },
+            "precio": 9
+          },
+          "40"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 4,
+              "grupo": [
+                "Cereales"
+              ]
+            },
+            "nombre": "Arroz",
+            "composicionNutricional": {
+              "lipidos": 18.1,
+              "hCarbono": 86,
+              "proteinas": 7,
+              "kCal": 381
+            },
+            "localizacion": {
+              "ciudad": "Pekin",
+              "pais": "China"
+            },
+            "precio": 3.8
+          },
+          "100"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 1,
+              "grupo": [
+                "Carnes",
+                "Pescados",
+                "Huevos",
+                "Tofu",
+                "Frutos Secos",
+                "Legumbres"
+              ]
+            },
+            "nombre": "Atun rojo",
+            "composicionNutricional": {
+              "lipidos": 12,
+              "hCarbono": 0,
+              "proteinas": 23,
+              "kCal": 200
+            },
+            "localizacion": {
+              "ciudad": "Oslo",
+              "pais": "Noruega"
+            },
+            "precio": 17.32
+          },
+          "60"
+        ]
+      ],
+      "categoria": "Entrante",
+      "composicionNutricional": {
+        "lipidos": 25.7,
+        "hCarbono": 86,
+        "proteinas": 32.8,
+        "kCal": 591
+      },
+      "grupoPredominante": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "precio": 1.7792000000000001
+    },
+    {
+      "name": "Puchero",
+      "ingredientes": [
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Piña",
+            "composicionNutricional": {
+              "lipidos": 1,
+              "hCarbono": 48,
+              "proteinas": 0,
+              "kCal": 12
+            },
+            "localizacion": {
+              "ciudad": "Santa Cruz de Tenerife",
+              "pais": "España"
+            },
+            "precio": 1
+          },
+          "20"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Bubango",
+            "composicionNutricional": {
+              "lipidos": 1,
+              "hCarbono": 30,
+              "proteinas": 0,
+              "kCal": 10
+            },
+            "localizacion": {
+              "ciudad": "Santa Cruz de Tenerife",
+              "pais": "España"
+            },
+            "precio": 1
+          },
+          "90"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Zanahoria",
+            "composicionNutricional": {
+              "lipidos": 2,
+              "hCarbono": 67,
+              "proteinas": 0,
+              "kCal": 16
+            },
+            "localizacion": {
+              "ciudad": "Maputo",
+              "pais": "Mozambique"
+            },
+            "precio": 1
+          },
+          "80"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 1,
+              "grupo": [
+                "Carnes",
+                "Pescados",
+                "Huevos",
+                "Tofu",
+                "Frutos Secos",
+                "Legumbres"
+              ]
+            },
+            "nombre": "Pollo",
+            "composicionNutricional": {
+              "lipidos": 9.7,
+              "hCarbono": 0,
+              "proteinas": 20,
+              "kCal": 167
+            },
+            "localizacion": {
+              "ciudad": "Amsterdam",
+              "pais": "Holanda"
+            },
+            "precio": 10.43
+          },
+          "20"
+        ]
+      ],
+      "categoria": "Primer plato",
+      "composicionNutricional": {
+        "lipidos": 4.640000000000001,
+        "hCarbono": 90.2,
+        "proteinas": 4,
+        "kCal": 57.6
+      },
+      "grupoPredominante": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "precio": 0.3986
+    },
+    {
+      "name": "Sopa de pescado",
+      "ingredientes": [
+        [
+          {
+            "grupo": {
+              "numGrupo": 4,
+              "grupo": [
+                "Cereales"
+              ]
+            },
+            "nombre": "Fideos",
+            "composicionNutricional": {
+              "lipidos": 10,
+              "hCarbono": 321,
+              "proteinas": 0,
+              "kCal": 64
+            },
+            "localizacion": {
+              "ciudad": "Milan",
+              "pais": "Italia"
+            },
+            "precio": 2
+          },
+          "100"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 1,
+              "grupo": [
+                "Carnes",
+                "Pescados",
+                "Huevos",
+                "Tofu",
+                "Frutos Secos",
+                "Legumbres"
+              ]
+            },
+            "nombre": "Bacalao",
+            "composicionNutricional": {
+              "lipidos": 40,
+              "hCarbono": 0,
+              "proteinas": 300,
+              "kCal": 90
+            },
+            "localizacion": {
+              "ciudad": "Ourense",
+              "pais": "España"
+            },
+            "precio": 6
+          },
+          "20"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Caldo",
+            "composicionNutricional": {
+              "lipidos": 3,
+              "hCarbono": 11,
+              "proteinas": 6,
+              "kCal": 8
+            },
+            "localizacion": {
+              "ciudad": "Almeria",
+              "pais": "España"
+            },
+            "precio": 0
+          },
+          "90"
+        ]
+      ],
+      "categoria": "Primer plato",
+      "composicionNutricional": {
+        "lipidos": 20.7,
+        "hCarbono": 330.9,
+        "proteinas": 65.4,
+        "kCal": 89.2
+      },
+      "grupoPredominante": {
+        "numGrupo": 4,
+        "grupo": [
+          "Cereales"
+        ]
+      },
+      "precio": 0.32
+    },
+    {
+      "name": "Lentejas",
+      "ingredientes": [
+        [
+          {
+            "grupo": {
+              "numGrupo": 2,
+              "grupo": [
+                "Verduras",
+                "Hortalizas"
+              ]
+            },
+            "nombre": "Lenteja",
+            "composicionNutricional": {
+              "lipidos": 3,
+              "hCarbono": 90,
+              "proteinas": 13,
+              "kCal": 70
+            },
+            "localizacion": {
+              "ciudad": "Lugo",
+              "pais": "España"
+            },
+            "precio": 1
+          },
+          "200"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 1,
+              "grupo": [
+                "Carnes",
+                "Pescados",
+                "Huevos",
+                "Tofu",
+                "Frutos Secos",
+                "Legumbres"
+              ]
+            },
+            "nombre": "Codillo",
+            "composicionNutricional": {
+              "lipidos": 35,
+              "hCarbono": 0,
+              "proteinas": 280,
+              "kCal": 88
+            },
+            "localizacion": {
+              "ciudad": "Castilla La Mancha",
+              "pais": "España"
+            },
+            "precio": 5
+          },
+          "80"
+        ],
+        [
+          {
+            "grupo": {
+              "numGrupo": 1,
+              "grupo": [
+                "Carnes",
+                "Pescados",
+                "Huevos",
+                "Tofu",
+                "Frutos Secos",
+                "Legumbres"
+              ]
+            },
+            "nombre": "Chorizo",
+            "composicionNutricional": {
+              "lipidos": 31.1,
+              "hCarbono": 1,
+              "proteinas": 22,
+              "kCal": 385
+            },
+            "localizacion": {
+              "ciudad": "Teror",
+              "pais": "España"
+            },
+            "precio": 3.24
+          },
+          "15"
+        ]
+      ],
+      "categoria": "Primer plato",
+      "composicionNutricional": {
+        "lipidos": 38.665,
+        "hCarbono": 180.15,
+        "proteinas": 253.3,
+        "kCal": 268.15
+      },
+      "grupoPredominante": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "precio": 0.6486000000000001
     }
   ]
 }

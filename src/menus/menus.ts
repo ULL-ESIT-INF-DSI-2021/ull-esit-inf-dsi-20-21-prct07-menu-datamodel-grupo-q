@@ -46,7 +46,6 @@ export class Menu implements MenuI<ComposicionNutricional>{
 
       if (contador > 5) throw 1;
       if (comprobarCategoria.length < 3) throw 2;
-      mensaje = "Menú creado correctamente"
     } 
     
     catch(err) {

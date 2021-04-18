@@ -1,6 +1,7 @@
 import { Platos } from "../../platos/platos";
 import { coleccionIngredientes } from '../ingredientes/ingredientesBD';
-
+import { Menu } from "../../menus/menus";
+import { coleccionPlatos } from '../platos/platosBD';
 
 
 export let pruebaPlatos: Platos[] = [
@@ -22,3 +23,13 @@ export let pruebaPlatos: Platos[] = [
   new Platos("Ensalada", [[coleccionIngredientes.getDatosIngredientes()[39], 300], [coleccionIngredientes.getDatosIngredientes()[38], 50], [coleccionIngredientes.getDatosIngredientes()[3], 110]], "Primer plato"),
   new Platos("Costillar con miel y mostaza", [[coleccionIngredientes.getDatosIngredientes()[42], 500], [coleccionIngredientes.getDatosIngredientes()[43], 20], [coleccionIngredientes.getDatosIngredientes()[38], 100], [coleccionIngredientes.getDatosIngredientes()[44], 25], [coleccionIngredientes.getDatosIngredientes()[45], 5], [coleccionIngredientes.getDatosIngredientes()[23], 15], [coleccionIngredientes.getDatosIngredientes()[3], 10]], "Segundo plato"),
 ]
+
+export let pruebaMenus: Menu[] = [
+  new Menu("Italiano", [coleccionPlatos.getPlatoConcreto("Pan con ajo"), coleccionPlatos.getPlatoConcreto("Pizza de Jamon cocido y champiñones"), coleccionPlatos.getPlatoConcreto("Natillas")]),
+  new Menu("Ingles", [coleccionPlatos.getPlatoConcreto("Huevos rotos"), coleccionPlatos.getPlatoConcreto("Salmon con arroz"), coleccionPlatos.getPlatoConcreto("Tarta de queso")]),
+  new Menu("Canario", [coleccionPlatos.getPlatoConcreto("Huevos rotos"), coleccionPlatos.getPlatoConcreto("Puchero"), coleccionPlatos.getPlatoConcreto("Pollo a la brasa"), coleccionPlatos.getPlatoConcreto("Polo")]),
+  new Menu("Japones", [coleccionPlatos.getPlatoConcreto("Sushi"), coleccionPlatos.getPlatoConcreto("Sopa"), coleccionPlatos.getPlatoConcreto("Teriyaki de atun rojo"), coleccionPlatos.getPlatoConcreto("Yogurt desnatado con fruta")]),
+  new Menu("Tradicional 1", [coleccionPlatos.getPlatoConcreto("Champiñones al Ajillo"), coleccionPlatos.getPlatoConcreto("Potaje"), coleccionPlatos.getPlatoConcreto("Solomillo Wellington"), coleccionPlatos.getPlatoConcreto("Natillas")]),
+  new Menu("Tradicional 2", [coleccionPlatos.getPlatoConcreto("Ensalada"), coleccionPlatos.getPlatoConcreto("Sopa"), coleccionPlatos.getPlatoConcreto("Salmon con arroz"), coleccionPlatos.getPlatoConcreto("Donuts")]),
+  new Menu("Tradicional 3", [coleccionPlatos.getPlatoConcreto("Pan con ajo"), coleccionPlatos.getPlatoConcreto("Pollo a la brasa"), coleccionPlatos.getPlatoConcreto("Yogurt desnatado con fruta")])
+];
