@@ -485,5 +485,235 @@ export let ingredientes:IngredientesJson[] = [
         ciudad: "Ciudad del cabo",
         pais: "Sudafrica",
         precio: 2.20
+    },
+
+
+    {
+        nombre: "Calabaza",
+        grupo: 2,
+        kCal: 250,
+        lipidos: 89,
+        proteinas: 2.1,
+        hCarbono: 28,
+        ciudad: "Moscow",
+        pais: "Rusia",
+        precio: 4.35
+    },
+
+
+    {
+        nombre: "Cebolla",
+        grupo: 2,
+        kCal: 163,
+        lipidos: 77.3,
+        proteinas: 1.3,
+        hCarbono: 19.4,
+        ciudad: "Yunnan",
+        pais: "China",
+        precio: 2.15
+    },
+
+
+    {
+        nombre: "Lechuga",
+        grupo: 2,
+        kCal: 154,
+        lipidos: 36.7,
+        proteinas: 0.6,
+        hCarbono: 11.5,
+        ciudad: "Palermo",
+        pais: "Italia",
+        precio: 3.43
+    },
+
+
+    {
+        nombre: "Pimiento",
+        grupo: 2,
+        kCal: 231,
+        lipidos: 28.3,
+        proteinas: 2.2,
+        hCarbono: 17.3,
+        ciudad: "Paris",
+        pais: "Francia",
+        precio: 2.93
+    },
+
+
+    {
+        nombre: "Carne molida",
+        grupo: 1,
+        kCal: 273,
+        lipidos: 23,
+        proteinas: 16.6,
+        hCarbono: 0,
+        ciudad: "Missouri",
+        pais: "EEUU",
+        precio: 5.50
+    },
+
+    {
+        nombre: "Calabaza",
+        grupo: 2,
+        kCal: 250,
+        lipidos: 89.0,
+        proteinas: 2.1,
+        hCarbono: 28.0,
+        ciudad: "Moscow",
+        pais: "Rusia",
+        precio: 4.35
+    },
+
+
+    {
+        nombre: "Cebolla",
+        grupo: 2,
+        kCal: 163,
+        lipidos: 77.3,
+        proteinas: 1.3,
+        hCarbono: 19.4,
+        ciudad: "Yunnan",
+        pais: "China",
+        precio: 2.15
+    },
+
+
+    {
+        nombre: "Lechuga",
+        grupo: 2,
+        kCal: 154,
+        lipidos: 36.7,
+        proteinas: 0.6,
+        hCarbono: 11.5,
+        ciudad: "Palermo",
+        pais: "Italia",
+        precio: 3.43
+    },
+
+
+    {
+        nombre: "Pimiento",
+        grupo: 2,
+        kCal: 231,
+        lipidos: 28.3,
+        proteinas: 2.2,
+        hCarbono: 17.3,
+        ciudad: "Paris",
+        pais: "Francia",
+        precio: 2.93
+    },
+
+
+    {
+        nombre: "Carne Molida",
+        grupo: 1,
+        kCal: 231,
+        lipidos: 28.3,
+        proteinas: 2.2,
+        hCarbono: 17.3,
+        ciudad: "Missouri",
+        pais: "EEUU",
+        precio: 5.93
+    },
+
+
+    {
+        nombre: "Costilla de Cerdo",
+        grupo: 1,
+        kCal: 349,
+        lipidos: 29.2,
+        proteinas: 21.5,
+        hCarbono: 0.0,
+        ciudad: "Leon",
+        pais: "España",
+        precio: 12.93
+    },
+
+
+    {
+        nombre: "Miel",
+        grupo: 2,
+        kCal: 314,
+        lipidos: 0.0,
+        proteinas: 0.5,
+        hCarbono: 78.0,
+        ciudad: "Tolouse",
+        pais: "Francia",
+        precio: 7.43
+    },
+
+
+    {
+        nombre: "Mostaza",
+        grupo: 1,
+        kCal: 84,
+        lipidos: 4.4,
+        proteinas: 4.7,
+        hCarbono: 6.4,
+        ciudad: "Berlin",
+        pais: "Alemania",
+        precio: 3.73
+    },
+
+
+    {
+        nombre: "Sal",
+        grupo: 1,
+        kCal: 0,
+        lipidos: 0.0,
+        proteinas: 0.0,
+        hCarbono: 0.0,
+        ciudad: "Oslo",
+        pais: "Noruega",
+        precio: 1.50
+    },
+
+    
+    {
+        nombre: "Aguacate",
+        grupo: 2,
+        lipidos: 32.5,
+        hCarbono: 11.2,
+        proteinas: 0.2,
+        kCal: 35.4,
+        ciudad: "California",
+        pais: "EEUU",
+        precio: 5.21
+    },
+    
+    {
+        nombre: "Gambas",
+        grupo: 1,
+        lipidos: 13.1,
+        hCarbono: 1.32,
+        proteinas: 40.3,
+        kCal: 50.1,
+        ciudad: "Oviedo",
+        pais: "España",
+        precio: 7.50
+    },
+    
+    {
+        nombre: "Mayonesa",
+        grupo: 1,
+        lipidos: 40.23,
+        hCarbono: 0.4,
+        proteinas: 19.14,
+        kCal: 25.2,
+        ciudad: "Cordoba",
+        pais: "Argentina",
+        precio: 2.02
+    },
+    
+    {
+        nombre: "Atun",
+        grupo: 1,
+        lipidos: 31.20,
+        hCarbono: 0.4,
+        proteinas: 334.18,
+        kCal: 88.52,
+        ciudad: "Santander",
+        pais: "España",
+        precio: 4.32
     }
 ];

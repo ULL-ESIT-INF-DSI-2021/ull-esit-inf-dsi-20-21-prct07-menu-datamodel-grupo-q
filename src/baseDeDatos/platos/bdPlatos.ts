@@ -1,6 +1,7 @@
 import { Ingrediente } from "../../ingredientes/ingredientes";
 import { Platos } from "../../platos/platos";
 import { baseDeDatosIngredientes } from "../ingredientes/bdIngredientes";
+import { baseDeDatosMenus } from "../menus/bdMenus";
 import { PlatosJson } from "../tiposDefinidos";
 import { platos } from "./platos";
 
@@ -121,3 +122,5 @@ export let nuevoPlato: PlatosJson = {
     cantidades: [100, 40, 50, 50],
     categoria: "Segundo plato"
 }
+
+console.log(baseDeDatosPlatos.getDatosPlatos())

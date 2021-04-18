@@ -1,4 +1,5 @@
 import { Ingrediente } from "../ingredientes/ingredientes"
+import { Platos } from "../platos/platos"
 
 export type IngredientesJson = {
     nombre: string,
@@ -18,4 +19,10 @@ export type PlatosJson = {
     ingredientes: string[],
     cantidades: number[],
     categoria: "Entrante" | "Primer plato" | "Segundo plato" | "Postre"
+}
+
+
+export type MenusJson = {
+    nombre: string,
+    platos: string[],
 }

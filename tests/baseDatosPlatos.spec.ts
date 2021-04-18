@@ -5,15 +5,15 @@ import {baseDeDatosPlatos, nuevoPlato} from '../src/baseDeDatos/platos/bdPlatos'
 
 describe('Pruebas clase Base de datos platos', ()=> {
 
-    it('baseDeDatosPlatos.getDatosPlatos().length return 13', ()=>{
-        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(13);
+    it('baseDeDatosPlatos.getDatosPlatos().length return 17', ()=>{
+        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(17);
     });
 
 
-    it('baseDeDatosPlatos.getInfoPlato("Teriyaki de atún rojo") return ', ()=>{
-        expect(baseDeDatosPlatos.getInfoPlato("Teriyaki de atún rojo")).to.deep.equal(
+    it('baseDeDatosPlatos.getInfoPlato("Teriyaki de atun rojo") return ', ()=>{
+        expect(baseDeDatosPlatos.getInfoPlato("Teriyaki de atun rojo")).to.deep.equal(
             {
-                "name": "Teriyaki de atún rojo",
+                "name": "Teriyaki de atun rojo",
                 "ingredientes": [
                   [
                     {
@@ -166,14 +166,14 @@ describe('Pruebas clase Base de datos platos', ()=> {
     });
 
 
-    it('baseDeDatosPlatos.addNuevoIngrediente(nuevoPlato) return 14', ()=>{
+    it('baseDeDatosPlatos.addNuevoIngrediente(nuevoPlato) return 18', ()=>{
         baseDeDatosPlatos.addNuevoIngrediente(nuevoPlato);
-        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(14);
+        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(18);
     });
 
 
-    it('baseDeDatosPlatos.removeIngrediente("Pizza de champiñones y queso") return 13', ()=>{
+    it('baseDeDatosPlatos.removeIngrediente("Pizza de champiñones y queso") return 17', ()=>{
         baseDeDatosPlatos.removeIngrediente("Pizza de champiñones y queso")
-        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(13);
+        expect(baseDeDatosPlatos.getDatosPlatos().length).to.be.equal(17);
     });
 });

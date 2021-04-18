@@ -38,7 +38,7 @@ export let platos:PlatosJson[] = [
     },
 
     {
-        nombre: "Salmón con arroz",
+        nombre: "Salmon con arroz",
         ingredientes: ["Salmon", "Aceite de oliva", "Arroz", "Ajo"],
         cantidades: [125, 25, 100, 5],
         categoria: "Segundo plato"
@@ -52,7 +52,7 @@ export let platos:PlatosJson[] = [
     },
 
     {
-        nombre: "Teriyaki de atún rojo",
+        nombre: "Teriyaki de atun rojo",
         ingredientes: ["Atun rojo", "Aceite de oliva", "Salsa de soja", "Jengibre", "Sesamo blanco"],
         cantidades: [100, 25, 10, 25, 10],
         categoria: "Segundo plato"
@@ -92,4 +92,32 @@ export let platos:PlatosJson[] = [
         cantidades: [125],
         categoria: "Postre"
     },
+
+    {
+        nombre: "Aguacate Relleno",
+        ingredientes: ["Aguacate", "Gambas", "Atun", "Mayonesa"],
+        cantidades: [80, 12, 40, 4],
+        categoria: "Entrante"
+    },
+
+    {
+        nombre: "Potaje",
+        ingredientes: ["Calabaza", "Cebolla", "Ajo"],
+        cantidades: [140, 500, 20],
+        categoria: "Primer plato"
+    },
+
+    {
+        nombre: "Ensalada",
+        ingredientes: ["Lechuga", "Cebolla", "Aceite de oliva"],
+        cantidades: [300, 50, 110],
+        categoria: "Primer plato"
+    },
+
+    {
+        nombre: "Costillar con miel y mostaza",
+        ingredientes: ["Costilla de Cerdo", "Miel", "Cebolla", "Mostaza", "Sal", "Ajo", "Aceite de oliva"],
+        cantidades: [500, 20, 100, 25, 5, 15, 10],
+        categoria: "Segundo plato"
+    }
 ];
