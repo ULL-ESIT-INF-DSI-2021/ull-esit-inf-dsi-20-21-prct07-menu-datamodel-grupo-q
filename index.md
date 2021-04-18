@@ -855,7 +855,7 @@ export class CartaPrinter {
   "precio": 1.0447499999999998
 }
  ```
-  Aqui podemos observar que, para un Plato, tenemos almacenado el **nombre** del plato, y luego un `array` con los ingredientes que contiene el plato, este array tiene la misma composición que la estructura de los ingredientes, es decir, en nuestro array de ingredientes, cada ingrediente almacenará, si nombre, su composición, el grupo y finalmente el precio. A parte de esto, tendremos además, la **categoría** del plato, es decir, si el plato es un entrante, primer plato, segundo plato o postre, el **grupo predominante**, es decir, el grupo del que pertenecen la mayor parte de los ingredientes del plato y para terminar, tenemos el **precio** del plato.
+  Aqui podemos observar que, para un Plato, tenemos almacenado el **nombre** del plato, y luego un `array` con los ingredientes que contiene el plato, este array tiene la misma composición que la estructura de los ingredientes, es decir, en nuestro array de ingredientes, cada ingrediente almacenará, su nombre, su composición, el grupo y finalmente el precio. A parte de esto, tendremos además, la **categoría** del plato, es decir, si el plato es un entrante, primer plato, segundo plato o postre, el **grupo predominante**, que es el grupo del que pertenecen la mayor parte de los ingredientes del plato y para terminar, tenemos el **precio** del plato.
  
    Para ver el fichero completo, puede acceder desde [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/platos/platos.json).
  
@@ -1564,13 +1564,14 @@ export class CartaPrinter {
    Para ver el fichero completo, puede acceder desde [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/baseDeDatos/menus/menus.json).
    
  
+ **En general, nuestra base de datos, contendrá lo siguiente:**
  
- 
-* **Ingredientes**: 50 alimentos/ingredientes con su correspondiente información (nombre, grupo alimenticio, composición nutricional, localización y precio).
-* **Platos**: 22 platos (entre entrantes, primeros platos, segundos platos y postres) conformados por la combinación de algunos de los ingredientes con su correspondiente información (nombre, ingredientes que lo componen con la cantidad en la que están presentes y la categoría del plato).
-* **Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
+* **BDD de Ingredientes**: 50 alimentos/ingredientes con su correspondiente información (nombre, grupo alimenticio, composición nutricional, localización y precio).
 
-También tendremos una carta que contiene todos los menús y los platos que los conforman.
+* **BDD Platos**: 22 platos (entre entrantes, primeros platos, segundos platos y postres) conformados por la combinación de algunos de los ingredientes con su correspondiente información (nombre, ingredientes que lo componen con la cantidad en la que están presentes y la categoría del plato).
+
+* **BDD Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
+
 
 #### 3.2. Gestión de una línea de comandos interactiva
 
