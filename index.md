@@ -1213,7 +1213,43 @@ Nuestra clase comanda, permite instanciar un objeto de tipo plato, los cuales ti
 
 Dentro de la clase tenemos varios métodos, el primero promptVisCarta(), el cual se encarga de comprobar la información que quiere consultar el usuario, ya sea, ver un menú en concreto, la información de un plato o incluso realizar una comanda.
 
+```ts
+async promptVisCarta() {
+    let cartaPrinter = new CartaPrinter(this.carta);
+    console.log()
+    cartaPrinter.print();
+
+    const respuesta = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: '¿Que quiere hacer?',
+      choices: [
+        "Ver información de un menú concreto",
+        "Ver información de un plato concreto",
+        "Ir a realizar una comanda",
+        "Volver al menú principal",
+      ]
+    }
+```
+
 Por otro lado, tenemos el método promptRelComanda() el cual es un método que se encarga de visualizar la carta o la comanda, según requiera el usuario, además de poder añadir a la comanda un menú hecho por el usuario, o uno de los que ofrezca el restaurante.
+
+```ts
+async promptRelComanda() {
+    console.clear();
+    const respuesta = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: '¿Que quiere hacer?',
+      choices: [
+        "Visualizar carta",
+        "Visualizar comanda",
+        "Añadir a la comanda un menú preestablecido de la carta",
+        "Añadir a la comanda un menú diseñado por el usuario",
+        "Volver al menú principal"
+      ]
+    }
+```
 
 El código completo de la clase comanda se encuentra [aquí]()
 
