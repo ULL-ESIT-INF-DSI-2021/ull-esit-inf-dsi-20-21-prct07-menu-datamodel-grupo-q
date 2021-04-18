@@ -1237,6 +1237,8 @@ Nos interesa poder tener cierta interacción con el programa para poder manipula
 
 Diseñaremos una aplicación que usa el módulo inquirer mencionado además de todos los recursos creados anteriormente. La función principal para manejar el promt será promptIngrediente. Esta función se encarga de manejar la respuesta del usuario y evaluarla segun el caso para efectuar el comando correspondiente. Mediante estos comandos podremos manipular todos los datos y personalizarnos a nuestro gusto editando los atributos paso por paso. El código que hace posible el manejo de estas respuestas se encuentra [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/master/src/funcionamiento/aplicacion.ts)
 
+Para hacer uso de la aplicacion, se tiene que ejecutar `npm run startApp`
+
 ### 4. Clase Comanda
 
 Nuestra clase comanda, permite instanciar un objeto de tipo plato, los cuales tienen las propiedades que hemos comentado anteriormente, el nombre, el array de los ingredientes que contiene el plato, su composición nutricional, la ciudad y el país de origen y finalmente el precio.
