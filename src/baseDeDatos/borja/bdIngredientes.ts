@@ -1,5 +1,5 @@
 import { Ingrediente } from '../../ingredientes/ingredientes';
-import { IngredientesJson } from '../tiposDefinidos';
+import { IngredientesJson } from './tiposDefinidos';
 import { ingredientes } from './ingredientes1';
 
 /**

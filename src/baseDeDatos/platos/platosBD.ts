@@ -2,7 +2,7 @@ import { Platos } from "../../platos/platos";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import { Ingrediente } from "../../ingredientes/ingredientes";
-import { pruebaPlatos } from "../prueba";
+import { pruebaPlatos } from "../borja/prueba";
 import { ComposicionNutricional, GrupoAlimenticio } from "../../ingredientes/tiposDefinidos";
 
 /**
@@ -114,7 +114,7 @@ export class PlatosBD {
   * @param nuevo Nuevo platos
   */
   storeNuevoPlatos(){
-    this.database.set('platoss', [...this.datosPlatos.values()]).write();
+    this.database.set('platos', [...this.datosPlatos.values()]).write();
   }
 
 

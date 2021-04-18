@@ -1,4 +1,4 @@
-import { IngredientesJson } from "../tiposDefinidos";
+import { IngredientesJson } from "./tiposDefinidos";
 
 /**
  * Base de datos de los ingredientes.

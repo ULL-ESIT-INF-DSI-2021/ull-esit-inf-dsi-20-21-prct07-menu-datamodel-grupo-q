@@ -1,5 +1,5 @@
-import { Platos } from "../platos/platos";
-import { coleccionIngredientes } from '../baseDeDatos/ingredientes/ingredientesBD';
+import { Platos } from "../../platos/platos";
+import { coleccionIngredientes } from '../ingredientes/ingredientesBD';
 
 
 

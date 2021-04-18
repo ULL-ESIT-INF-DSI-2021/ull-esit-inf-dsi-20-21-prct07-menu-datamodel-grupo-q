@@ -1,4 +1,4 @@
-import { PlatosJson } from "../tiposDefinidos";
+import { PlatosJson } from "./tiposDefinidos";
 
 export let platos:PlatosJson[] = [
 

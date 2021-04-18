@@ -1,5 +1,5 @@
-import { Ingrediente } from "../ingredientes/ingredientes"
-import { Platos } from "../platos/platos"
+import { Ingrediente } from "../../ingredientes/ingredientes"
+import { Platos } from "../../platos/platos"
 
 /**
  * Tipo de parametros que contiene in ingrediente.
