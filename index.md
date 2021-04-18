@@ -675,8 +675,16 @@ export class CartaPrinter {
 
 #### 3.1. Bases de datos
 
-[EXPLICAR MEJOR LAS BBDD***](***)
-Para almacenar todo lo necesario para que funcione el programa crearemos una serie de bases de datos con los siguientes contenidos:
+ Para almacenar todo lo necesario para que funcione el programa crearemos una serie de bases de datos, para poder almacenar toda la información con respecto a los ingredientes, los platos, el menú y finamente la comanda. Por una parte, veremos en detalle cada una de estas, y como están estructuradas.
+ 
+ Para comprobar la estructura, o más bien, asignarle esta, tenemos creado un fichero `.ts` por cada base de datos, llamada `(nombreBase)BD.ts`, en este fichero tenemos creaod un **schema** el cual asigna la estructura que tendrán nuestros objetos dentro de cada base de datos, usando para estos, ficheros `.json`. Para la base de datos de ingredientes, tendremos lo siguiente:
+ 
+ _** Ejemplo de una implementación de un objeto en la BDD de Ingredientes: **_
+ 
+ ```typescript
+ 
+ ```
+ 
 
 [REVISAR CANTIDADES***](***)
 * **Ingredientes**: 50 alimentos/ingredientes con su correspondiente información (nombre, grupo alimenticio, composición nutricional, localización y precio).
