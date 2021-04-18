@@ -1280,6 +1280,7 @@ async promptRelComanda() {
       ]
     }
 ```
+Para hacer uso de la aplicacion de comanda, se tiene que ejecutar `npm run startComanda`
 
 El código completo de la clase comanda se encuentra [aquí]()
 
