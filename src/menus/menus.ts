@@ -14,11 +14,11 @@ export class Menu implements MenuI<ComposicionNutricional>{
 
   /**
    * Constructor de la clase Menú.
-   * @param name Nombre del menú
+   * @param nombre Nombre del menú
    * @param platos Array con los platos
    */
-  constructor(private name: string, private platos: Platos[]) {   
-    this.name = name;
+  constructor(private nombre: string, private platos: Platos[]) {   
+    this.nombre = nombre;
     this.platos = platos;
     let contador: number = 0;
     let categoriaAux: string = platos[0].getCategoria();
@@ -27,7 +27,6 @@ export class Menu implements MenuI<ComposicionNutricional>{
     let cantporGrupo: [number, number, number, number, number] = [0,0,0,0,0];
     this.platos.forEach((plato) => {
       if (comprobarCategoria[2] != 1) {
-        console.log(comprobarCategoria.length)
         if (categoriaAux != plato.getCategoria()){
           comprobarCategoria.push(1);
         }
@@ -57,24 +56,24 @@ export class Menu implements MenuI<ComposicionNutricional>{
     }
     
     finally{
-      console.log(mensaje);
+      console.table([this.nombre, mensaje]);
     }
   }
 
   /**
-   * Método getter para acceder al atributo name
+   * Método getter para acceder al atributo nombre
    * @returns Se retorna la el nombre del menu
    */
   public getNombre() {
-    return this.name
+    return this.nombre
   }
   
   /**
-   * Método setter para cambiar al atributo name
-   * @param name El nuevo nombre que tendrá el menú
+   * Método setter para cambiar al atributo nombre
+   * @param nombre El nuevo nombre que tendrá el menú
    */
-  public setNombre(name: string) {
-    this.name = name;
+  public setNombre(nombre: string) {
+    this.nombre = nombre;
   }
 
   /**
