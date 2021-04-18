@@ -1,6 +1,6 @@
 import { Ingrediente } from '../../ingredientes/ingredientes';
 import { IngredientesJson } from '../tiposDefinidos';
-import { ingredientes } from './ingredientes';
+import { ingredientes } from './ingredientes1';
 
 /**
  * Clase que simula el comportamiento de una base de datos para los ingredientes
@@ -47,6 +47,8 @@ export class BaseDatosIngredientes {
         return ingrediente;
     }
 
+
+
     /**
      * Función par añadir un ingrediente a la base de datos
      * @param nuevo Nuevo ingrediente
@@ -75,6 +77,9 @@ export class BaseDatosIngredientes {
         this.datosIngredientes.splice(indice, 1);
     }
 
+    /**
+     * Función para la salida por pantalla de los ingredientes
+     */
     salida() {
         this.datosIngredientes.forEach(item => {
             console.log(`new Ingrediente("${item.getNombre()}", ${item.getGrupoAlimenticio().numGrupo}, [${item.getComposicionNutricional().lipidos}, ${item.getComposicionNutricional().hCarbono}, ${item.getComposicionNutricional().proteinas}, ${item.getComposicionNutricional().kCal}], ["${item.getLocalizacion().ciudad}", "${item.getLocalizacion().pais}"], ${item.getPrecio()}),`);
@@ -82,6 +87,6 @@ export class BaseDatosIngredientes {
     }
 }
 
-
+/** 
 export const baseDeDatosIngredientes = new BaseDatosIngredientes(ingredientes);
-//baseDeDatosIngredientes.salida();
+baseDeDatosIngredientes.salida();*/

@@ -16,7 +16,7 @@ export class PlatoPrinter {
     this.plato.getIngredientes().forEach((item) => {
       console.log(`        ${item[0].getNombre()}`);
     });
-    console.log(`\n    Composición nutriconal: \n        Kcal = ${this.plato.getComposicionNutricional().kCal}, \n        Proteinas = ${this.plato.getComposicionNutricional().proteinas},\n        Lipidos = ${this.plato.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.plato.getComposicionNutricional().hCarbono},\n    Grupo alimenticio: ${this.plato.getGrupoPredominante().grupo}, \n    Precio: ${this.plato.getPrecio()} €`);
+    console.log(`    Composición nutriconal: \n        Kcal = ${this.plato.getComposicionNutricional().kCal}, \n        Proteinas = ${this.plato.getComposicionNutricional().proteinas},\n        Lipidos = ${this.plato.getComposicionNutricional().lipidos}, \n        Hidratos de Carbono = ${this.plato.getComposicionNutricional().hCarbono},\n    Grupo alimenticio: ${this.plato.getGrupoPredominante().grupo}, \n    Precio: ${this.plato.getPrecio()} €`);
   }
 
   /**

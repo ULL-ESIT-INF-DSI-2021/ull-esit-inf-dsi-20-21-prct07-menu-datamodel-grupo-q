@@ -1,6 +1,9 @@
 import { Ingrediente } from "../ingredientes/ingredientes"
 import { Platos } from "../platos/platos"
 
+/**
+ * Tipo de parametros que contiene in ingrediente.
+ */
 export type IngredientesJson = {
     nombre: string,
     grupo: number,
@@ -13,7 +16,9 @@ export type IngredientesJson = {
     precio: number
 }
 
-
+/**
+ * Tipo de parámetros que contiene un plato.
+ */
 export type PlatosJson = {
     nombre: string,
     ingredientes: string[],
@@ -22,6 +27,9 @@ export type PlatosJson = {
 }
 
 
+/**
+ * Tipo de parametros que contiene un menu.
+ */
 export type MenusJson = {
     nombre: string,
     platos: string[],

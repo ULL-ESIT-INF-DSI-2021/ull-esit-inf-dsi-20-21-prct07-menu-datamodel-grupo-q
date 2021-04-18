@@ -18,18 +18,32 @@ export class ComandaPedido  {
 
   }
 
+  /**
+   * Método para acceder al pedido.
+   */
   getPedido() {
     return this.pedido;
   }
 
+  /**
+   * Método para actualizar el pedido.
+   * @param newPedido Platos nuevos que quieres asignar al pedido.
+   */
   setPedido(newPedido: Menu | Platos) {
     this.pedido = newPedido;
   }
 
+  /**
+   * Método para obtener la cantidad.
+   */
   getCantidad() {
     return this.cantidad;
   }
 
+  /**
+   * Método para actualizar la cantidad de cada ingrediente.
+   * @param newCantidad cantidad nueva a asignar.
+   */
   setCantidad(newCantidad: number) {
     this.cantidad = newCantidad;
   }

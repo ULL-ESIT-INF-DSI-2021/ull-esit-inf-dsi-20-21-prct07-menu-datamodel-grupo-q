@@ -2,6 +2,27 @@
   "ingredientes": [
     {
       "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Albahaca fresca",
+      "composicionNutricional": {
+        "lipidos": 25,
+        "hCarbono": 0.61,
+        "proteinas": 0.44,
+        "kCal": 0.3
+      },
+      "localizacion": {
+        "ciudad": "Milan",
+        "pais": "Italia"
+      },
+      "precio": 4.5
+    },
+    {
+      "grupo": {
         "numGrupo": 3,
         "grupo": [
           "Leche",
@@ -792,6 +813,90 @@
     },
     {
       "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Calabaza",
+      "composicionNutricional": {
+        "lipidos": 89,
+        "hCarbono": 28,
+        "proteinas": 2.1,
+        "kCal": 250
+      },
+      "localizacion": {
+        "ciudad": "Moscow",
+        "pais": "Rusia"
+      },
+      "precio": 4.35
+    },
+    {
+      "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Cebolla",
+      "composicionNutricional": {
+        "lipidos": 77.3,
+        "hCarbono": 19.4,
+        "proteinas": 1.3,
+        "kCal": 163
+      },
+      "localizacion": {
+        "ciudad": "Yunnan",
+        "pais": "China"
+      },
+      "precio": 2.15
+    },
+    {
+      "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Lechuga",
+      "composicionNutricional": {
+        "lipidos": 36.7,
+        "hCarbono": 11.5,
+        "proteinas": 0.6,
+        "kCal": 154
+      },
+      "localizacion": {
+        "ciudad": "Palermo",
+        "pais": "Italia"
+      },
+      "precio": 3.43
+    },
+    {
+      "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Pimiento",
+      "composicionNutricional": {
+        "lipidos": 28.3,
+        "hCarbono": 17.3,
+        "proteinas": 2.2,
+        "kCal": 231
+      },
+      "localizacion": {
+        "ciudad": "Paris",
+        "pais": "Francia"
+      },
+      "precio": 2.93
+    },
+    {
+      "grupo": {
         "numGrupo": 1,
         "grupo": [
           "Carnes",
@@ -802,18 +907,210 @@
           "Legumbres"
         ]
       },
-      "nombre": "Atun rojo",
+      "nombre": "Carne Molida",
       "composicionNutricional": {
-        "lipidos": 12,
-        "hCarbono": 32,
-        "proteinas": 45,
-        "kCal": 12
+        "lipidos": 28.3,
+        "hCarbono": 17.3,
+        "proteinas": 2.2,
+        "kCal": 231
       },
       "localizacion": {
-        "ciudad": "Parmenia",
-        "pais": "Oslo"
+        "ciudad": "Missouri",
+        "pais": "EEUU"
       },
-      "precio": 37
+      "precio": 5.93
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Costilla de Cerdo",
+      "composicionNutricional": {
+        "lipidos": 29.2,
+        "hCarbono": 0,
+        "proteinas": 21.5,
+        "kCal": 349
+      },
+      "localizacion": {
+        "ciudad": "Leon",
+        "pais": "España"
+      },
+      "precio": 12.93
+    },
+    {
+      "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Miel",
+      "composicionNutricional": {
+        "lipidos": 0,
+        "hCarbono": 78,
+        "proteinas": 0.5,
+        "kCal": 314
+      },
+      "localizacion": {
+        "ciudad": "Tolouse",
+        "pais": "Francia"
+      },
+      "precio": 7.43
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Mostaza",
+      "composicionNutricional": {
+        "lipidos": 4.4,
+        "hCarbono": 6.4,
+        "proteinas": 4.7,
+        "kCal": 84
+      },
+      "localizacion": {
+        "ciudad": "Berlin",
+        "pais": "Alemania"
+      },
+      "precio": 3.73
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Sal",
+      "composicionNutricional": {
+        "lipidos": 0,
+        "hCarbono": 0,
+        "proteinas": 0,
+        "kCal": 0
+      },
+      "localizacion": {
+        "ciudad": "Oslo",
+        "pais": "Noruega"
+      },
+      "precio": 1.5
+    },
+    {
+      "grupo": {
+        "numGrupo": 2,
+        "grupo": [
+          "Verduras",
+          "Hortalizas"
+        ]
+      },
+      "nombre": "Aguacate",
+      "composicionNutricional": {
+        "lipidos": 32.5,
+        "hCarbono": 11.2,
+        "proteinas": 0.2,
+        "kCal": 35.4
+      },
+      "localizacion": {
+        "ciudad": "California",
+        "pais": "EEUU"
+      },
+      "precio": 5.21
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Gambas",
+      "composicionNutricional": {
+        "lipidos": 13.1,
+        "hCarbono": 1.32,
+        "proteinas": 40.3,
+        "kCal": 50.1
+      },
+      "localizacion": {
+        "ciudad": "Oviedo",
+        "pais": "España"
+      },
+      "precio": 7.5
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Mayonesa",
+      "composicionNutricional": {
+        "lipidos": 40.23,
+        "hCarbono": 0.4,
+        "proteinas": 19.14,
+        "kCal": 25.2
+      },
+      "localizacion": {
+        "ciudad": "Cordoba",
+        "pais": "Argentina"
+      },
+      "precio": 2.02
+    },
+    {
+      "grupo": {
+        "numGrupo": 1,
+        "grupo": [
+          "Carnes",
+          "Pescados",
+          "Huevos",
+          "Tofu",
+          "Frutos Secos",
+          "Legumbres"
+        ]
+      },
+      "nombre": "Atun",
+      "composicionNutricional": {
+        "lipidos": 31.2,
+        "hCarbono": 0.4,
+        "proteinas": 334.18,
+        "kCal": 88.52
+      },
+      "localizacion": {
+        "ciudad": "Santander",
+        "pais": "España"
+      },
+      "precio": 4.32
     }
   ]
 }
