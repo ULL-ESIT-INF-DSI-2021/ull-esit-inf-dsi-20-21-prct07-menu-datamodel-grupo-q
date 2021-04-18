@@ -53,6 +53,9 @@ export class Comanda  {
     }
   }
 
+  /**
+   * Método para comprobar que información quiere consultar el usuario, o hacer una comanda.
+   */
   async promptVisCarta() {
     let cartaPrinter = new CartaPrinter(this.carta);
     console.log()
@@ -130,6 +133,9 @@ export class Comanda  {
   }
 
 
+  /**
+   * Metodo para visualizar la carta o la comanda, o en cambio, añadir una nueva por el usuario.
+   */
   async promptRelComanda() {
     console.clear();
     const respuesta = await inquirer.prompt({
