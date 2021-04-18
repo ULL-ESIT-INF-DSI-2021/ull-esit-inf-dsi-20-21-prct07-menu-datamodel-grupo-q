@@ -11,6 +11,8 @@ import { Platos } from '../platos/platos';
 import { coleccionMenus } from '../baseDeDatos/menus/menusBD';
 import { Menu } from '../menus/menus';
 import { MenuPrinter } from '../menus/printMenu';
+import { coleccionCarta } from '../baseDeDatos/carta/cartasBD';
+import { CartaPrinter } from '../carta/printCarta';
 
 async function promptUser() {
   console.clear();
@@ -23,6 +25,7 @@ async function promptUser() {
       "Ingredientes",
       "Platos",
       "Menús",
+      "Carta",
       "Volver"
     ]
   })
@@ -36,6 +39,9 @@ async function promptUser() {
     break;
     case "Menús":
       promptMenu();
+    break;
+    case "Carta":
+      promptCarta();
     break;
     case "Salir":
     break;
@@ -413,6 +419,66 @@ async function promptMenu(): Promise<void> {
     break;
     default:
       break;
+  }
+}
+
+async function promptCarta(): Promise<void> {
+  console.clear();
+
+  const respuesta = await inquirer.prompt({
+    type: 'list',
+    name: 'command',
+    message: '¿Qué quiere hacer?',
+    choices: [
+      "Mostrar cartas",
+      "Añadir carta",
+      "Borrar carta",
+      "Volver"
+    ]
+  })
+
+  switch(respuesta["command"]) {
+    case "Mostrar cartas":
+      coleccionCarta.getDatoscarta().forEach(carta => {
+        let cartaPrinter = new CartaPrinter(carta);
+        console.log()
+        cartaPrinter.print();
+      });
+
+      const a = await inquirer.prompt({
+        type: 'list',
+        name: 'command',
+        message: 'Si ya ha terminado de ver las cartas, pulse ENTER',
+        choices: ["Volver"]
+      })
+
+      promptCarta();
+    break;
+    case "Borrar carta":
+      const cartaAQuitar = await inquirer.prompt({
+        type: 'input',
+        name: 'NombreRestaurante',
+        message: 'Introduzca el nombre de la carta del restaurante que quiere quitar de la base de datos: '
+      })
+
+      coleccionCarta.removeCarta(cartaAQuitar['NombreRestaurante']);
+      console.log("borro")
+      console.log(`\n\n¡CARTA DEL ${cartaAQuitar['NombreRestaurante']} ELIMINADA CON ÉXITO!\n`)
+
+      await inquirer.prompt({
+        type: 'list',
+        name: 'salir',
+        message: 'Pulse ENTER para volver al menú',
+        choices: ["Volver"]
+      })
+
+      promptCarta();
+    break;
+    case "Volver":
+      promptUser();
+    break;
+    default:
+    break;
   }
 }
 

@@ -265,5 +265,5 @@ export class Comanda  {
   }
 }
 
-const cartaR = new Carta([coleccionMenus.getMenuConcreto("Italiano"), coleccionMenus.getMenuConcreto("Ingles")], [coleccionPlatos.getPlatoConcreto("Pan de ajo"), coleccionPlatos.getPlatoConcreto("Sopa de pescado"),  coleccionPlatos.getPlatoConcreto("Solomillo Wellington")]);
+const cartaR = new Carta("Mi restaurante", [coleccionMenus.getMenuConcreto("Italiano"), coleccionMenus.getMenuConcreto("Ingles")], [coleccionPlatos.getPlatoConcreto("Pan de ajo"), coleccionPlatos.getPlatoConcreto("Sopa de pescado"),  coleccionPlatos.getPlatoConcreto("Solomillo Wellington")]);
 const comanda = new Comanda(cartaR);

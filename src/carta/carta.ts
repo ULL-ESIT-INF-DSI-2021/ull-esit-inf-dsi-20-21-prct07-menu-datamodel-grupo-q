@@ -15,7 +15,17 @@ export class Carta implements CartaI{
    * @param menus Array con los menús
    * @param platos Array con los platos
    */
-  constructor(private menus: Menu[], private platos: Platos[]) {}
+  constructor(private nombreRestaurante: string, private menus: Menu[], private platos: Platos[]) {}
+
+  
+  /**
+   * Metodo para obtener los nombres de los restaurantes que tienen carta
+   * @returns Nombre de los restaurantes
+   */
+   public getNombre() {
+    return this.nombreRestaurante
+  }
+
 
   /**
    * Metodo para obtener los menus de la carta

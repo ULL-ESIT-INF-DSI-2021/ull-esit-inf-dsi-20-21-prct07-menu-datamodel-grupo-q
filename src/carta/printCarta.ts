@@ -12,7 +12,7 @@ export class CartaPrinter {
    * Metodo para mostrar pon pantalla la carta
    */
   print() {
-    console.log(`CARTA DEL RESTAURANTE \n     Menus:`);
+    console.log(`CARTA DEL RESTAURANTE ${this.carta.getNombre()}\n     Menus:`);
     let auxiliar: [string[], string[], string[], string[]] = [[], [], [], []];;
     this.carta.getMenus().forEach((item) => {
       item.getPlatos().forEach((elemento) => {
