@@ -14,7 +14,7 @@ const ingredientes: [Ingrediente, number][] = [[ingrediente2, 200], [ingrediente
 const pastaConPesto = new Platos("Pasta al pesto", ingredientes, "Segundo plato");
 const printPastaConPesto = new PlatoPrinter(pastaConPesto);
 
-describe('Pruebas clase Plato', ()=> {
+describe('2. Pruebas clase Plato', ()=> {
   it('expect(pastaConPesto.getNombre()).to.be.equal("Pasta al pesto");', ()=>{
     expect(pastaConPesto.getNombre()).to.be.equal("Pasta al pesto");
   });

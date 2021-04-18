@@ -2,10 +2,6 @@ import 'mocha';
 import {expect} from 'chai';
 import {Ingrediente} from '../src/ingredientes/ingredientes';
 import {IngredientePrinter} from '../src/ingredientes/printIngredientes';
-import {BaseDatosIngredientes} from '../src/baseDeDatos/ingredientes/bdIngredientes'
-import {ingredientes} from '../src/baseDeDatos/ingredientes/ingredientes'
-
-const baseDeDatos = new BaseDatosIngredientes(ingredientes);
 
 const ingrediente1 = new Ingrediente("Clara de huevo", 1, [0.2, 0.5, 11, 48], ["Candelaria", "España"], 0.12);
 const printIngrediente1 = new IngredientePrinter(ingrediente1);
