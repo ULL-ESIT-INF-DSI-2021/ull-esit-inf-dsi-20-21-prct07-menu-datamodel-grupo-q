@@ -670,3 +670,27 @@ export class CartaPrinter {
   }
  }
 ````
+
+### 3. Funcionamiento
+
+#### 3.1. Bases de datos
+
+[EXPLICAR MEJOR LAS BBDD***](***)
+Para almacenar todo lo necesario para que funcione el programa crearemos una serie de bases de datos con los siguientes contenidos:
+
+[REVISAR CANTIDADES***](***)
+* **Ingredientes**: 50 alimentos/ingredientes con su correspondiente información (nombre, grupo alimenticio, composición nutricional, localización y precio).
+* **Platos**: 22 platos (entre entrantes, primeros platos, segundos platos y postres) conformados por la combinación de algunos de los ingredientes con su correspondiente información (nombre, ingredientes que lo componen con la cantidad en la que están presentes y la categoría del plato).
+* **Menús**: 5 menús conformados por la combinación de algunos de los platos con su correspondiente información (nombre y platos que contiene).
+
+También tendremos una carta que contiene todos los menús y los platos que los conforman.
+
+#### 3.2. Gestión de una línea de comandos interactiva
+
+Nos interesa poder tener cierta interacción con el programa para poder manipular los datos creados. Nos ayudaremos de el módulo Inquirer.js para este propósito. Por línea de comandos podremos realizar las siguientes acciones:
+
+* **Añadir** alimentos/ingredientes, platos, menús y cartas.
+* **Borrar** alimentos/ingredientes, platos, menús y cartas.
+* **Modificar** alimentos/ingredientes, platos, menús y cartas.
+
+### 4. Clase Comanda
