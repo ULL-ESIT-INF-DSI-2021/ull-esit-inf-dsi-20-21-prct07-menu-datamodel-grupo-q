@@ -71,11 +71,11 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Clase Ingrediente. Permite instanciar objetos de tipo ingredientes. Se extiende la clase
-							Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz Ingredientes (IngredientesI),
-							con los tipos definidos GrupoAlimenticio, KcalPorCienGramos, Localizacion. Las propiedades que
+						<p>Clase Ingrediente. Permite instanciar objetos de tipo Ingrediente. Se extiende la clase
+							Grupos de Alimentos (GruposAlimentos) y se implementa la interfaz genérica Ingredientes (IngredientesI),
+							con los tipos definidos GrupoAlimenticio, composicionNutricional y Localizacion. Las propiedades que
 							tiene un ingrediente son: Nombre, grupo alimenticio al que pertenece, su composición nutricional,
-						la ciudad y el país de origen y el precio.</p>
+						la ciudad y el país de origen y el precio por 1kg de ese ingrediente.</p>
 					</div>
 				</div>
 			</section>
@@ -95,7 +95,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/interfazingredientes.ingredientesi.html" class="tsd-signature-type" data-tsd-kind="Interface">IngredientesI</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/tiposdefinidos.html#grupoalimenticio" class="tsd-signature-type" data-tsd-kind="Type alias">GrupoAlimenticio</a><span class="tsd-signature-symbol">, </span><a href="../modules/tiposdefinidos.html#kcalporciengramos" class="tsd-signature-type" data-tsd-kind="Type alias">KcalPorCienGramos</a><span class="tsd-signature-symbol">, </span><a href="../modules/tiposdefinidos.html#localizacion" class="tsd-signature-type" data-tsd-kind="Type alias">Localizacion</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/interfazingredientes.ingredientesi.html" class="tsd-signature-type" data-tsd-kind="Interface">IngredientesI</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/tiposdefinidos.html#grupoalimenticio" class="tsd-signature-type" data-tsd-kind="Type alias">GrupoAlimenticio</a><span class="tsd-signature-symbol">, </span><a href="../modules/tiposdefinidos.html#composicionnutricional" class="tsd-signature-type" data-tsd-kind="Type alias">ComposicionNutricional</a><span class="tsd-signature-symbol">, </span><a href="../modules/tiposdefinidos.html#localizacion" class="tsd-signature-type" data-tsd-kind="Type alias">Localizacion</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -111,8 +111,7 @@
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#composionnutricional" class="tsd-kind-icon">composion<wbr>Nutricional</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#grupoalimenticio" class="tsd-kind-icon">grupo<wbr>Alimenticio</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#composicionnutricional" class="tsd-kind-icon">composicion<wbr>Nutricional</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#localizacion" class="tsd-kind-icon">localizacion</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#nombre" class="tsd-kind-icon">nombre</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ingredientes.ingrediente.html#precio" class="tsd-kind-icon">precio</a></li>
@@ -121,13 +120,13 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getcomposionnutricional" class="tsd-kind-icon">get<wbr>Composion<wbr>Nutricional</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getcomposicionnutricional" class="tsd-kind-icon">get<wbr>Composicion<wbr>Nutricional</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="ingredientes.ingrediente.html#getgrupo" class="tsd-kind-icon">get<wbr>Grupo</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getgrupoalimenticio" class="tsd-kind-icon">get<wbr>Grupo<wbr>Alimenticio</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getlocalizacion" class="tsd-kind-icon">get<wbr>Localizacion</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getnombre" class="tsd-kind-icon">get<wbr>Nombre</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#getprecio" class="tsd-kind-icon">get<wbr>Precio</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#setcomposionnutricional" class="tsd-kind-icon">set<wbr>Composion<wbr>Nutricional</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#setcomposicionnutricional" class="tsd-kind-icon">set<wbr>Composicion<wbr>Nutricional</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="ingredientes.ingrediente.html#setgrupo" class="tsd-kind-icon">set<wbr>Grupo</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#setgrupoalimenticio" class="tsd-kind-icon">set<wbr>Grupo<wbr>Alimenticio</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ingredientes.ingrediente.html#setlocalizacion" class="tsd-kind-icon">set<wbr>Localizacion</a></li>
@@ -144,14 +143,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Ingrediente<span class="tsd-signature-symbol">(</span>nombre<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, composionNutricional<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span>, localizacion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span>, precio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ingredientes.ingrediente.html" class="tsd-signature-type" data-tsd-kind="Class">Ingrediente</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Ingrediente<span class="tsd-signature-symbol">(</span>nombre<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, composicionNutricional<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span>, localizacion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span>, precio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ingredientes.ingrediente.html" class="tsd-signature-type" data-tsd-kind="Class">Ingrediente</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="gruposalimentos.gruposalimentos-1.html">GruposAlimentos</a>.<a href="gruposalimentos.gruposalimentos-1.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L19">ingredientes.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L18">ingredientes.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -168,15 +167,15 @@
 									</div>
 								</li>
 								<li>
-									<h5>grupo: <span class="tsd-signature-type">string</span></h5>
+									<h5>grupo: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Grupo alimenticio del ingrediente.</p>
 									</div>
 								</li>
 								<li>
-									<h5>composionNutricional: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h5>
+									<h5>composicionNutricional: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].</p>
+										<p>Composición nutricional del ingrediente [Lípidos, Hidratos de Carbono, Proteínas, Kcal].</p>
 									</div>
 								</li>
 								<li>
@@ -200,22 +199,12 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="composionnutricional" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> composion<wbr>Nutricional</h3>
-					<div class="tsd-signature tsd-kind-icon">composion<wbr>Nutricional<span class="tsd-signature-symbol">:</span> <a href="../modules/tiposdefinidos.html#kcalporciengramos" class="tsd-signature-type" data-tsd-kind="Type alias">KcalPorCienGramos</a></div>
+					<a name="composicionnutricional" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> composicion<wbr>Nutricional</h3>
+					<div class="tsd-signature tsd-kind-icon">composicion<wbr>Nutricional<span class="tsd-signature-symbol">:</span> <a href="../modules/tiposdefinidos.html#composicionnutricional" class="tsd-signature-type" data-tsd-kind="Type alias">ComposicionNutricional</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L17">ingredientes.ts:17</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="grupoalimenticio" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> grupo<wbr>Alimenticio</h3>
-					<div class="tsd-signature tsd-kind-icon">grupo<wbr>Alimenticio<span class="tsd-signature-symbol">:</span> <a href="../modules/tiposdefinidos.html#grupoalimenticio" class="tsd-signature-type" data-tsd-kind="Type alias">GrupoAlimenticio</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L16">ingredientes.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L16">ingredientes.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -225,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">localizacion<span class="tsd-signature-symbol">:</span> <a href="../modules/tiposdefinidos.html#localizacion" class="tsd-signature-type" data-tsd-kind="Type alias">Localizacion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L18">ingredientes.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L17">ingredientes.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -235,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">nombre<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L15">ingredientes.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L15">ingredientes.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -245,7 +234,7 @@
 					<div class="tsd-signature tsd-kind-icon">precio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L19">ingredientes.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L18">ingredientes.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -253,17 +242,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getcomposionnutricional" class="tsd-anchor"></a>
-					<h3>get<wbr>Composion<wbr>Nutricional</h3>
+					<a name="getcomposicionnutricional" class="tsd-anchor"></a>
+					<h3>get<wbr>Composicion<wbr>Nutricional</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Composion<wbr>Nutricional<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/tiposdefinidos.html#kcalporciengramos" class="tsd-signature-type" data-tsd-kind="Type alias">KcalPorCienGramos</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Composicion<wbr>Nutricional<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/tiposdefinidos.html#composicionnutricional" class="tsd-signature-type" data-tsd-kind="Type alias">ComposicionNutricional</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getcomposionnutricional">getComposionNutricional</a></p>
+								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getcomposicionnutricional">getComposicionNutricional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L65">ingredientes.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L63">ingredientes.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -271,8 +260,8 @@
 									<p>Método getter para obtener la composición nutricional del ingrediente.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="../modules/tiposdefinidos.html#kcalporciengramos" class="tsd-signature-type" data-tsd-kind="Type alias">KcalPorCienGramos</a></h4>
-							<p>Se retorna la composición nutricional del ingrediente en forma del tipo de dato KcalPorCienGramos.</p>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/tiposdefinidos.html#composicionnutricional" class="tsd-signature-type" data-tsd-kind="Type alias">ComposicionNutricional</a></h4>
+							<p>Se retorna la composición nutricional del ingrediente en forma del tipo de dato composicionNutricional.</p>
 						</li>
 					</ul>
 				</section>
@@ -287,7 +276,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="gruposalimentos.gruposalimentos-1.html">GruposAlimentos</a>.<a href="gruposalimentos.gruposalimentos-1.html#getgrupo">getGrupo</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/gruposAlimentos.ts#L31">gruposAlimentos.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/gruposAlimentos.ts#L31">gruposAlimentos.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -311,7 +300,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getgrupoalimenticio">getGrupoAlimenticio</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L55">ingredientes.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L53">ingredientes.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -335,7 +324,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getlocalizacion">getLocalizacion</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L75">ingredientes.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L73">ingredientes.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,7 +348,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getnombre">getNombre</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L45">ingredientes.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L43">ingredientes.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,7 +372,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#getprecio">getPrecio</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L85">ingredientes.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L83">ingredientes.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -392,22 +381,22 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>Se retorna el precio del ingrediente en forma del tipo de dato Localización.</p>
+							<p>Se retorna el precio del ingrediente.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setcomposionnutricional" class="tsd-anchor"></a>
-					<h3>set<wbr>Composion<wbr>Nutricional</h3>
+					<a name="setcomposicionnutricional" class="tsd-anchor"></a>
+					<h3>set<wbr>Composicion<wbr>Nutricional</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Composion<wbr>Nutricional<span class="tsd-signature-symbol">(</span>composionNutricional<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Composicion<wbr>Nutricional<span class="tsd-signature-symbol">(</span>composicionNutricional<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setcomposionnutricional">setComposionNutricional</a></p>
+								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setcomposicionnutricional">setComposicionNutricional</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L115">ingredientes.ts:115</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L114">ingredientes.ts:114</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -418,9 +407,9 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>composionNutricional: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h5>
+									<h5>composicionNutricional: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Composición nutricional del ingrediente [Proteínas, Lípidos, Hidratos de Carbono].</p>
+										<p>Composición nutricional del ingrediente [Lípidos, Hidratos de Carbono, Proteínas, Kcal].</p>
 									</div>
 								</li>
 							</ul>
@@ -432,14 +421,14 @@
 					<a name="setgrupo" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> set<wbr>Grupo</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Grupo<span class="tsd-signature-symbol">(</span>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Grupo<span class="tsd-signature-symbol">(</span>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="gruposalimentos.gruposalimentos-1.html">GruposAlimentos</a>.<a href="gruposalimentos.gruposalimentos-1.html#setgrupo">setGrupo</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/gruposAlimentos.ts#L42">gruposAlimentos.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/gruposAlimentos.ts#L42">gruposAlimentos.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -451,7 +440,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>grupo: <span class="tsd-signature-type">string</span></h5>
+									<h5>grupo: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Grupo al que pertence el ingrediente.</p>
 									</div>
@@ -465,14 +454,14 @@
 					<a name="setgrupoalimenticio" class="tsd-anchor"></a>
 					<h3>set<wbr>Grupo<wbr>Alimenticio</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Grupo<wbr>Alimenticio<span class="tsd-signature-symbol">(</span>grupoAlimenticio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Grupo<wbr>Alimenticio<span class="tsd-signature-symbol">(</span>grupoAlimenticio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setgrupoalimenticio">setGrupoAlimenticio</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L105">ingredientes.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L103">ingredientes.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -483,7 +472,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>grupoAlimenticio: <span class="tsd-signature-type">string</span></h5>
+									<h5>grupoAlimenticio: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Grupo alimenticio del ingrediente.</p>
 									</div>
@@ -504,7 +493,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setlocalizacion">setLocalizacion</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L125">ingredientes.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L124">ingredientes.ts:124</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -536,7 +525,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setnombre">setNombre</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L95">ingredientes.ts:95</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L93">ingredientes.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -568,7 +557,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/interfazingredientes.ingredientesi.html">IngredientesI</a>.<a href="../interfaces/interfazingredientes.ingredientesi.html#setprecio">setPrecio</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/ingredientes.ts#L135">ingredientes.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/ingredientes.ts#L134">ingredientes.ts:134</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -607,6 +596,9 @@
 						<a href="../modules/interfazingredientes.html">interfaz<wbr>Ingredientes</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/printingredientes.html">print<wbr>Ingredientes</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/tiposdefinidos.html">tipos<wbr>Definidos</a>
 					</li>
 				</ul>
@@ -622,10 +614,7 @@
 								<a href="ingredientes.ingrediente.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="ingredientes.ingrediente.html#composionnutricional" class="tsd-kind-icon">composion<wbr>Nutricional</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="ingredientes.ingrediente.html#grupoalimenticio" class="tsd-kind-icon">grupo<wbr>Alimenticio</a>
+								<a href="ingredientes.ingrediente.html#composicionnutricional" class="tsd-kind-icon">composicion<wbr>Nutricional</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="ingredientes.ingrediente.html#localizacion" class="tsd-kind-icon">localizacion</a>
@@ -637,7 +626,7 @@
 								<a href="ingredientes.ingrediente.html#precio" class="tsd-kind-icon">precio</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ingredientes.ingrediente.html#getcomposionnutricional" class="tsd-kind-icon">get<wbr>Composion<wbr>Nutricional</a>
+								<a href="ingredientes.ingrediente.html#getcomposicionnutricional" class="tsd-kind-icon">get<wbr>Composicion<wbr>Nutricional</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="ingredientes.ingrediente.html#getgrupo" class="tsd-kind-icon">get<wbr>Grupo</a>
@@ -655,7 +644,7 @@
 								<a href="ingredientes.ingrediente.html#getprecio" class="tsd-kind-icon">get<wbr>Precio</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ingredientes.ingrediente.html#setcomposionnutricional" class="tsd-kind-icon">set<wbr>Composion<wbr>Nutricional</a>
+								<a href="ingredientes.ingrediente.html#setcomposicionnutricional" class="tsd-kind-icon">set<wbr>Composicion<wbr>Nutricional</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="ingredientes.ingrediente.html#setgrupo" class="tsd-kind-icon">set<wbr>Grupo</a>
@@ -676,9 +665,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/ingredientes.html#ingrediente1" class="tsd-kind-icon">ingrediente1</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -694,7 +680,6 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">

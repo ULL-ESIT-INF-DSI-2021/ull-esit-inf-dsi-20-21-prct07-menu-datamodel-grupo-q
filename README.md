@@ -1,5 +1,7 @@
 # PRACTICA 7: Modelo de datos de un sistema que permite el diseño de menús 
 
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/badge.svg?branch=master)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q?branch=master)
+
 ## Asignatura:
 
   * Desarrollo de Sistemas Informáticos

@@ -72,8 +72,8 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="tiposdefinidos.html#composicionnutricional" class="tsd-kind-icon">Composicion<wbr>Nutricional</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="tiposdefinidos.html#grupoalimenticio" class="tsd-kind-icon">Grupo<wbr>Alimenticio</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="tiposdefinidos.html#kcalporciengramos" class="tsd-kind-icon">Kcal<wbr>Por<wbr>Cien<wbr>Gramos</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="tiposdefinidos.html#localizacion" class="tsd-kind-icon">Localizacion</a></li>
 							</ul>
 						</section>
@@ -83,12 +83,45 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="grupoalimenticio" class="tsd-anchor"></a>
-					<h3>Grupo<wbr>Alimenticio</h3>
-					<div class="tsd-signature tsd-kind-icon">Grupo<wbr>Alimenticio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span></div>
+					<a name="composicionnutricional" class="tsd-anchor"></a>
+					<h3>Composicion<wbr>Nutricional</h3>
+					<div class="tsd-signature tsd-kind-icon">Composicion<wbr>Nutricional<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>hCarbono<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>kCal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>lipidos<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>proteinas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/tiposDefinidos.ts#L15">tiposDefinidos.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/tiposDefinidos.ts#L5">tiposDefinidos.ts:5</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Tipo composicionNutricional. Permite definir los lipidos, hidratos de carbono, proteínas
+							y kcal/100gr que tendrá un ingrediente.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>h<wbr>Carbono<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>k<wbr>Cal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>lipidos<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>proteinas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="grupoalimenticio" class="tsd-anchor"></a>
+					<h3>Grupo<wbr>Alimenticio</h3>
+					<div class="tsd-signature tsd-kind-icon">Grupo<wbr>Alimenticio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>numGrupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/tiposDefinidos.ts#L17">tiposDefinidos.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -101,31 +134,10 @@
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></h5>
+								<h5>grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="kcalporciengramos" class="tsd-anchor"></a>
-					<h3>Kcal<wbr>Por<wbr>Cien<wbr>Gramos</h3>
-					<div class="tsd-signature tsd-kind-icon">Kcal<wbr>Por<wbr>Cien<wbr>Gramos<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>composionCienGramos<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/tiposDefinidos.ts#L5">tiposDefinidos.ts:5</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Tipo KcalPorCienGramos. Permite definir las kcal/100gr que tendrá un ingrediente de acuerdo a los macronutrientes
-							del mismo en formato tupla [Proteínas, Lípidos, Hidratos de carbono)]</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>composion<wbr>Cien<wbr>Gramos<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h5>
+								<h5>num<wbr>Grupo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -133,10 +145,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="localizacion" class="tsd-anchor"></a>
 					<h3>Localizacion</h3>
-					<div class="tsd-signature tsd-kind-icon">Localizacion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>localizacionOrigen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Localizacion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>ciudad<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>pais<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/9606d2f/src/ingredientes/tiposDefinidos.ts#L24">tiposDefinidos.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-q/blob/5087bca/src/ingredientes/tiposDefinidos.ts#L27">tiposDefinidos.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -148,7 +160,10 @@
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>localizacion<wbr>Origen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></h5>
+								<h5>ciudad<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>pais<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -170,6 +185,9 @@
 					<li class=" tsd-kind-module">
 						<a href="interfazingredientes.html">interfaz<wbr>Ingredientes</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="printingredientes.html">print<wbr>Ingredientes</a>
+					</li>
 					<li class="current tsd-kind-module">
 						<a href="tiposdefinidos.html">tipos<wbr>Definidos</a>
 					</li>
@@ -178,10 +196,10 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="tiposdefinidos.html#grupoalimenticio" class="tsd-kind-icon">Grupo<wbr>Alimenticio</a>
+						<a href="tiposdefinidos.html#composicionnutricional" class="tsd-kind-icon">Composicion<wbr>Nutricional</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="tiposdefinidos.html#kcalporciengramos" class="tsd-kind-icon">Kcal<wbr>Por<wbr>Cien<wbr>Gramos</a>
+						<a href="tiposdefinidos.html#grupoalimenticio" class="tsd-kind-icon">Grupo<wbr>Alimenticio</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="tiposdefinidos.html#localizacion" class="tsd-kind-icon">Localizacion</a>
@@ -196,7 +214,6 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
