@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import { IngredientePrinter } from '../ingredientes/printIngredientes';
-import { IngredientesBD } from '../baseDeDatos/JsonIngredientes';
+import { IngredientesBD } from '../baseDeDatos/ingredientesBD';
 import { Ingrediente } from '../ingredientes/ingredientes';
 
 
