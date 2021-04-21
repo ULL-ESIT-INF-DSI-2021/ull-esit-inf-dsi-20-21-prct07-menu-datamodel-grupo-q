@@ -2,7 +2,6 @@ import { Platos } from "../../platos/platos";
 import lowdb from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import { Ingrediente } from "../../ingredientes/ingredientes";
-import { pruebaPlatos } from "../borja/prueba";
 import { ComposicionNutricional, GrupoAlimenticio } from "../../ingredientes/tiposDefinidos";
 
 /**
