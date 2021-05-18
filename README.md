@@ -1,4 +1,4 @@
-# PRACTICA 7: Modelo de datos de un sistema que permite el diseño de menús 
+# Práctica 11 - API Node/Express de gestión de información nutricional
 
 ## Asignatura:
 
